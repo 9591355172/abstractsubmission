@@ -1,0 +1,86 @@
+
+
+
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+
+  <div class="" style="background-image: url(../Refinecoinbg.png);">
+
+    <div class="row" style="height: 1000px;">
+      <div class="col-md-3"></div>
+      <div class="col-md-6">
+      </div>
+      <div class="col-md-3"></div>
+      <div class="col-md-3"></div>
+      <div class=" col-md-6"><h3 class="text-center" style="color: white"> LOG IN</h3>
+        <div class="card">
+          <div class="card-header">
+            <span class="myfont">LOGIN CREDENTIALS</span>
+          </div>
+          <div class="card-body">
+            <div class="form-group row">
+              <div class="control-label text-right col-md-3">
+                <%= f.label :email %><br>
+              </div>
+              <div class="col-md-9">
+                <%= f.email_field :email,class: "form-control ", autofocus: true, autocomplete: "email", id: "name-field",placeholder:"Enter Email", :required => true%>
+                <%if resource.errors[:email].present?%>
+                  <span>* Email <%=resource.errors[:email].first%></span>
+                <%end%>
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="control-label text-right col-md-3">
+                <%= f.label :password %>
+                <br/>
+              </div>
+              <div class="col-md-9">
+                <%= f.password_field :password, autocomplete: "off", class: "form-control", id: "name-field",placeholder:"Enter password", :required => true%>
+                  <% if devise_mapping.rememberable? -%>
+    <div class="field">
+      <%= f.check_box :remember_me %>
+      <%= f.label :remember_me %>
+    </div>
+  <% end -%>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-3"></div>
+              <div class="col-md-6">
+                <div class="actions">
+                  <%= f.submit "Log in", class: "btn btn-secondary btn-md btn-block text-uppercase", style: "background-color: #512dab " %>
+                </div>
+              </div>
+              <div class="col-md-3"></div>
+            
+          </div>
+          <div class="row">
+              <div class="col-md-3"></div>
+              <div class="col-md-6">
+               
+              </div>
+              <div class="col-md-3"></div>
+            
+          </div>
+          <div class="form-group m-b-0">
+          <div class="col-sm-12 text-center">
+            <div>Don't have an account?
+              <%= link_to "Sign up", new_user_registration_path,class:"btn btn-sm btn-danger btn-cons" %>
+            </div>
+          </div><%end%>
+        </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3"></div>
+      <div class="col-md-3"></div>
+      <div class="col-md-6">
+
+  </div>
+</div>
+<div class="footer">
+    <h6 class="" style="color:white;">© Copyright 2018  || All Rights Reserved </h5>
+  </div>
+</div>
+  
+
