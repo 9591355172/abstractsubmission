@@ -12,7 +12,7 @@ class S3Store
      self
    end
   def url
-    @obj.public_url.to_s
+    @obj.url.to_s
   end
 
   private

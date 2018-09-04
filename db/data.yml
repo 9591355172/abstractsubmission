@@ -1,0 +1,84 @@
+
+---
+abstracts:
+  columns:
+  - id
+  - title
+  - user_id
+  - abstract_url
+  - created_at
+  - updated_at
+  records: 
+  - - 1
+    - 
+    - 
+    - "#<ActionDispatch::Http::UploadedFile:0x00007f8bf50bcbc8>"
+    - '2018-09-03 14:08:59.621731'
+    - '2018-09-03 14:08:59.621731'
+  - - 2
+    - 
+    - 
+    - "#<ActionDispatch::Http::UploadedFile:0x00007f8bedd6f6c0>"
+    - '2018-09-03 14:09:07.520394'
+    - '2018-09-03 14:09:07.520394'
+  - - 3
+    - 
+    - 
+    - "#<ActionDispatch::Http::UploadedFile:0x00007f8bedd6e478>"
+    - '2018-09-03 15:16:30.513135'
+    - '2018-09-03 15:16:30.513135'
+  - - 4
+    - 
+    - 
+    - "#<ActionDispatch::Http::UploadedFile:0x00007f8bf19023b8>"
+    - '2018-09-03 15:21:35.041332'
+    - '2018-09-03 15:21:35.041332'
+  - - 5
+    - 
+    - 
+    - "#<ActionDispatch::Http::UploadedFile:0x00007f8bf419bb58>"
+    - '2018-09-03 15:22:11.445667'
+    - '2018-09-03 15:22:11.445667'
+  - - 6
+    - 
+    - 
+    - "#<ActionDispatch::Http::UploadedFile:0x00007f8bf5125bf0>"
+    - '2018-09-03 15:22:28.038341'
+    - '2018-09-03 15:22:28.038341'
+  - - 7
+    - 
+    - 
+    - "#<ActionDispatch::Http::UploadedFile:0x00007f8bf1bfd838>"
+    - '2018-09-03 15:30:12.607889'
+    - '2018-09-03 15:30:12.607889'
+  - - 8
+    - 
+    - 
+    - "#<ActionDispatch::Http::UploadedFile:0x00007fc6900b4498>"
+    - '2018-09-03 18:37:00.327414'
+    - '2018-09-03 18:37:00.327414'
+  - - 9
+    - 1. RM.pdf
+    - 
+    - https://spjainbony.s3.amazonaws.com/1.%20RM.pdf
+    - '2018-09-03 19:01:33.52248'
+    - '2018-09-03 19:01:33.52248'
+  - - 10
+    - 5-01.png
+    - 
+    - https://spjainbony.s3.amazonaws.com/5-01.png
+    - '2018-09-03 19:05:06.594287'
+    - '2018-09-03 19:05:06.594287'
+
+---
+ar_internal_metadata:
+  columns:
+  - key
+  - value
+  - created_at
+  - updated_at
+  records: 
+  - - environment
+    - development
+    - '2018-08-27 10:00:24.948248'
+    - '2018-08-27 10:00:24.948248'
