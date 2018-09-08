@@ -976,6 +976,8 @@ figcaption {
 .image-3 {
   margin-left: 0px;
   float: right;
+  height: 80px;
+  margin-top:10px; 
 }
 
 .column {
