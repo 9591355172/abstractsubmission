@@ -24,4 +24,6 @@ class HomeController < ApplicationController
 	
 	def tracks
 	end
+
+	
 end

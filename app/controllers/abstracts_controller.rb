@@ -1,4 +1,5 @@
 class AbstractsController < ApplicationController
+	# before_action :authenticate_user!
 	# require 'aws-sdk'
 	# 	def create
 	# 	@abstract = Abstract.new(request_params)
@@ -34,33 +35,64 @@ class AbstractsController < ApplicationController
 	# 	end
 
   def new
+  	if current_user
+  		if current_user.abstract.present?
+  			redirect_to abstract_path(current_user.abstract.id)
+  		end
+  		@uploaded_abstract = current_user.abstract
+  	end
+  	
+
   end
 
   def create
     # Make an object in your bucket for your upload
-    obj = S3_BUCKET.objects[params[:file].original_filename]
 
-    # Upload the file
-    obj.write(
-      file: params[:file],
-      acl: :public_read
-    )
+    if params[:file]
+	    if params[:file].content_type != 'application/pdf' 
+	    	flash[:notice] = 'Please upload a pdf file'
+	    	redirect_to abstract_path(current_user.abstract.id)
+	    else
+	    	    obj = S3_BUCKET.objects[params[:file].original_filename]
 
-    # Create an object for the upload
-    @upload = Abstract.new(
-    		abstract_url: obj.public_url,
-		title: obj.key
-    	)
+		    # Upload the file
+		    obj.write(
+		      file: params[:file],
+		      acl: :public_read
+		    )
 
-    # Save the upload
-    if @upload.save
-      redirect_to root_path, success: 'File successfully uploaded'
-    else
-      flash.now[:notice] = 'There was an error'
-      render :new
-    end
+		    # Create an object for the upload
+		    @upload = Abstract.new(
+		    		abstract_url: obj.public_url,
+				title: obj.key,
+				user_id: current_user.id
+		    	)
+
+		    # Save the upload
+		    if @upload.save
+		    	flash[:notice] = 'Abstract uploaded successfully'
+		      	redirect_to abstract_path(current_user.abstract.id)
+		    else
+		      flash[:alert] = 'There was an error'
+		      render :new
+		    end
+	    	
+	    end
+	end
+	flash[:notice] = "Select a file to upload"
+	redirect_to abstract_path(current_user.abstract.id)
+
+  end
+
+  def destroy
+  	Abstract.find_by(id: params[:id], sender_Id: 1).destroy
+  		render :new
   end
 
   def index
+  end
+
+  def show
+  	@uploaded_abstract = current_user.abstract
   end
 end

@@ -1,6 +1,37 @@
-<h1>Upload a file</h1>
 
-<%= form_tag abstracts_path, enctype: 'multipart/form-data' do %>
-  <%= file_field_tag :file  %>
-  <%= submit_tag 'Upload file' %>
+<% if current_user%>
+
+<div>
+  <div class="container-5 w-container">
+    <h3 class="heading-5">Upload Abstract</h3>
+    <h6 class="heading-5">(Name of the file should be studentname_abstract-track)</h6>
+    <div class="div-block-4">
+      <div>
+        <div class="w-row heading-5">
+          <% if current_user.abstract.present?%>
+              <h6 class="heading-5"><%= @uploaded_abstract.title %></h6>
+              <%= link_to 'Delete', controller: 'abstracts', action: 'destroy', id: @uploaded_abstract.id, method: :delete %>
+
+          <% elsif %>
+              <%= form_tag abstracts_path, enctype: 'multipart/form-data' do %>
+                <%= file_field_tag :file  %>
+                <%= submit_tag 'Upload file' %>
+              <% end %>
+     <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<% elsif %>
+<div>
+  <div class="container-5 w-container">
+    <h6 class="heading-5">Please &nbsp;
+    	<%= link_to "Log in", new_user_session_path,class:"btn btn-sm btn-danger btn-cons" %>
+    	/
+    	<%= link_to "Register", new_user_registration_path,class:"btn btn-sm btn-danger btn-cons" %>&nbsp;
+     to upload abtract</h6>
+  </div>
+</div>
 <% end %>

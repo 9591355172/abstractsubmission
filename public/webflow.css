@@ -185,6 +185,17 @@ html[data-w-dynpage] [data-w-cloak] {
   white-space: nowrap;
   box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1), 0px 1px 3px rgba(0, 0, 0, 0.1);
 }
+.w-button {
+  display: inline-block;
+  padding: 9px 15px;
+  background-color: #3898EC;
+  color: white;
+  border: 0;
+  line-height: inherit;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 0;
+}
 .w-webflow-badge > img {
   display: inline-block !important;
   visibility: visible !important;
@@ -316,7 +327,7 @@ label {
 .w-input,
 .w-select {
   display: block;
-  width: 100%;
+  width: 80%;
   height: 38px;
   padding: 8px 12px;
   margin-bottom: 10px;

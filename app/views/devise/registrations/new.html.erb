@@ -1,156 +1,103 @@
 
   <div>
     <div class="container-4 w-container">
-      <div class="div-block-3">
+      <div class="div-block-3" style="background-color: #f2f2f2;">
         <div>
           <h3 class="heading">Sign up</h3>
         </div>
         <div>
-          <h6 class="heading-2">If you have already registerd please click here</h6>
+          <h6 class="heading-2">If you have already registerd please <a href="/users/sign_in" class="">click here</a></h6>
           <h6 class="heading-3">Those who are visiting first time to submit the online abstract/paper may fill the following:</h6>
-
-  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-
-          <div class="row" style="margin: 0px !important;">
-            <div class="col-md-6">
-              <%= f.label :email %><br>
-            </div>
-            <div class="col-md-6">
-              <%= f.label :email %><br>
-            </div>
-            <div class="col-md-6">
-              <%= f.label :email %><br>
-            </div>
-            <div class="col-md-6">
-               <%= f.email_field :email,class: "form-control ", autofocus: true, autocomplete: "email", id: "name-field",placeholder:"Enter Email", :required => true%>
-                <%if resource.errors[:email].present?%>
-                  <span>* Email <%=resource.errors[:email].first%></span>
-                <%end%>
-            </div>
-          </div>
-  <div class="" style="background-image: url(../Refinecoinbg.png);">
-
-    <div class="row" style="height: 1000px;">
-      <div class="col-md-3"></div>
-      <div class="col-md-6">
-      </div>
-      <div class="col-md-3"></div>
-      <div class="col-md-3"></div>
-      <div class=" col-md-6"><h3 class="text-center" style="color: white"> SIGN UP</h3>
-        <div class="card">
-          <div class="card-header">
-            <span class="myfont">LOGIN CREDENTIALS</span>
-          </div>
-          <div class="card-body">
-            <div class="form-group row">
-              <div class="control-label text-right col-md-3">
-                <%= f.label :email %><br>
+          <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+            <div class="div-block-1">
+              <div>
+                <div class="w-row">
+                  <div class="column-3 w-col w-col-6">
+                    <h6 class="heading-6" style="text-align: left !important; margin: 0px 0px 0px 10px;font-size: 14px; ">First Name</h6>
+                    <%= f.text_field :first_name ,class: "form-control required w-input", id:"name-field",placeholder:"Enter First Name", :required => true, style:"margin-left:10px;"%>
+                  </div>
+                  <div class="column-3 w-col w-col-6">
+                    <h6 class="heading-6" style="text-align: left !important; margin: 0px 0px 0px 10px; font-size: 14px;">Last Name</h6>
+                    <%= f.text_field :last_name ,class: "form-control required w-input", id:"name-field",placeholder:"Enter Last Name", :required => true, style:"margin-left:10px;"%>
+                  </div>
+                </div>
               </div>
-              <div class="col-md-9">
-                <%= f.email_field :email,class: "form-control ", autofocus: true, autocomplete: "email", id: "name-field",placeholder:"Enter Email", :required => true%>
-                <%if resource.errors[:email].present?%>
-                  <span>* Email <%=resource.errors[:email].first%></span>
-                <%end%>
+              
+              <div style="margin-top: 10px;">
+                <div class="w-row">
+                  <div class="column-3 w-col w-col-6">
+                    <h6 class="heading-6" style="text-align: left !important; margin: 0px 0px 0px 10px; font-size: 14px;">Email Address</h6>
+
+                    <%= f.email_field :email ,class: "form-control required w-input", id:"name-field",placeholder:"Enter Email Address", :required => true, style:"margin-left:10px;"%>
+                  </div>
+                  <div class="column-3 w-col w-col-6">
+                    <h6 class="heading-6" style="text-align: left !important; margin: 0px 0px 0px 10px; font-size: 14px;">Mobile</h6>
+                    <%= f.text_field :mobile_number ,class: "form-control required w-input", id:"name-field",placeholder:"Enter mobile number", :required => true, style:"margin-left:10px;"%>
+                  </div>
+                </div>
               </div>
-            </div>
-            <div class="form-group row">
-              <div class="control-label text-right col-md-3">
-                <%= f.label :password %>
-                <% if @minimum_password_length %>
+
+              <div style="margin-top: 10px;">
+                <div class="w-row">
+                  <div class="column-3 w-col w-col-6">
+                    <h6 class="heading-6" style="text-align: left !important; margin: 0px 0px 0px 10px; font-size: 14px;">Password
+                    <% if @minimum_password_length %>
                   <small>(<%= @minimum_password_length %>
                     characters minimum)</small>
-                <% end %><br/>
-              </div>
-              <div class="col-md-9">
-                <%= f.password_field :password, autocomplete: "off", class: "form-control", id: "name-field",placeholder:"Enter password", :required => true%>
+                <% end %></h6>
+                    <%= f.password_field :password, autocomplete: "off", class: "form-control w-input", id: "name-field",placeholder:"Enter password", :required => true, style:"margin-left:10px;" %>
                 <%if resource.errors[:password].present?%>
                   <span style="color: #d80d0d; font-size:13px!important;" >* <%=resource.errors[:password].first%></span>
                 <%end%>
-              </div>
-            </div>
-            <div class="form-group row">
-              <div class="control-label text-right col-md-3">
-                <%= f.label :password_confirmation %><br/>
-
-              </div>
-              <div class="col-md-9">
-                <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control", id: "name-field",placeholder:"Enter password", :required => true%>
+                  </div>
+                  <div class="column-3 w-col w-col-6">
+                    <h6 class="heading-6" style="text-align: left !important; margin: 0px 0px 0px 10px; font-size: 14px;">Confirm Password</h6>
+                    <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control w-input", id: "name-field",placeholder:"Enter password", :required => true, style:"margin-left:10px;"%>
                 <%if resource.errors[:password_confirmation].present?%>
                   <span style="color: #d80d0d; font-size:13px!important;">* Password confirmation <%=resource.errors[:password_confirmation].first%></span>
                 <%end%>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-3"></div>
-      <div class="col-md-3"></div>
-      <div class="col-md-6">
-        <div class="card">
-          <div class="card-header">
-            <span class="myfont">PERSONAL INFORMATION</span>
-          </div>
-          <div class="card-body">
-           <div class="form-group row">
-            <div class="control-label text-right col-md-3">
-             <%= f.label :name %><br>
-            </div>
-            <div class="col-md-9">
-             
-            </div> 
-           </div>
-           <div class="form-group row">
-            <div class="control-label text-right col-md-3">
-             <%= f.label :contact_number %><br>
-            </div>
-            <div class="col-md-9">
-              
-            </div> 
-           </div>
-           <div class="form-group row">
-            <div class="control-label text-right col-md-3">
-             <%= f.label :token_address%><br>
-            </div>
-            <div class="col-md-9">
-             
-            </div> 
-           </div>
-           <div class="form-group row">
-            <div class="control-label text-right col-md-3">
-             <%= f.label :account_type %><br>
-            </div>
-            <div class="col-md-9">
-              
-             
-            </div> 
-           </div>
-          <div class="form-group text-center m-t-20">
-            <div class="row">
-              <div class="col-md-3"></div>
-              <div class="col-md-6">
-                <div class="actions">
-                  <%= f.submit "Sign up", class: "btn btn-secondary btn-md btn-block text-uppercase", style: "background-color:#512dab;" %>
+                  </div>
                 </div>
               </div>
-              <div class="col-md-3"></div>
-            <%end%>
-          </div>
-        </div>
-        <div class="form-group m-b-0">
-          <div class="col-sm-12 text-center">
-            <div>Already have an account?
-              <%= link_to "Log in", new_user_session_path,class:"btn btn-sm btn-danger btn-cons" %>
+
+              <div style="margin-top: 10px;">
+                <div class="w-row">
+                  <div class="column-3 w-col w-col-6">
+                    <h6 class="heading-6" style="text-align: left !important; margin: 0px 0px 0px 10px; font-size: 14px;">Organization/College</h6>
+                    <%= f.text_field :organization ,class: "form-control required w-input", id:"name-field",placeholder:"Organization/College name", :required => true, style:"margin-left:10px;"%>
+                  </div>
+                  <div class="column-3 w-col w-col-6">
+                    <h6 class="heading-6" style="text-align: left !important; margin: 0px 0px 0px 10px; font-size: 14px;">Designation</h6>
+                    <%= f.text_field :designation ,class: "form-control required w-input", id:"name-field",placeholder:"Designation", :required => true, style:"margin-left:10px;"%>
+                  </div>
+                </div>
+              </div>
+
+              <div style="margin-top: 10px;">
+                <div class="w-row">
+                  <div class="column-3 w-col w-col-12">
+                    <h6 class="heading-6" style="text-align: left !important; margin: 0px 0px 0px 10px; font-size: 14px;">Website URL, if any</h6>
+                    <%= f.email_field :website_url ,class: "form-control required w-input", id:"name-field",placeholder:"website URL", :required => true, style:"margin-left:10px; width:91% !important;"%>
+                  </div>
+                  
+                </div>
+              </div>
+
+              <div>
+                <div class="w-row">
+                  <div class="column-3 w-col w-col-5">
+                    
+                  </div>
+                  <div class="column-5 w-col w-col-7">
+                    <%= f.submit "Sign up", class: "button-3 w-button", style: "float:left; text-align:center; margin-bottom: 15px;" %>
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
+          <% end %>
       </div>
     </div>
   </div>
 </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
 
 

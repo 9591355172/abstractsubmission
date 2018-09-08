@@ -1,0 +1,17 @@
+<% if notice %>
+<div class="row">
+	<div class="card" style="text-align: center; background-color: red; color: white;">
+		<%= notice.html_safe %>
+	</div>
+</div>
+	
+
+
+<% elsif alert %>
+  <div id="validation_msgs">
+  	<br>
+	<div class="alert alert-danger" role="alert" style="margin: 0px">
+	   <%= alert.html_safe %>
+	</div>
+  </div>
+<% end %>

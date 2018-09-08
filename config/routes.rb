@@ -10,5 +10,6 @@ Rails.application.routes.draw do
   get 'dates' => 'home#dates'
   get 'tracks' => 'home#tracks'
   get 'cochair' => 'home#cochair'
+  get 'express_checkout' => 'home#express_checkout'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
