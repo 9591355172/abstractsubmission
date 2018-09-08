@@ -6,8 +6,8 @@
           <h3 class="heading">Sign up</h3>
         </div>
         <div>
-          <h6 class="heading-2">If you have already registerd please <a href="/users/sign_in" class="">click here</a></h6>
-          <h6 class="heading-3">Those who are visiting first time to submit the online abstract/paper may fill the following:</h6>
+          <h6 class="heading-2">If you have already registered please <a href="/users/sign_in" class="">click here</a></h6>
+          
           <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
             <div class="div-block-1">
               <div>
@@ -75,14 +75,16 @@
 
               <div style="margin-top: 10px;">
                 <div class="w-row">
-                  <div class="column-3 w-col w-col-12">
+                  <div class="column-3 w-col w-col-6">
                     <h6 class="heading-6" style="text-align: left !important; margin: 0px 0px 0px 10px; font-size: 14px;">Website URL, if any</h6>
-                    <%= f.email_field :website_url ,class: "form-control required w-input", id:"name-field",placeholder:"website URL", :required => true, style:"margin-left:10px; width:91% !important;"%>
+                    <%= f.email_field :website_url ,class: "form-control required w-input", id:"name-field",placeholder:"Website URL", :required => true, style:"margin-left:10px; width:91% !important;"%>
                   </div>
-                  
+                  <div class="column-3 w-col w-col-6">
+                    <h6 class="heading-6" style="text-align: left !important; margin: 0px 0px 10px 10px; font-size: 14px;">Where did you hear about the conference?</h6>
+                    <%= f.select :promotion, ['Website', 'E-mailers', 'Social Media','Colleagues', 'Others'],{ :class => "form-control required w-input",:style => "text-align: center"}%>
+                  </div>
                 </div>
               </div>
-
               <div>
                 <div class="w-row">
                   <div class="column-3 w-col w-col-5">

@@ -1036,8 +1036,8 @@ figcaption {
 }
 
 .slide-1 {
-  background-image: url('../carousel1.jpg');
-  background-position: 50% 50%;
+  background-image: url('../UNPRME.jpg');
+  /*background-position: 50% 50%;*/
   background-size: cover;
 }
 
