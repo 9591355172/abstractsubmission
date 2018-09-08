@@ -1129,13 +1129,13 @@ figcaption {
 }
 
 .dropdwon-toggle {
-  margin-top: -15px;
-  padding: 8px 23px 8px 12px;
+  margin-top: -13px;
+  padding: 6px 21px 6px 10px;
   border-right: 1px solid #fff;
   background-color: #4d4d4d;
   font-family: Roboto, sans-serif;
   color: #fff;
-  font-size: 13px;
+  font-size: 12px;
 }
 
 .dropdwon-toggle.w--open {
@@ -1160,14 +1160,14 @@ figcaption {
 }
 
 .nav-link-2 {
-  margin-top: -15px;
+  margin-top: -13px;
   margin-bottom: 0px;
-  padding: 8px 10px 8px 12px;
+  padding: 6px 8px 6px 10px;
   border-right: 1px solid #fff;
   background-color: #4d4d4d;
   font-family: Roboto, sans-serif;
   color: #fff;
-  font-size: 13px;
+  font-size: 12px;
 }
 
 .nav-link-2:hover {
@@ -1176,13 +1176,13 @@ figcaption {
 }
 
 .nav-link-3 {
-  margin-top: -15px;
-  padding: 8px 8px 8px 12px;
+  margin-top: -16px;
+  padding: 8px 6px 8px 10px;  
   border-right: 1px solid #fff;
   background-color: #4d4d4d;
   font-family: Roboto, sans-serif;
   color: #fff;
-  font-size: 13px;
+  font-size: 12px;
 }
 
 .nav-link-3:hover {
