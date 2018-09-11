@@ -25,5 +25,20 @@ class HomeController < ApplicationController
 	def tracks
 	end
 
+	def comingsoon
+	end
+
+	def spjimr
+	end
+
+	def details
+	end
+
+	def docapp
+	end
+
+	def forum
+	end
+
 	
 end

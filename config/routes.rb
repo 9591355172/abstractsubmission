@@ -11,5 +11,12 @@ Rails.application.routes.draw do
   get 'tracks' => 'home#tracks'
   get 'cochair' => 'home#cochair'
   get 'express_checkout' => 'home#express_checkout'
+  get 'comingup' => 'home#comingsoon'
+  get 'unglobal' => 'home#unglobal'
+  get 'prme' => 'home#prme'
+  get 'spjimr' => 'home#spjimr'
+  get 'details' => 'home#details'
+  get 'docapp' => 'home#docapp'
+  get 'forum' => 'home#forum'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
