@@ -27,6 +27,9 @@ gem 'bootstrap', '~> 4.1.3'
 gem 'carrierwave', '~> 1.0'
 gem 'aws-sdk', '< 2.0'
 gem 'activemerchant'
+gem 'sinatra', '~> 2.0', '>= 2.0.3'
+gem 'encryptor', '~> 1.3.0'
+gem 'savon', '~> 2.11.1'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks

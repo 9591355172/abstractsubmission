@@ -40,5 +40,22 @@ class HomeController < ApplicationController
 	def forum
 	end
 
+	def contact
+
+	end
+
+	def org
+	end
+
+	def workshopdetails
+	end
+
+	def trackdetails
+	end
+
+	def application
+	end
+	def trackchairs
+	end
 	
 end
