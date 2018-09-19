@@ -57,5 +57,8 @@ class HomeController < ApplicationController
 	end
 	def trackchairs
 	end
+
+	def sponsors
+	end
 	
 end
