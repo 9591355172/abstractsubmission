@@ -1,7 +1,52 @@
+<% content_for :styles do %>
+    <style type="text/css">
+        .heading-tittle h2 {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 0;
+    background-color: inherit;
+    padding-left: 14px;
+    padding-right: 14px;
+    z-index: 2;
+    font-size: 26px;
+    line-height: 24px;
+    background: #fff;
+    margin: 0;
+    text-transform: uppercase; }
+
+    .heading-tittle.color-black h2{
+            color: #222;
+    }
+    .heading-tittle {
+    position: relative;
+    text-align: center;
+}
+.heading-tittle::before, .heading-tittle::after {
+    content: "";
+    position: absolute;
+    width: 35%;
+    height: 0;
+    border-top-width: 2px;
+    color: #3b1e9a;}
+
+    .heading-tittle::after {
+    top: 7%;
+    border-top-style: solid;
+    left: auto;
+    right: 33%;
+}
+:after, :before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+    </style>
+<%end%>  
+
     <div>
-      <div class="container-5 w-container">
-        <h3 class="heading-5">List of tracks</h3>
-        <div class="div-block-4">
+      <div class="heading-tittle color-black w-container">
+        <h2 class="" style="margin-top: 30px; margin-bottom:30px;">List of tracks</h2>
+        <div class="div-block-4" style="text-align: left">
           <h6 class="heading-11">The conference presentation tracks include the following:</h6>
           <ul class="unordered-list">
             <li class="list-item">Innovating on pedagogy and curriculum.</li>

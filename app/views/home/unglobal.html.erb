@@ -1,10 +1,59 @@
-<div>
-      <div class="w-container" style="margin-top: 30px;">
-        <h3 class="heading-5">UN GLOBAL COMPACT</h3>
-    </div>
+<% content_for :styles do %>
+    <style type="text/css">
+        .heading-tittle h2 {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 0;
+    background-color: inherit;
+    padding-left: 14px;
+    padding-right: 14px;
+    z-index: 2;
+    font-size: 26px;
+    line-height: 24px;
+    background: #fff;
+    margin: 0;
+    text-transform: uppercase; }
 
-    <div class="w-container">
-    	<p>
+    .heading-tittle.color-black h2{
+            color: #222;
+    }
+    .heading-tittle {
+    position: relative;
+    text-align: center;
+}
+.heading-tittle::before, .heading-tittle::after {
+    content: "";
+    position: absolute;
+    width: 35%;
+    height: 0;
+    border-top-width: 2px;
+    color: #3b1e9a;}
+
+    .heading-tittle::after {
+    top: 50%;
+    border-top-style: solid;
+    left: auto;
+    right: 33%;
+}
+:after, :before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+    </style>
+<%end%>
+
+<div>
+      <div class="heading-tittle color-black w-container" style="margin-top: 30px; margin-bottom: 30px;">
+        <h2 class="">UN GLOBAL COMPACT</h2>
+    </div>
+    <div class="row-7">
+    	<div class="w-col w-col-3">
+    		<img src="../UNGCLogo.png" class="image-6">	
+    	</div>
+    	<div class="w-col w-col-9">
+    		<div class="w-container">
+    	<p style="line-height: 1.6; font-size: 16px; color: #333;">
     		The UN Global Compact is the world's largest corporate sustainability initiative. It is a call to companies to align strategies and operations with universal principles on human rights, labour, environment and anti-corruption, and take actions that advance societal goals. 
 At the UN Global Compact, we aim to mobilize a global movement of sustainable companies and stakeholders to create the world we want. To make this happen, the UN Global Compact supports companies to:<br>
 
@@ -13,4 +62,8 @@ At the UN Global Compact, we aim to mobilize a global movement of sustainable co
 
     	</p>
     </div>
+    	</div>
+    </div>
+    
+    
 </div>

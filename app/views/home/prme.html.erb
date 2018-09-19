@@ -1,13 +1,65 @@
+<% content_for :styles do %>
+    <style type="text/css">
+        .heading-tittle h2 {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 0;
+    background-color: inherit;
+    padding-left: 14px;
+    padding-right: 14px;
+    z-index: 2;
+    font-size: 28px;
+    line-height: 24px;
+    background: #fff;
+    margin: 0;
+    text-transform: uppercase; }
+
+    .heading-tittle.color-black h2{
+            color: #222;
+    }
+    .heading-tittle {
+    position: relative;
+    text-align: center;
+}
+.heading-tittle::before, .heading-tittle::after {
+    content: "";
+    position: absolute;
+    width: 35%;
+    height: 0;
+    border-top-width: 2px;
+    color: #3b1e9a;}
+
+    .heading-tittle::after {
+    top: 50%;
+    border-top-style: solid;
+    left: auto;
+    right: 33%;
+}
+:after, :before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+    </style>
+<%end%>
 <div>
-      <div class="w-container" style="margin-top: 30px;">
-        <h3 class="heading-5">UN PRME</h3>
+      <div class="heading-tittle color-black w-container" style="margin-top: 30px; margin-bottom: 30px;">
+        <h2>PRME</h2>
     </div>
 
-    <div class="w-container">
-    	<p>
-    		The Principles for Responsible Management Education were developed in 2007 by an international task force of sixty deans, university presidents and official representatives of leading business schools and academic institutions. <br> <br>
-    		The development of a principle-based global engagement platform for academic institutions follows from a recommendation by academic stakeholders of the UN Global Compact. Under the coordination of the UN Global Compact and leading academic institutions, the PRME task force developed a set of six principles which lay the foundation for the global platform for responsible management education. <br> <br>
-    		Thus, PRME is the UN Global Compact’s initiative to transform management education, research, and thought education leadership globally by providing the Principles of Responsible Management Education framework, developing learning communities and promoting awareness about United Nations Sustainable Development Goals.
-		</p>
+    <div class="row-7">
+        <div class="w-col w-col-3">
+            <img src="../UNPRMELogo.png" class="image-6"> 
+        </div>
+        <div class="w-col w-col-9">
+                <div class="w-container">
+        <p>
+            The Principles for Responsible Management Education were developed in 2007 by an international task force of sixty deans, university presidents and official representatives of leading business schools and academic institutions. <br> <br>
+            The development of a principle-based global engagement platform for academic institutions follows from a recommendation by academic stakeholders of the UN Global Compact. Under the coordination of the UN Global Compact and leading academic institutions, the PRME task force developed a set of six principles which lay the foundation for the global platform for responsible management education. <br> <br>
+            Thus, PRME is the UN Global Compact’s initiative to transform management education, research, and thought education leadership globally by providing the Principles of Responsible Management Education framework, developing learning communities and promoting awareness about United Nations Sustainable Development Goals.
+        </p>
     </div>
+        </div>
+    </div>
+
 </div>

@@ -1,6 +1,52 @@
+<% content_for :styles do %>
+    <style type="text/css">
+        .heading-tittle h2 {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 0;
+    background-color: inherit;
+    padding-left: 14px;
+    padding-right: 14px;
+    z-index: 2;
+    font-size: 26px;
+    line-height: 24px;
+    background: #fff;
+    margin: 0;
+    text-transform: uppercase; }
+
+    .heading-tittle.color-black h2{
+            color: #222;
+    }
+    .heading-tittle {
+    position: relative;
+    text-align: center;
+}
+.heading-tittle::before, .heading-tittle::after {
+    content: "";
+    position: absolute;
+    width: 35%;
+    height: 0;
+    border-top-width: 2px;
+    color: #3b1e9a;}
+
+    .heading-tittle::after {
+    top: 11%;
+    border-top-style: solid;
+    left: auto;
+    right: 33%;
+}
+:after, :before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+    </style>
+<%end%>
+
+
     <div>
-      <div class="w-container">
-        <h3 class="heading-5">FEES</h3>
+      <div class="heading-tittle color-black w-container">
+        <h2 class="" style="margin-top: 30px; margin-bottom: 30px;">FEES</h2>
         <div data-duration-in="300" data-duration-out="100" class="w-tabs">
           <div class="tabs-menu w-tab-menu">
             <a data-w-tab="Tab 1" class="open-tab w-inline-block w-tab-link w--current">
@@ -10,55 +56,55 @@
               <div>DOLLARS</div>
             </a>
           </div>
-          <div class="w-tab-content">
+          <div class="w-tab-content" style="border-bottom-left-radius: 10px; border-bottom-right-radius: 10px;" >
             <div data-w-tab="Tab 1" class="w-tab-pane">
               <div class="div-block-4">
                 <div>
                   <div class="w-row">
-                    <div class="column-4 w-col w-col-6" style="background-color: #696969;border-bottom: 1px solid white; border-top-left-radius: 10px;">
+                    <div class="column-4 w-col w-col-6" style="background-color: #333a56;border-bottom: 1px solid white; border-top-left-radius: 10px;">
                       <h5 class="heading-6" style="color:white">Industry participant</h5>
                     </div>
-                    <div class="column-3 w-col w-col-6" style="border: 1px solid #696969; border-top-right-radius: 10px;">
+                    <div class="column-3 w-col w-col-6" style="border: 1px solid white; border-top-right-radius: 10px; background-color: #ddd">
                       <h5 class="heading-7">8000 INR per person</h5>
                     </div>
                   </div>
                 </div>
                 <div>
                   <div class="w-row">
-                    <div class="column-4 w-col w-col-6" style="background-color: #696969;border-bottom: 1px solid white; border-top-left-radius: 10px;">
+                    <div class="column-4 w-col w-col-6" style="background-color: #333a56;border-bottom: 1px solid white; border-top-left-radius: 10px;">
                       <h5 class="heading-6" style="color:white">Members of UN Global Compact Network</h5>
                     </div>
-                    <div class="column-3 w-col w-col-6" style="border: 1px solid #696969; border-top-right-radius: 10px;">
+                    <div class="column-3 w-col w-col-6" style="border: 1px solid white; border-top-right-radius: 10px; background-color: #ddd">
                       <h5 class="heading-7">6000 INR per person</h5>
                     </div>
                   </div>
                 </div>
                 <div>
                   <div class="w-row">
-                    <div class="column-4 w-col w-col-6" style="background-color: #696969;border-bottom: 1px solid white; border-top-left-radius: 10px;">
+                    <div class="column-4 w-col w-col-6" style="background-color: #333a56;border-bottom: 1px solid white; border-top-left-radius: 10px;">
                       <h5 class="heading-6" style="color:white">Academics</h5>
                     </div>
-                    <div class="column-3 w-col w-col-6" style="border: 1px solid #696969; border-top-right-radius: 10px;">
+                    <div class="column-3 w-col w-col-6" style="border: 1px solid white; border-top-right-radius: 10px; background-color: #ddd;">
                       <h5 class="heading-7">6000 INR per person</h5>
                     </div>
                   </div>
                 </div>
                 <div>
                   <div class="w-row">
-                    <div class="column-4 w-col w-col-6" style="background-color: #696969;border-bottom: 1px solid white; border-top-left-radius: 10px;">
+                    <div class="column-4 w-col w-col-6" style="background-color: #333a56;border-bottom: 1px solid white; border-top-left-radius: 10px;">
                       <h5 class="heading-6" style="color:white">Students</h5>
                     </div>
-                    <div class="column-3 w-col w-col-6" style="border: 1px solid #696969; border-top-right-radius: 10px;">
+                    <div class="column-3 w-col w-col-6" style="border: 1px solid white; border-top-right-radius: 10px; background-color: #ddd">
                       <h5 class="heading-7">2000 INR per person</h5>
                     </div>
                   </div>
                 </div>
                 <div>
                   <div class="w-row">
-                    <div class="column-4 w-col w-col-6" style="background-color: #696969;border-bottom: 1px solid white; border-top-left-radius: 10px; padding-bottom: 2px;">
+                    <div class="column-4 w-col w-col-6" style="background-color: #333a56;border-bottom: 1px solid white; border-top-left-radius: 10px; padding-bottom: 2px;">
                       <h5 class="heading-6" style="color:white">Social Sector</h5>
                     </div>
-                    <div class="column-3 w-col w-col-6" style="border: 1px solid #696969; border-top-right-radius: 10px;">
+                    <div class="column-3 w-col w-col-6" style="border: 1px solid white; border-top-right-radius: 10px;background-color: #ddd"">
                       <h5 class="heading-7">1500 INR per person</h5>
                     </div>
                   </div>
@@ -69,50 +115,50 @@
               <div class="div-block-4">
                 <div>
                   <div class="w-row">
-                    <div class="column-4 w-col w-col-6" style="background-color: #696969;border-bottom: 1px solid white; border-top-left-radius: 10px;">
+                    <div class="column-4 w-col w-col-6" style="background-color: #333a56;border-bottom: 1px solid white; border-top-left-radius: 10px;">
                       <h5 class="heading-6" style="color:white">Industry participant</h5>
                     </div>
-                    <div class="column-3 w-col w-col-6" style="border: 1px solid #696969; border-top-right-radius: 10px;">
+                    <div class="column-3 w-col w-col-6" style="border: 1px solid white; border-top-right-radius: 10px;background-color: #ddd"">
                       <h5 class="heading-7">120 USD per person</h5>
                     </div>
                   </div>
                 </div>
                 <div>
                   <div class="w-row">
-                    <div class="column-4 w-col w-col-6" style="background-color: #696969;border-bottom: 1px solid white; border-top-left-radius: 10px;">
+                    <div class="column-4 w-col w-col-6" style="background-color: #333a56;border-bottom: 1px solid white; border-top-left-radius: 10px;">
                       <h5 class="heading-6" style="color:white">Members of UN Global Compact Network</h5>
                     </div>
-                    <div class="column-3 w-col w-col-6" style="border: 1px solid #696969; border-top-right-radius: 10px;">
+                    <div class="column-3 w-col w-col-6" style="border: 1px solid white; border-top-right-radius: 10px;background-color: #ddd"">
                       <h5 class="heading-7">90 USD per person</h5>
                     </div>
                   </div>
                 </div>
                 <div>
                   <div class="w-row">
-                    <div class="column-4 w-col w-col-6" style="background-color: #696969;border-bottom: 1px solid white; border-top-left-radius: 10px;">
+                    <div class="column-4 w-col w-col-6" style="background-color: #333a56;border-bottom: 1px solid white; border-top-left-radius: 10px;">
                       <h5 class="heading-6" style="color:white">Academics</h5>
                     </div>
-                    <div class="column-3 w-col w-col-6" style="border: 1px solid #696969; border-top-right-radius: 10px;">
+                    <div class="column-3 w-col w-col-6" style="border: 1px solid white; border-top-right-radius: 10px;background-color: #ddd">
                       <h5 class="heading-7">90 USD per person</h5>
                     </div>
                   </div>
                 </div>
                 <div>
                   <div class="w-row">
-                    <div class="column-4 w-col w-col-6" style="background-color: #696969;border-bottom: 1px solid white; border-top-left-radius: 10px;">
+                    <div class="column-4 w-col w-col-6" style="background-color: #333a56;border-bottom: 1px solid white; border-top-left-radius: 10px;">
                       <h5 class="heading-6" style="color:white">Students</h5>
                     </div>
-                    <div class="column-3 w-col w-col-6" style="border: 1px solid #696969; border-top-right-radius: 10px;">
+                    <div class="column-3 w-col w-col-6" style="border: 1px solid white; border-top-right-radius: 10px; background-color: #dddddd;">
                       <h5 class="heading-7">30 USD per person</h5>
                     </div>
                   </div>
                 </div>
                 <div>
                   <div class="w-row">
-                    <div class="column-4 w-col w-col-6" style="background-color: #696969;border-bottom: 1px solid white; border-top-left-radius: 10px; padding-bottom: 2px;">
+                    <div class="column-4 w-col w-col-6" style="background-color: #333a56;border-bottom: 1px solid white; border-top-left-radius: 10px; padding-bottom: 2px;">
                       <h5 class="heading-6" style="color:white">Social Sector</h5>
                     </div>
-                    <div class="column-3 w-col w-col-6" style="border: 1px solid #696969; border-top-right-radius: 10px;">
+                    <div class="column-3 w-col w-col-6" style="border: 1px solid white; border-top-right-radius: 10px; background-color: #ddd">
                       <h5 class="heading-7">20 USD per person</h5>
                     </div>
                   </div>

@@ -1,15 +1,64 @@
-<div>
-      <div class="w-container" style="margin-top: 30px;">
-        <h3 class="heading-5">SPJMR</h3>
-    </div>
+<% content_for :styles do %>
+	<style type="text/css">
+		.heading-tittle h2 {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 0;
+    background-color: inherit;
+    padding-left: 14px;
+    padding-right: 14px;
+    z-index: 2;
+    font-size: 28px;
+    line-height: 24px;
+    background: #fff;
+    margin: 0;
+    text-transform: uppercase; }
 
+    .heading-tittle.color-black h2{
+    	    color: #222;
+    }
+    .heading-tittle {
+    position: relative;
+    text-align: center;
+}
+.heading-tittle::before, .heading-tittle::after {
+    content: "";
+    position: absolute;
+    width: 35%;
+    height: 0;
+    border-top-width: 2px;
+    color: #3b1e9a;}
+
+    .heading-tittle::after {
+    top: 50%;
+    border-top-style: solid;
+    left: auto;
+    right: 32%;
+}
+:after, :before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+	</style>
+<%end%>
+
+<div>
+    <div class="heading-tittle color-black w-container" style="margin-top: 30px; margin-bottom: 30px;">
+            <h2>SPJIMR</h2>
+          </div>
+    <div class="row-7">
+        <div class="w-col w-col-3">
+            <img src="../spjimr.png" class="image-6"> 
+        </div>
+        <div class="w-col w-col-9">
     <div class="w-container">
-    	<p>
+    	<p style="text-align: justify;">
     		SPJIMR is a leading school of management in the heart of India’s financial centre of Mumbai. It have grown over the years to be recognised as one of the top 10 business schools of India. 	<br><br>
 SPJIMR has acquired the reputation of meeting societal needs of under-managed sectors by offering unique, purposeful and relevant initiatives. This ensures self-financing, personal freedom with professional accountability and a corporatised culture. <br><br>
 We are a part of the Bharatiya Vidya Bhavan and function as an autonomous Institute with entrepreneurial agility. Our mission is to influence practice and promote value-based growth. We build on this mission through pedagogic innovations and pioneering programmes, which have helped us stand out for our unique and distinctive path in management education. <br><br>
 More than 1,000 participants from diverse backgrounds are enrolled at any given time across a range of management programmes offered by SPJIMR.
 
 		</p>
-    </div>
+    </div></div></div>
 </div>

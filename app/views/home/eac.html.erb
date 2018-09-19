@@ -1,14 +1,58 @@
+<% content_for :styles do %>
+    <style type="text/css">
+        .heading-tittle h2 {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 0;
+    background-color: inherit;
+    padding-left: 14px;
+    padding-right: 14px;
+    z-index: 2;
+    font-size: 26px;
+    line-height: 24px;
+    background: #fff;
+    margin: 0;
+    text-transform: uppercase; }
+
+    .heading-tittle.color-black h2{
+            color: #222;
+    }
+    .heading-tittle {
+    position: relative;
+    text-align: center;
+}
+.heading-tittle::before, .heading-tittle::after {
+    content: "";
+    position: absolute;
+    width: 35%;
+    height: 0;
+    border-top-width: 2px;
+    color: #3b1e9a;}
+
+    .heading-tittle::after {
+    top: 5%;
+    border-top-style: solid;
+    left: auto;
+    right: 33%;
+}
+:after, :before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+    </style>
+<%end%> 
     <div>
-      <div class="container-5 w-container">
-        <h3 class="heading-5">External advisory committee</h3>
+      <div class="heading-tittle color-black w-container">
+        <h2 class="-5 " style="margin: 30px 0px 30px 0px;">External advisory committee</h2>
         <div class="row-2 w-row">
-          <div class="column-5 w-col w-col-6">
+          <div class="column-6 w-col w-col-6">
             <div class="div-block-5">
-              <div class="row-6 w-row">
-                <div class="w-col w-col-3"><img src="../Dr.-K-Kuperan-Vishwanathan.jpg" width="117" class="image-6"></div>
+              <div class="row-6 w-row" style="background-color: #f2f2f2">
+                <div class="w-col w-col-3"><img src="../Dr.-K-Kuperan-Vishwanathan.jpg" width="117" class="image-6" style="border-radius: 50%; height: 120px; width: 120px;"></div>
                 <div class="w-col w-col-9">
                   <h4 class="heading-8">Dr. K Kuperan Vishwanathan</h4>
-                  <h5 class="heading-9">Professor and Head of Financial Analysis and Policy Group</h5>
+                  <h5 class="heading-10">Professor and Head of Financial Analysis and Policy Group</h5>
                   <h5 class="heading-10">Othman Yeop Abdullah Graduate School of Business, Malaysia<br></h5>
                 </div>
               </div>
@@ -16,12 +60,14 @@
           </div>
           <div class="column-6 w-col w-col-6">
             <div class="div-block-5">
-              <div class="row-7 w-row">
-                <div class="w-col w-col-3"><img src="../Kamal-Singh-Executive-Director-UN-Global-Compact-Network-India.jpg" class="image-6"></div>
+              <div class="row-6 w-row" style="background-color: #f2f2f2">
+                <div class="w-col w-col-3"><img src="../Kamal-Singh-Executive-Director-UN-Global-Compact-Network-India.jpg" class="image-6" style="border-radius: 50%; height: 120px; width: 120px;"></div>
                 <div class="w-col w-col-9">
+                  &nbsp;
                   <h4 class="heading-8">Mr. Kamal Singh</h4>
-                  <h5 class="heading-9">Executive Director</h5>
-                  <h5 class="heading-10">United Nations Global Compact Network India<br></h5>
+                  <h5 class="heading-10">Executive Director</h5>
+                  <h5 class="heading-10">United Nations Global Compact Network India</h5>
+                  &nbsp;
                 </div>
               </div>
             </div>
@@ -30,11 +76,11 @@
         <div class="row-3 w-row">
           <div class="column-5 w-col w-col-6">
             <div class="div-block-5">
-              <div class="row-5 w-row">
-                <div class="w-col w-col-3"><img src="../Dr.-Pamsy-Hui.jpg" width="225" class="image-6"></div>
+              <div class="row-5 w-row" style="background-color: #f2f2f2;">
+                <div class="w-col w-col-3"><img src="../Dr.-Pamsy-Hui.jpg" width="225" class="image-6" style="border-radius: 50%; height: 120px; width: 120px;"></div>
                 <div class="w-col w-col-9">
                   <h4 class="heading-8">Dr. Pamsy Hui</h4>
-                  <h5 class="heading-9">MBA Programme Director</h5>
+                  <h5 class="heading-10">MBA Programme Director</h5>
                   <h5 class="heading-10">The Hong Kong Polytechnic University</h5>
                 </div>
               </div>
@@ -42,11 +88,11 @@
           </div>
           <div class="column-6 w-col w-col-6">
             <div class="div-block-5">
-              <div class="row-4 w-row">
-                <div class="w-col w-col-3"><img src="../Dr.-Bhaskar-Chatterjee.jpg" class="image-6"></div>
+              <div class="row-4 w-row" style="background-color: #f2f2f2;">
+                <div class="w-col w-col-3"><img src="../Dr.-Bhaskar-Chatterjee.jpg" class="image-6" style="border-radius: 50%; height: 120px; width: 120px;"></div>
                 <div class="column-7 w-col w-col-9">
                   <h4 class="heading-8">Dr. Bhaskar Chatterjee</h4>
-                  <h5 class="heading-9">Senior Director</h5>
+                  <h5 class="heading-10">Senior Director</h5>
                   <h5 class="heading-10">Indian Institute of Learning and Management (IILM)</h5>
                 </div>
               </div>
@@ -54,13 +100,13 @@
           </div>
         </div>
         <div class="w-row">
-          <div class="column-5 w-col w-col-6">
+          <div class="column-6 w-col w-col-6">
             <div class="div-block-5">
-              <div class="w-row">
-                <div class="w-col w-col-3"><img src="../Professor-PD-Jose.jpg" width="84" class="image-6"></div>
-                <div class="w-col w-col-9">
+              <div class="w-row" style="background-color: #f2f2f2;">
+                <div class="w-col w-col-3"><img src="../Professor-PD-Jose.jpg" width="84" class="image-6" style="border-radius: 50%; height: 120px; width: 120px;"></div>
+                <div class="column-7 w-col w-col-9" style="margin-top: 5px;">
                   <h4 class="heading-8">Dr. P.D. Jose</h4>
-                  <h5 class="heading-9">Professor (Strategy) &amp; Chair</h5>
+                  <h5 class="heading-10">Professor (Strategy) &amp; Chair</h5>
                   <h5 class="heading-10"> Indian Institute of Management-Bangalore<br></h5>
                 </div>
               </div>
@@ -68,11 +114,11 @@
           </div>
           <div class="column-6 w-col w-col-6">
             <div class="div-block-5">
-              <div class="w-row">
-                <div class="w-col w-col-3"><img src="../Prof.-Stephen-Yong-Seung-Park.jpg" class="image-6"></div>
-                <div class="w-col w-col-9">
+              <div class="w-row" style="background-color: #f2f2f2;">
+                <div class="w-col w-col-3"><img src="../Prof.-Stephen-Yong-Seung-Park.jpg" class="image-6" style="border-radius: 50%; height: 120px; width: 120px;"></div>
+                <div class="column-7 w-col w-col-9" style="margin-top: 5px;">
                   <h4 class="heading-8">Prof. Stephen Yong-Seung Park</h4>
-                  <h5 class="heading-9">Dean &amp; Professor</h5>
+                  <h5 class="heading-10">Dean &amp; Professor</h5>
                   <h5 class="heading-10">Kyung Hee University, Seoul</h5>
                 </div>
               </div>
@@ -82,11 +128,11 @@
         <div class="w-row" style="margin-top: 40px;">
           <div class="column-5 w-col w-col-6">
             <div class="div-block-5">
-              <div class="w-row">
-                <div class="w-col w-col-3"><img src="../Prof-Carole-Parkes.jpg" width="84" class="image-4"></div>
-                <div class="w-col w-col-9">
+              <div class="w-row" style="background-color: #f2f2f2;">
+                <div class="w-col w-col-3"><img src="../Prof-Carole-Parkes.jpg" width="84" class="image-4" style="border-radius: 50%; height: 120px; width: 120px;"></div>
+                <div class="column-7 w-col w-col-9" style="margin-top: 5px;">
                   <h4 class="heading-8">Prof. Carole Parkes</h4>
-                  <h5 class="heading-9">Professor of Responsible Management</h5>
+                  <h5 class="heading-10">Professor of Responsible Management</h5>
                   <h5 class="heading-10"> Winchester University Business School <br></h5>
                 </div>
               </div>
@@ -94,10 +140,10 @@
           </div>
           <div class="column-6 w-col w-col-6">
             <div class="div-block-5">
-              <div class="w-row">
-                <div class="w-col w-col-3"><img src="../Mr-Amit-Jakhar.jpg" class="image-6"></div>
-                <div class="w-col w-col-9">
-                  <h4 class="heading-9">&nbsp;</h4>
+              <div class="w-row" style="background-color: #f2f2f2;">
+                <div class="w-col w-col-3"><img src="../Mr-Amit-Jakhar.jpg" class="image-6" style="border-radius: 50%"></div>
+                <div class="column-7 w-col w-col-9">
+                  <h4 class="heading-10">&nbsp;</h4>
                   <h4 class="heading-8">Mr. Amit Jakhar</h4>
                   
                 </div>

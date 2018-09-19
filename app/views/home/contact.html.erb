@@ -1,18 +1,56 @@
+
+
+<% content_for :styles do %>
+    <style type="text/css">
+        .heading-tittle h2 {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 0;
+    background-color: inherit;
+    padding-left: 14px;
+    padding-right: 14px;
+    z-index: 2;
+    font-size: 26px;
+    line-height: 24px;
+    background: #fff;
+    margin: 0;
+    text-transform: uppercase; }
+
+    .heading-tittle.color-black h2{
+            color: #222;
+    }
+    .heading-tittle {
+    position: relative;
+    text-align: center;
+}
+.heading-tittle::before, .heading-tittle::after {
+    content: "";
+    position: absolute;
+    width: 35%;
+    height: 0;
+    border-top-width: 2px;
+    color: #3b1e9a;}
+
+    .heading-tittle::after {
+    top: 39%;
+    border-top-style: solid;
+    left: auto;
+    right: 33%;
+}
+:after, :before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+    </style>
+<%end%> 
+
 <div>
   <div class="container-5 w-container">
+    <div class="heading-tittle color-black w-container" style="margin-top: 20px; margin-bottom: 30px;">
+    <h2 class="-5">Contact Us</h2>
+    </div>
     <div class="row-3 w-row">
-      <div class="column-6 w-col w-col-6">
-        <div class="div-block-5" style="background-color: #f2f2f2">
-          <div class="row-4 w-row">
-            <div class="column-7 w-col w-col-9" style="margin-left: 20px;">
-              <h4 class="heading-8" style="text-align: left !important;">Ms. Ranjeeta Bhattacharya</h4>
-              <h5 class="heading-10" style="text-align: left !important;">Research Associate, SPJIMR</h5>
-              <h5 class="heading-10" style="text-align: left !important;">E-mail : prme.asiaforum@spjimr.org</h5>
-              <h5 class="heading-10" style="text-align: left !important;">Contact No. : +91 22 6145 4316 (between 10 am-6 pm IST)</h5>
-            </div>
-          </div>
-        </div>
-      </div>
       <div class="column-5 w-col w-col-6">
         <div class="div-block-5" style="background-color: #f2f2f2">
           <div class="row-5 w-row">
@@ -25,6 +63,19 @@
           </div>
         </div>
       </div>
+      <div class="column-6 w-col w-col-6">
+        <div class="div-block-5" style="background-color: #f2f2f2">
+          <div class="row-4 w-row">
+            <div class="column-7 w-col w-col-9" style="margin-left: 20px;">
+              <h4 class="heading-8" style="text-align: left !important;">Ms. Ranjeeta Bhattacharya</h4>
+              <h5 class="heading-10" style="text-align: left !important;">Research Associate, SPJIMR</h5>
+              <h5 class="heading-10" style="text-align: left !important;">E-mail : prme.asiaforum@spjimr.org</h5>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      
     </div>
   </div>
 </div>
