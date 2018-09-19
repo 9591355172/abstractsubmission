@@ -77,11 +77,11 @@
                 <div class="w-row">
                   <div class="column-3 w-col w-col-6">
                     <h6 class="heading-6" style="text-align: left !important; margin: 0px 0px 0px 10px; font-size: 14px;">Website URL, if any</h6>
-                    <%= f.email_field :website_url ,class: "form-control required w-input", id:"name-field",placeholder:"Website URL", :required => true, style:"margin-left:10px; width:91% !important;"%>
+                    <%= f.email_field :website_url ,class: "form-control required w-input", id:"name-field",placeholder:"Website URL", :required => true, style:"margin-left:10px;"%>
                   </div>
                   <div class="column-3 w-col w-col-6">
-                    <h6 class="heading-6" style="text-align: left !important; margin: 0px 0px 10px 10px; font-size: 14px;">Where did you hear about the conference?</h6>
-                    <%= f.select :promotion, ['Website', 'E-mailers', 'Social Media','Colleagues', 'Others'],{ :class => "form-control required w-input",:style => "text-align: center"}%>
+                    <h6 class="heading-6" style="text-align: left !important; margin: 0px 0px 0px 10px; font-size: 14px;">Where did you hear about the conference?</h6>
+                    <%= f.select :promotion, options_for_select(['Website', 'E-mailers', 'Social Media','Colleagues', 'Others']), {}, { class: "form-control required w-input margin-on-select"}%>
                   </div>
                 </div>
               </div>
@@ -91,7 +91,7 @@
                     
                   </div>
                   <div class="column-5 w-col w-col-7">
-                    <%= f.submit "Sign up", class: "button-3 w-button", style: "float:left; text-align:center; margin-bottom: 15px;" %>
+                    <%= f.submit "Sign up", class: "button-3 w-button", style: "float:left; text-align:center; margin-bottom: 15px; border-radius: 10px;" %>
                   </div>
                 </div>
               </div>

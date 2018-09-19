@@ -86,14 +86,12 @@
             <div data-hover="1" data-delay="0" class="w-dropdown">
               <div class="dropdwon-toggle w-dropdown-toggle">
                 <div class="icon-4 w-icon-dropdown-toggle"></div>
-                <div>Registration</div>
+                <div>Leadership</div>
               </div>
               <nav class="w-dropdown-list">
-              	<%= link_to "Fees", fees_path, :class => "dropdown-links w-dropdown-link" %>
-              	<%= link_to "Dates", dates_path, :class => "dropdown-links w-dropdown-link" %>
-                <% if !current_user%>
-              	<%= link_to "Sign Up", new_user_registration_path, :class => "dropdown-links w-dropdown-link" %>
-                <% end %>
+              	
+              	<%= link_to "External Advisory Committee", eac_path, :class => "dropdown-links w-dropdown-link" %>
+              	<a href="/organizingcomittee" class="dropdown-links w-dropdown-link">Organizing Committee</a>
               </nav>
             </div>
             <div data-hover="1" data-delay="0" class="w-dropdown">
@@ -102,22 +100,24 @@
                 <div>Submissions</div>
               </div>
               <nav class="w-dropdown-list">
-              	<%= link_to "List of Tracks", tracks_path, :class => "dropdown-links w-dropdown-link" %>
-              	<a href="/trackchairs" class="dropdown-links w-dropdown-link">Track Chairs</a>
-              	<a href="/trackdetails" class="dropdown-links w-dropdown-link">Track Details</a>
-              	<%= link_to "Important Dates", dates_path, :class => "dropdown-links w-dropdown-link" %>
-              	<%= link_to "Abstract Submissions", new_abstract_path, :class => "dropdown-links w-dropdown-link" %>
+                <%= link_to "List of Tracks", tracks_path, :class => "dropdown-links w-dropdown-link" %>
+                <a href="/trackchairs" class="dropdown-links w-dropdown-link">Track Chairs</a>
+                <a href="/trackdetails" class="dropdown-links w-dropdown-link">Track Details</a>
+                <%= link_to "Important Dates", dates_path, :class => "dropdown-links w-dropdown-link" %>
+                <%= link_to "Abstract Submissions", new_abstract_path, :class => "dropdown-links w-dropdown-link" %>
               </nav>
             </div>
             <div data-hover="1" data-delay="0" class="w-dropdown">
               <div class="dropdwon-toggle w-dropdown-toggle">
                 <div class="icon-4 w-icon-dropdown-toggle"></div>
-                <div>Leadership</div>
+                <div>Registration</div>
               </div>
               <nav class="w-dropdown-list">
-              	
-              	<%= link_to "External Advisory Committee", eac_path, :class => "dropdown-links w-dropdown-link" %>
-              	<a href="/organizingcomittee" class="dropdown-links w-dropdown-link">Organizing Committee</a>
+                <%= link_to "Fees", fees_path, :class => "dropdown-links w-dropdown-link" %>
+                <%= link_to "Dates", dates_path, :class => "dropdown-links w-dropdown-link" %>
+                <% if !current_user%>
+                <%= link_to "Sign Up", new_user_registration_path, :class => "dropdown-links w-dropdown-link" %>
+                <% end %>
               </nav>
             </div>
             <div data-hover="1" data-delay="0" class="w-dropdown">
