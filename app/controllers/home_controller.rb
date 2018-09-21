@@ -60,5 +60,8 @@ class HomeController < ApplicationController
 
 	def sponsors
 	end
+
+	def payment
+	end
 	
 end
