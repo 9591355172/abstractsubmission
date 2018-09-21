@@ -1,5 +1,5 @@
 class PaymentController < ApplicationController
 	require 'paynimo'
-	require 'sinatra'
+require 'sinatra'
 	require 'date'
 end

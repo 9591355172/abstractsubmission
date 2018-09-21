@@ -51,7 +51,7 @@ class AbstractsController < ApplicationController
     if params[:file]
 	    if params[:file].content_type != 'application/pdf' 
 	    	flash[:notice] = 'Please upload a pdf file'
-	    	redirect_to abstract_path(current_user.abstract.id)
+	    	redirect_to root_path
 	    else
 	    	    obj = S3_BUCKET.objects[params[:file].original_filename]
 
@@ -79,8 +79,8 @@ class AbstractsController < ApplicationController
 	    	
 	    end
 	end
-	flash[:notice] = "Select a file to upload"
-	redirect_to abstract_path(current_user.abstract.id)
+	
+	
 
   end
 
