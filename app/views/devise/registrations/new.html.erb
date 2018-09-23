@@ -1,12 +1,108 @@
 
+<% content_for :styles do %>
+    <style type="text/css">
+        .heading-tittle h2 {
+          text-transform: uppercase;
+          position: relative;
+          text-align: center;
+          font-size: 28px;
+          font-weight: 400px;
+          line-height: 10px;
+          letter-spacing: 1px;
+          font-family: 'Roboto Condensed', sans-serif;
+     }
+
+
+     .button {
+  border-radius: 4px;
+  background-color: #52658f !important;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 16px;
+  padding: 5px;
+  width: 100px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.btn {
+    border-radius: 4px;
+  background-color: #333a56 !important;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 16px;
+  padding: 5px;
+  width: 100px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 25px 5px 5px 55px;
+}
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.btn span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.btn span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.btn:hover span {
+  padding-right: 25px;
+}
+
+.btn:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+    
+
+    </style>
+<%end%> 
   <div>
     <div class="container-4 w-container">
-      <div class="div-block-3" style="background-color: #f2f2f2;">
+      <div class="card" style=" height: 580px !important;font-family: 'Roboto Condensed', sans-serif;">
         <div>
-          <h3 class="heading">Sign up</h3>
+          <h3 class="heading" style="font-family: 'Roboto Condensed', sans-serif; padding-top: 10px">Sign up</h3>
         </div>
         <div>
-          <h6 class="heading-2">If you have already registered please <a href="/users/sign_in" class="">click here</a></h6>
+          <h6 class="heading-2" style="font-family: 'Roboto Condensed', sans-serif;">If you have already registered please <a href="/users/sign_in" class="button" class="">
+            <span>Log In</span> 
+          </a></h6>
           
           <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
             <div class="div-block-1">
@@ -81,17 +177,22 @@
                   </div>
                   <div class="column-3 w-col w-col-6">
                     <h6 class="heading-6" style="text-align: left !important; margin: 0px 0px 0px 10px; font-size: 14px;">Where did you hear about the conference?</h6>
-                    <%= f.select :promotion, options_for_select(['Website', 'E-mailers', 'Social Media','Colleagues', 'Others']), {}, { class: "form-control required w-input margin-on-select"}%>
+                    <%= f.select :promotion, options_for_select(['Website', 'E-mailers', 'Social Media','Colleagues', 'Others']), {}, { class: "form-control required w-input margin-on-select", style: "margin-left:10px;"}%>
                   </div>
                 </div>
               </div>
               <div>
                 <div class="w-row">
-                  <div class="column-3 w-col w-col-5">
+                  <div class="column-4 w-col w-col-4">
                     
                   </div>
-                  <div class="column-5 w-col w-col-7">
-                    <%= f.submit "Sign up", class: "button-3 w-button", style: "float:left; text-align:center; margin-bottom: 15px; border-radius: 10px;" %>
+                  <div class="column- w-col w-col-4">
+                    <%= button_tag(type: 'submit', class: "btn") do %>
+ <span class="">Sign Up</span>
+<% end %>
+                  </div>
+                  <div class="column-4 w-col w-col-4">
+                    
                   </div>
                 </div>
               </div>

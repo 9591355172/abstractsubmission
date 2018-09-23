@@ -1005,6 +1005,7 @@ textarea.w-select {
 .w-slider-arrow-right {
   position: absolute;
   width: 80px;
+  height: 40px;
   top: 0;
   right: 0;
   bottom: 0;
@@ -1741,8 +1742,8 @@ textarea.w-select {
   padding: 9px 30px;
   text-align: left;
   cursor: pointer;
-  color: #222222;
-  background-color: #dddddd;
+  color: #fff;
+  background-color: #333a56;
 }
 .w-tab-link.w--current {
   background-color: #C8C8C8;

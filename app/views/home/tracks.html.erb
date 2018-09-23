@@ -1,71 +1,269 @@
 <% content_for :styles do %>
     <style type="text/css">
         .heading-tittle h2 {
-    position: relative;
-    display: inline-block;
-    margin-bottom: 0;
+          text-transform: uppercase;
+          position: relative;
+          text-align: center;
+          font-size: 28px;
+          font-weight: 400px;
+          line-height: 10px;
+          letter-spacing: 1px;
+          font-family: 'Roboto Condensed', sans-serif;
+     }
+    
+.tab {
+    float: left;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    width: 30%;
+    /*height: 300px;*/
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+    display: block;
     background-color: inherit;
-    padding-left: 14px;
-    padding-right: 14px;
-    z-index: 2;
-    font-size: 26px;
-    line-height: 24px;
-    background: #fff;
-    margin: 0;
-    text-transform: uppercase; }
-
-    .heading-tittle.color-black h2{
-            color: #222;
-    }
-    .heading-tittle {
-    position: relative;
-    text-align: center;
+    color: black;
+    padding: 22px 16px;
+    width: 100%;
+    border: none;
+    outline: none;
+    text-align: left;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 17px;
 }
-.heading-tittle::before, .heading-tittle::after {
-    content: "";
-    position: absolute;
-    width: 35%;
-    height: 0;
-    border-top-width: 2px;
-    color: #3b1e9a;}
 
-    .heading-tittle::after {
-    top: 7%;
-    border-top-style: solid;
-    left: auto;
-    right: 33%;
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: #ddd;
 }
-:after, :before {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
+
+/* Create an active/current "tab button" class */
+.tab button.active {
+    background-color: #505050;
+    color:white;
+}
+
+/* Style the tab content */
+.tabcontent {
+    float: left;
+    padding: 0px 12px;
+    /*border: 1px solid #ccc;*/
+    width: 70%;
+    border-left: none;
+    /*height: 300px;*/
 }
     </style>
-<%end%>  
+<%end%> 
+
+<% content_for :scripts do%>
+
+<script>
+function openCity(evt, cityName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+<% end %>
+
+
+
 
     <div>
       <div class="heading-tittle color-black w-container">
-        <h2 class="" style="margin-top: 30px; margin-bottom:30px;">List of tracks</h2>
-        <div class="div-block-4" style="text-align: left">
-          <h6 class="heading-11">The conference presentation tracks include the following:</h6>
-          <ul class="unordered-list">
-            <li class="list-item">Innovating on pedagogy and curriculum.</li>
-            <li class="list-item-2">Building inclusive markets</li>
-            <li class="list-item-3">Re-thinking CSR</li>
-            <li class="list-item-4">Asian way of thinking: Integrating local diversities in management education</li>
-            <li class="list-item-5">Management education for the future</li>
-            <li class="list-item-6">Sustainability and development</li>
-            <li class="list-item-7">Social impact investing</li>
-            <li class="list-item-8">Sustainable businesses</li>
-            <li class="list-item-9">Sustainable cities</li>
-            <li class="list-item-10">Social entrepreneurship</li>
-            <li class="list-item-11">Global peace and education</li>
-            <li class="list-item-12">Business Initiatives for Sustainable Development</li>
-            <li class="list-item-13">Inequality - the role for businesses</li>
-            <li class="list-item-14">Engaging with Sustainable Development Goals - The local experiences</li>
-            <li class="list-item-14">Extreme events, disasters and building resilience</li>
-          </ul>
-        </div>
+        <h2 class="" style="margin-top: 30px; margin-bottom:30px;"><p style="text-decoration: underline; text-decoration-color: #3b1e9a;">List of tracks</p></h2>
+
       </div>
     </div>
+<div class="tab card-new">
+  <button class="tablinks active" onclick="openCity(event, '1')" id="defaultOpen" style="border-bottom: 1px solid black ">
+  Sustainability and development
+  </button>
+  <button class="tablinks" onclick="openCity(event, '2')" style="border-bottom: 1px solid black ">
+  Engaging with Sustainable Development Goals - The local experiences
+  </button>
+  <button class="tablinks" onclick="openCity(event, '3')" style="border-bottom: 1px solid black ">
+    Innovating on pedagogy and curriculum
+  </button>
+  <button class="tablinks" onclick="openCity(event, '4')" style="border-bottom: 1px solid black ">
+  Building inclusive markets
+  </button>
+  <button class="tablinks" onclick="openCity(event, '5')" style="border-bottom: 1px solid black ">
+  Re-thinking CSR
+  </button>
+  <button class="tablinks" onclick="openCity(event, '6')" style="border-bottom: 1px solid black ">
+  Asian way of thinking: Integrating local diversities in management education
+  </button>
+  <button class="tablinks" onclick="openCity(event, '7')" style="border-bottom: 1px solid black ">
+  Management education for the future
+  </button>
+  <button class="tablinks" onclick="openCity(event, '8')" style="border-bottom: 1px solid black ">
+  Social impact investing
+  </button>
+  <button class="tablinks" onclick="openCity(event, '9')" style="border-bottom: 1px solid black ">
+  Sustainable businesses
+  </button>
+  <button class="tablinks" onclick="openCity(event, '10')" style="border-bottom: 1px solid black ">
+  Sustainable cities
+  </button>
+  <button class="tablinks" onclick="openCity(event, '11')" style="border-bottom: 1px solid black ">
+  Social entrepreneurship
+  </button>
+  <button class="tablinks" onclick="openCity(event, '12')" style="border-bottom: 1px solid black ">
+  Global peace and education
+  </button>
+  <button class="tablinks" onclick="openCity(event, '13')" style="border-bottom: 1px solid black ">
+  Business Initiatives for Sustainable Development
+  </button>
+  <button class="tablinks" onclick="openCity(event, '14')" style="border-bottom: 1px solid black ">
+  Inequality - the role for businesses
+  </button>
+  <button class="tablinks" onclick="openCity(event, '15')" style="border-bottom: 1px solid black ">
+  Extreme events, disasters and building resilience
+  </button>
+</div>
+
+<div id="1" class="tabcontent">
+      <div class="column-12 w-col w-col-12">
+        <div class="card-new">
+          <div class="row-5 w-row">
+            <div class="w-col w-col-12" style="padding: 10px;">
+              <h4 class="heading-8" style="text-align: center !important;font-family: 'Roboto Condensed', sans-serif;"><u>SUSTAINABILITY AND DEVELOPMENT</u><br></h4>
+              <p style="text-align: justify;">
+                Asia consists of a large number of emerging economies.  Since the early 1990s, about a billion people in Asia have been lifted out of poverty.  Nevertheless, many are still left behind.  At the same time, the drive to achieve economic development has put immense pressure on both the social and the environmental fronts.  The ambitious, comprehensive and interconnected nature of the 2030 Agenda poses to us all tough questions about the challenges and opportunities ahead.  Can we build sustainable prosperity such that everyone has a chance to flourish and future generations are not left with depleted resources?   <br>
+                
+                Examples of questions to examine in this track include: <br>
+                <li>
+                  Does economic development necessarily mean trade-offs in the social and environmental dimensions?  Can the development of social agenda (e.g., gender equality, quality education, quality healthcare) and environmental preservation (e.g., affordable and renewable energy, circular economy) be opportunities for economic development? 
+                </li>
+                <li>
+                  What are the biggest challenges within the 2030 Agenda for different Asian economies?  How can we tackle these challenges?
+                </li>
+                <li>
+                  Unbridled economic growth and development often brings sustainability challenges, such as widening income gap among people, massive urbanization with insufficient infrastructure, deforestation with threats to biodiversity, inadequate waste management endangering life on land and below water, etc.  Many such issues call for policy interventions.  How can public-private partnership help us build a sustainable future?
+                </li>
+                <li>
+                  Other questions that address sustainability issues related to economic development are welcome.
+                </li>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+</div>
+
+<div id="2" class="tabcontent" style="display: none">
+        <div class="column-12 w-col w-col-12">
+        <div class="card-new">
+          <div class="row-5 w-row">
+            <div class="w-col w-col-12" style="padding: 10px;">
+              <h4 class="heading-8" style="text-align: center !important;font-family: 'Roboto Condensed', sans-serif;"><u>Engaging with SDGs: The Local Experiences</u><br></h4>
+              <p style="text-align: justify;">
+                The 2030 Agenda for Sustainable Development, adopted at the United Nations in 2015, sets out an ambitious plan of action with the overarching objective of leaving no one behind. At its core are 17 Sustainable Development Goals (SDGs) comprising 169 targets to be achieved by 2030. These 17 Goals build on the experiences of the Millennium Development Goals, while including new areas such as climate change, economic inequality, innovation, sustainable consumption, peace and justice, among other priorities. The goals are interconnected – often the key to success on one goal will involve tackling issues more commonly associated with another. It is also important to note that successful implementation of SDGs will require partnership among all stakeholders e.g. Government, NGOs, Businesses, Civil Society and Academia, etc.  <br>
+                If we talk about Asia and Pacific region, it is important to note that some SDGs have registered positive progress, particularly towards Goal 9 - focused on industry, innovation and infrastructure. However, Asia and the Pacific has failed to reduce inequalities within and among countries (SDG 10) and inequalities have widened since 2000. Regional progress towards SDGs focused on promoting environmental sustainability has been insufficient across the board. <br>
+                In this context, it is pertinent to deliberate and understand what progress, so far, have been made, and how multi-stakeholder integrated approach can be adopted to advance the 2030 agenda. This session will thus provide a platform to foster dialogues with regard to SDG implementation and exploring the best practices. The session will try to see how the businesses are integrating the SDGs framework for future growth. How can business work with governments to develop policy frame9work to achieve 2030 agenda? How academia and civil society can help in advancing the 2030 agenda? What are some successful examples of collective action in this regard?  <br>
+                The papers are invited in the following specific areas: <br>
+                <li>
+                  Policy formwork for the SDGs in Asia region and progress 
+                </li>
+                <li>
+                  The role of  Businesses in the implementation of SDGs (Invited Guests)
+                </li>
+                <li>
+                  SDGs and Social Engagement in Asian region (invited Guests)
+                </li>
+                <li>
+                  Academic Perspectives on the SDG: Opportunities and Challenges  
+                </li>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+</div>
+
+<div id="3" class="tabcontent" style="display: none">
+  <div class="card-new">
+    <p style="text-align: center; font-size: 18px; padding: 10px;">Content coming soon </p> 
+  </div>
+</div>
+
+<div id="4" class="tabcontent" style="display: none">
+  <div class="card-new">
+    <p style="text-align: center; font-size: 18px; padding: 10px;">Content coming soon </p> 
+  </div>
+</div>
+<div id="5" class="tabcontent" style="display: none">
+  <div class="card-new">
+    <p style="text-align: center; font-size: 18px; padding: 10px;">Content coming soon </p> 
+  </div>
+</div>
+<div id="6" class="tabcontent" style="display: none">
+  <div class="card-new">
+    <p style="text-align: center; font-size: 18px; padding: 10px;">Content coming soon </p> 
+  </div>
+</div>
+<div id="7" class="tabcontent" style="display: none">
+  <div class="card-new">
+    <p style="text-align: center; font-size: 18px; padding: 10px;">Content coming soon </p> 
+  </div>
+</div>
+<div id="8" class="tabcontent" style="display: none">
+  <div class="card-new">
+    <p style="text-align: center; font-size: 18px; padding: 10px;">Content coming soon </p> 
+  </div>
+</div>
+<div id="9" class="tabcontent" style="display: none">
+  <div class="card-new">
+    <p style="text-align: center; font-size: 18px; padding: 10px;">Content coming soon </p> 
+  </div>
+</div>
+<div id="10" class="tabcontent" style="display: none">
+  <div class="card-new">
+    <p style="text-align: center; font-size: 18px; padding: 10px;">Content coming soon </p> 
+  </div>
+</div>
+<div id="11" class="tabcontent" style="display: none">
+  <div class="card-new">
+    <p style="text-align: center; font-size: 18px; padding: 10px;">Content coming soon </p> 
+  </div>
+</div>
+<div id="12" class="tabcontent" style="display: none">
+  <div class="card-new">
+    <p style="text-align: center; font-size: 18px; padding: 10px;">Content coming soon </p> 
+  </div>
+</div>
+<div id="13" class="tabcontent" style="display: none">
+  <div class="card-new">
+    <p style="text-align: center; font-size: 18px; padding: 10px;">Content coming soon </p> 
+  </div>
+</div>
+<div id="14" class="tabcontent" style="display: none">
+  <div class="card-new">
+    <p style="text-align: center; font-size: 18px; padding: 10px;">Content coming soon </p> 
+  </div>
+</div>
+<div id="15" class="tabcontent" style="display: none">
+  <div class="card-new">
+    <p style="text-align: center; font-size: 18px; padding: 10px;">Content coming soon </p> 
+  </div>
+</div>
+
+
+
+
+
 

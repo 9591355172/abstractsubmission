@@ -1,63 +1,34 @@
+
 <% content_for :styles do %>
     <style type="text/css">
         .heading-tittle h2 {
-    position: relative;
-    display: inline-block;
-    margin-bottom: 0;
-    background-color: inherit;
-    padding-left: 14px;
-    padding-right: 14px;
-    z-index: 2;
-    font-size: 26px;
-    line-height: 24px;
-    background: #fff;
-    margin: 0;
-    text-transform: uppercase; }
+          text-transform: uppercase;
+          position: relative;
+          text-align: center;
+          font-size: 28px;
+          font-weight: 400px;
+          line-height: 10px;
+          letter-spacing: 1px;
+          font-family: 'Roboto Condensed', sans-serif;
+     }
+    
 
-    .heading-tittle.color-black h2{
-            color: #222;
-    }
-    .heading-tittle {
-    position: relative;
-    text-align: center;
-}
-.heading-tittle::before, .heading-tittle::after {
-    content: "";
-    position: absolute;
-    width: 35%;
-    height: 0;
-    border-top-width: 2px;
-    color: #3b1e9a;}
-
-    .heading-tittle::after {
-    top: 2%;
-    border-top-style: solid;
-    left: auto;
-    right: 33%;
-}
-:after, :before {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-}
     </style>
-<%end%>  
-
-
+<%end%> 
 <div>
   <div class="heading-tittle color-black w-container">
-    <h2 class="-5" style="margin-top: 30px; margin-bottom: 30px">Track chairs</h2>
+    <h2 class="-5" style="margin-top: 30px; margin-bottom: 30px"> <p style="text-decoration: underline; text-decoration-color: #3b1e9a;">Track chairs</p></h2>
     <div class="row-3 w-row">
       <div class="column-12 w-col w-col-12">
-        <div class="div-block-5" style="background-color: #f2f2f2">
+        <div class="card-track">
           <div class="row-5 w-row">
-            <div class="w-col w-col-3"><img src="../track/DrPamsyHui.jpg" width="225" class="image-6" style="border-radius: 50%; height: 150px; width: 150px; margin-left: 60px;"></div>
+            <div class="w-col w-col-3" style="text-align: center"><img src="../track/DrPamsyHui.jpg" width="225" class="image-6" style="border-radius: 50%; height: 120px; width: 120px; object-fit: cover; object-position: 0% 0%; text-align: center;"></div>
             <div class="w-col w-col-9">
-              <h4 class="heading-8" style="margin-bottom: 0px !important; padding-top: 30px;">Dr Pamsy Hui</h4>
-              <p style="text-align: center; margin-bottom: 10px !important; font-size: 14px ">(pamsy.hui@polyu.edu.hk)</p>
-              <h5 class="heading-10" style="margin-bottom: 0px !important;">MBA Programme Director 
+              <h4 class="heading-8" style="margin-bottom: 0px !important;font-family: 'Roboto Condensed', sans-serif;">Dr. Pamsy Hui</h4>
+              <p style="text-align: center; font-size: 14px;font-family: 'Roboto Condensed', sans-serif;color:#6c757d!important ">(pamsy.hui@polyu.edu.hk)</p>
+              <h5 class="heading-10" style="font-size: 16px;font-family: 'Roboto Condensed', sans-serif;">MBA Programme Director 
               </h5>
-              <h5 class="heading-10">The Hong Kong Polytechnic University</h5>
+              <h5 class="heading-10" style="font-size: 16px;font-family: 'Roboto Condensed', sans-serif;">The Hong Kong Polytechnic University</h5>
             </div>
           </div>
           <div class="row-5 w-row" style="padding: 10px;">
@@ -70,15 +41,15 @@
         </div>
       </div>
       <div class="column-12 w-col w-col-12" style="margin-top: 20px;">
-        <div class="div-block-5" style="background-color: #f2f2f2">
+        <div class="card-track">
           <div class="row-5 w-row">
-            <div class="w-col w-col-3"><img src="../track/ProfSanrtoshKumar.jpg" width="225" class="image-6" style="border-radius: 50%; height: 150px; width: 150px; margin-left: 60px;"></div>
+            <div class="w-col w-col-3" style="text-align: center"><img src="../track/ProfSanrtoshKumar.jpg" width="225" class="image-6" style="border-radius: 50%; height: 120px; width: 120px; object-fit: cover; object-position: 50% 0%"></div>
             <div class="w-col w-col-9">
-              <h4 class="heading-8" style="margin-bottom: 0px !important; padding-top: 20px;">PROF. SANTOSH KUMAR</h4>
-              <p style="text-align: center; margin-bottom: 10px !important; font-size: 14px ">(Santosh.kumar@aurouniversity.edu.in; kumar29466@yahoo.co.in)</p>
-              <h5 class="heading-10" style="margin-bottom: 0px !important;">Head, Public Policy
+              <h4 class="heading-8" style="margin-bottom: 0px !important; padding-top: 20px;font-family: 'Roboto Condensed', sans-serif;">Prof. Santosh Kumar</h4>
+              <p style="text-align: center; margin-bottom: 10px !important; font-size: 14px;color:#6c757d!important ">(Santosh.kumar@aurouniversity.edu.in; kumar29466@yahoo.co.in)</p>
+              <h5 class="heading-10" style="font-size: 16px;font-family: 'Roboto Condensed', sans-serif;">Head, Public Policy
               </h5>
-              <h5 class="heading-10">School of Liberal Arts and Human Sciences
+              <h5 class="heading-10" style="font-size: 16px;font-family: 'Roboto Condensed', sans-serif;">School of Liberal Arts and Human Sciences
 AURO University</h5>
             </div>
           </div>
@@ -97,18 +68,18 @@ While for the state of Gujarat, he has been in the policy formulation and implem
           </div>
         </div>
       </div>
-      <div class="column-12 w-col w-col-12" style="margin-top: 20px;">
-        <div class="div-block-5" style="background-color: #f2f2f2">
+      <div class="column-6 w-col w-col-6" style="margin-top: 20px;">
+        <div class="card-track" style="height: 229px;">
           <div class="row-5 w-row">
-            <div class="w-col w-col-3"><img src="../track/ProfSatyajitMajumdar.jpg" width="225" class="image-6" style="border-radius: 50%; height: 150px; width: 150px; margin-left: 60px;"></div>
+            <div class="w-col w-col-3" style="text-align: center"><img src="../track/ProfSatyajitMajumdar.jpg" width="225" class="image-6" style="border-radius: 50%; height: 120px; width: 120px; object-fit: cover; object-position: 50% 0%"></div>
             <div class="w-col w-col-9">
-              <h4 class="heading-8" style="margin-bottom: 0px !important; padding-top: 10px;">Prof. Satyajit Majumdar</h4>
-              <p style="text-align: center; margin-bottom: 20px !important; font-size: 14px ">(satyajit@tiss.edu)</p>
+              <h4 class="heading-8" style="margin-bottom: 0px !important; padding-top: 10px;font-family: 'Roboto Condensed', sans-serif;">Prof. Satyajit Majumdar</h4>
+              <p style="text-align: center; margin-bottom: 20px !important; font-size: 14px;color:#6c757d!important ">(satyajit@tiss.edu)</p>
               
-              <h5 class="heading-10" style="margin-bottom: 0px !important;">Professor and Chairperson,
+              <h5 class="heading-10" style="font-size: 16px;font-family: 'Roboto Condensed', sans-serif;">Professor and Chairperson,
 Center for Social Entrepreneurship
               </h5>
-              <h5 class="heading-10">Tata Institute of Social Sciences (TISS, Mumbai)</h5>
+              <h5 class="heading-10" style="font-size: 16px;font-family: 'Roboto Condensed', sans-serif;">Tata Institute of Social Sciences (TISS, Mumbai)</h5>
             </div>
           </div>
           <div class="row-5 w-row" style="padding: 10px;">
@@ -118,16 +89,16 @@ Center for Social Entrepreneurship
           </div>
         </div>
       </div>
-      <div class="column-12 w-col w-col-12" style="margin-top: 20px;">
-        <div class="div-block-5" style="background-color: #f2f2f2">
+      <div class="column-6 w-col w-col-6" style="margin-top: 20px;">
+        <div class="card-track" style="height: 229px;">
           <div class="row-5 w-row">
-            <div class="w-col w-col-3"><img src="../track/DrKKuperanVishwanathan.jpg" width="225" class="image-6" style="border-radius: 50%; height: 150px; width: 150px; margin-left: 60px;"></div>
+            <div class="w-col w-col-3" style="text-align: center"><img src="../track/DrKKuperanVishwanathan.jpg" width="225" class="image-6" style="border-radius: 50%; height: 120px; width: 120px; object-fit: cover; object-position: 50% 0%"></div>
             <div class="w-col w-col-9">
-              <h4 class="heading-8" style="margin-bottom: 0px !important; padding-top: 10px;">Dr. K Kuperan Vishwanathan</h4>
-              <p style="text-align: center; margin-bottom: 20px !important; font-size: 14px ">(kuperan@uum.edu.my)</p>
-              <h5 class="heading-10" style="margin-bottom: 0px !important;">Professor and Head of Financial Analysis and Policy Group
+              <h4 class="heading-8" style="margin-bottom: 0px !important; padding-top: 10px;font-family: 'Roboto Condensed', sans-serif;">Dr. K Kuperan Vishwanathan</h4>
+              <p style="text-align: center; margin-bottom: 20px !important; font-size: 14px ; color:#6c757d!important">(kuperan@uum.edu.my)</p>
+              <h5 class="heading-10" style="font-size: 16px;font-family: 'Roboto Condensed', sans-serif;">Professor and Head of Financial Analysis and Policy Group
               </h5>
-              <h5 class="heading-10">Othman Yeop Abdullah Graduate School of Business Malaysia</h5>
+              <h5 class="heading-10" style="font-size: 16px;font-family: 'Roboto Condensed', sans-serif;">Othman Yeop Abdullah Graduate School of Business Malaysia</h5>
             </div>
           </div>
           <div class="row-5 w-row" style="padding: 10px;">
@@ -137,17 +108,17 @@ Center for Social Entrepreneurship
           </div>
         </div>
       </div>
-      <div class="column-12 w-col w-col-12" style="margin-top: 20px;">
-        <div class="div-block-5" style="background-color: #f2f2f2">
+      <div class="column-6 w-col w-col-6" style="margin-top: 20px;">
+        <div class="card-track" style="height: 229px;">
           <div class="row-5 w-row">
-            <div class="w-col w-col-3"><img src="../track/DrDivyaSinghal.jpg" width="225" class="image-6" style="border-radius: 50%; height: 150px; width: 150px; margin-left: 60px;"></div>
+            <div class="w-col w-col-3" style="text-align: center"><img src="../track/DrDivyaSinghal.jpg" width="225" class="image-6" style="border-radius: 50%; height: 120px; width: 120px; object-fit: cover; object-position: 50% 0%"></div>
             <div class="w-col w-col-9">
-              <h4 class="heading-8" style="margin-bottom: 0px !important; padding-top: 10px;">Dr.Divya Singhal</h4>
-              <p style="text-align: center; margin-bottom: 20px !important; font-size: 14px ">(divyasinghal@gim.ac.in)</p>
+              <h4 class="heading-8" style="margin-bottom: 0px !important; padding-top: 10px;font-family: 'Roboto Condensed', sans-serif;">Dr. Divya Singhal</h4>
+              <p style="text-align: center; margin-bottom: 20px !important; font-size: 14px; color:#6c757d">(divyasinghal@gim.ac.in)</p>
               
-              <h5 class="heading-10" style="margin-bottom: 0px !important;">Associate Professor (General Management)
+              <h5 class="heading-10" style="font-size: 16px;font-family: 'Roboto Condensed', sans-serif;">Associate Professor (General Management)
               </h5>
-              <h5 class="heading-10">Goa Institute of Management</h5>
+              <h5 class="heading-10" style="font-size: 16px;font-family: 'Roboto Condensed', sans-serif;">Goa Institute of Management</h5>
             </div>
           </div>
           <div class="row-5 w-row" style="padding: 10px;">
@@ -157,17 +128,17 @@ Center for Social Entrepreneurship
           </div>
         </div>
       </div>
-      <div class="column-12 w-col w-col-12" style="margin-top: 20px;">
-        <div class="div-block-5" style="background-color: #f2f2f2">
+      <div class="column-6 w-col w-col-6" style="margin-top: 20px;">
+        <div class="card-track" style="height: 229px;">
           <div class="row-5 w-row">
-            <div class="w-col w-col-3"><img src="../track/ProfJankiAndharia.jpeg" width="225" class="image-6" style="border-radius: 50%; height: 150px; width: 150px; margin-left: 60px;"></div>
+            <div class="w-col w-col-3" style="text-align: center"><img src="../track/ProfJankiAndharia.jpeg" width="225" class="image-6" style="border-radius: 50%; height: 120px; width: 120px; object-fit: cover; object-position: 50% 0%"></div>
             <div class="w-col w-col-9">
-              <h4 class="heading-8" style="margin-bottom: 0px !important; padding-top: 10px;">Prof.Janki Andharia</h4>
-              <p style="text-align: center; margin-bottom: 20px !important; font-size: 14px ">(andharia@tiss.edu)</p>
-              <h5 class="heading-10" style="margin-bottom: 0px !important;">Dean - Jamsetji Tata School of Disaster Studies <br>
+              <h4 class="heading-8" style="margin-bottom: 0px !important; padding-top: 10px;font-family: 'Roboto Condensed', sans-serif;">Prof. Janki Andharia</h4>
+              <p style="text-align: center; margin-bottom: 20px !important; font-size: 14px;color:#6c757d!important ">(andharia@tiss.edu)</p>
+              <h5 class="heading-10" style="font-size: 16px;font-family: 'Roboto Condensed', sans-serif;">Dean - Jamsetji Tata School of Disaster Studies <br>
 Chairperson - Centre for Disasters and Development, Jamsetji Tata School of Disaster Studies 
               </h5>
-              <h5 class="heading-8">Tata Institute of Social Sciences (TISS, Mumbai)</h5>
+              <h5 class="heading-10" style="font-size: 16px;font-family: 'Roboto Condensed', sans-serif;">Tata Institute of Social Sciences (TISS, Mumbai)</h5>
             </div>
           </div>
           <div class="row-5 w-row" style="padding: 10px;">

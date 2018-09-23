@@ -1066,6 +1066,7 @@ figcaption {
   background-image: url('../003_PRMEMICROSITEBanner_001_F2.jpg');
   background-position: 50% 50%;
   background-size: contain;
+  
 }
 
 .slide-6 {
@@ -1341,6 +1342,7 @@ figcaption {
   padding-top: 5px;
   border-top: 2px solid #00adef;
   background-color: #fff;
+  color:#000;
 }
 
 .tabs-menu {

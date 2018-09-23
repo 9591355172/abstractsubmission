@@ -1,169 +1,231 @@
+
 <% content_for :styles do %>
     <style type="text/css">
         .heading-tittle h2 {
-    position: relative;
-    display: inline-block;
-    margin-bottom: 0;
-    background-color: inherit;
-    padding-left: 14px;
-    padding-right: 14px;
-    z-index: 2;
-    font-size: 26px;
-    line-height: 24px;
-    background: #fff;
-    margin: 0;
-    text-transform: uppercase; }
+          text-transform: uppercase;
+          position: relative;
+          text-align: center;
+          font-size: 28px;
+          font-weight: 400px;
+          line-height: 10px;
+          letter-spacing: 1px;
+          font-family: 'Roboto Condensed', sans-serif;
+     }
+    .table-fill {
+  background: white;
+  border-radius:3px;
+  border-collapse: collapse;
+  height: 320px;
+  margin: auto;
+  padding:5px;
+  width: 100%;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  animation: float 5s infinite;
+}
+ 
+th {
+  color:#fff;
+  background:#333a56;
+  border-bottom:4px solid #9ea7af;
+  border-right: 1px solid #fff;
+  font-size:23px;
+  font-weight: 100;
+  padding:24px;
+  text-align:left;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  vertical-align:middle;
+}
 
-    .heading-tittle.color-black h2{
-            color: #222;
-    }
-    .heading-tittle {
-    position: relative;
-    text-align: center;
+th:first-child {
+  border-top-left-radius:3px;
 }
-.heading-tittle::before, .heading-tittle::after {
-    content: "";
-    position: absolute;
-    width: 35%;
-    height: 0;
-    border-top-width: 2px;
-    color: #3b1e9a;}
+ 
+th:last-child {
+  border-top-right-radius:3px;
+  border-right:none;
+}
+  
+tr {
+  border-top: 1px solid #C1C3D1;
+  border-bottom-: 1px solid #C1C3D1;
+  color:#666B85;
+  font-size:16px;
+  font-weight:normal;
+  text-shadow: 0 1px 1px rgba(256, 256, 256, 0.1);
+}
+ 
+tr:hover td {
+  background:#4E5066;
+  color:#FFFFFF;
+  border-top: 1px solid #22262e;
+}
+ 
+tr:first-child {
+  border-top:none;
+}
 
-    .heading-tittle::after {
-    top: 11%;
-    border-top-style: solid;
-    left: auto;
-    right: 33%;
+tr:last-child {
+  border-bottom:none;
 }
-:after, :before {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
+ 
+tr:nth-child(odd) td {
+  background:#EBEBEB;
 }
+ 
+tr:nth-child(odd):hover td {
+  background:#4E5066;
+}
+
+tr:last-child td:first-child {
+  border-bottom-left-radius:3px;
+}
+ 
+tr:last-child td:last-child {
+  border-bottom-right-radius:3px;
+}
+ 
+td {
+  background:#FFFFFF;
+  padding:20px;
+  text-align:left;
+  vertical-align:middle;
+  font-weight:300;
+  font-size:18px;
+  text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
+  border-right: 1px solid #C1C3D1;
+}
+
+td:last-child {
+  border-right: 0px;
+}
+
+th.text-left {
+  text-align: left;
+}
+
+th.text-center {
+  text-align: center;
+}
+
+th.text-right {
+  text-align: right;
+}
+
+td.text-left {
+  text-align: left;
+}
+
+td.text-center {
+  text-align: center;
+}
+
+td.text-right {
+  text-align: right;
+}
+
+
     </style>
-<%end%>
+<%end%> 
 
 
-    <div>
-      <div class="heading-tittle color-black w-container">
-        <h2 class="" style="margin-top: 30px; margin-bottom: 30px;">FEES</h2>
-        <div data-duration-in="300" data-duration-out="100" class="w-tabs">
+    <div style="margin-bottom: 40px;">
+      <div class="heading-tittle color-black w-container" style="max-width: none !important;">
+
+
+        <div>
+      <div data-delay="4000" data-animation="slide" data-autoplay="1" data-duration="500" data-infinite="1" class="w-slider">
+        <div class="w-slider-mask">
+          <div class="slide-1 w-slide"></div>
+          <div class="slide-5 w-slide">
+            <a href="/tracks" class="button" style="position: absolute; top: 63%; left: 47%;  cursor: pointer; opacity: 0">
+              
+            </a>
+          </div>
+          <!-- <div class="slide-6 w-slide"></div> -->
+        </div>
+        <div class="w-slider-arrow-left">
+          <div class="w-icon-slider-left"></div>
+        </div>
+        <div class="w-slider-arrow-right">
+          <div class="w-icon-slider-right"></div>
+        </div>
+        <div class="w-slider-nav w-round"></div>
+      </div>
+      <div class="w-container"></div>
+        <h2 class="" style="margin-top: 30px; margin-bottom: 30px;"><p style="text-decoration: underline; text-decoration-color: #3b1e9a;">FEES</p></h2>
+
+
+</div>
+
+
+
+        <div data-duration-in="300" data-duration-out="100" class="w-tabs" style="max-width: 940px !important; margin: 0px 170px 0px 170px;">
           <div class="tabs-menu w-tab-menu">
             <a data-w-tab="Tab 1" class="open-tab w-inline-block w-tab-link w--current">
-              <div>INR</div>
+              <div style="font-size: 18px">INR</div>
             </a>
             <a data-w-tab="Tab 2" class="open-tab w-inline-block w-tab-link">
-              <div>DOLLARS</div>
+              <div style="font-size: 18px;">DOLLARS</div>
             </a>
           </div>
           <div class="w-tab-content" style="border-bottom-left-radius: 10px; border-bottom-right-radius: 10px;" >
             <div data-w-tab="Tab 1" class="w-tab-pane">
-              <div class="div-block-4">
-                <div>
-                  <div class="w-row">
-                    <div class="column-4 w-col w-col-6" style="background-color: #333a56;border-bottom: 1px solid white; border-top-left-radius: 10px;">
-                      <h5 class="heading-6" style="color:white">Industry participant</h5>
-                    </div>
-                    <div class="column-3 w-col w-col-6" style="border: 1px solid white; border-top-right-radius: 10px; background-color: #ddd">
-                      <h5 class="heading-7">8000 INR per person</h5>
-                    </div>
-                  </div>
-                </div>
-                <div>
-                  <div class="w-row">
-                    <div class="column-4 w-col w-col-6" style="background-color: #333a56;border-bottom: 1px solid white; border-top-left-radius: 10px;">
-                      <h5 class="heading-6" style="color:white">Members of UN Global Compact Network</h5>
-                    </div>
-                    <div class="column-3 w-col w-col-6" style="border: 1px solid white; border-top-right-radius: 10px; background-color: #ddd">
-                      <h5 class="heading-7">6000 INR per person</h5>
-                    </div>
-                  </div>
-                </div>
-                <div>
-                  <div class="w-row">
-                    <div class="column-4 w-col w-col-6" style="background-color: #333a56;border-bottom: 1px solid white; border-top-left-radius: 10px;">
-                      <h5 class="heading-6" style="color:white">Academics</h5>
-                    </div>
-                    <div class="column-3 w-col w-col-6" style="border: 1px solid white; border-top-right-radius: 10px; background-color: #ddd;">
-                      <h5 class="heading-7">6000 INR per person</h5>
-                    </div>
-                  </div>
-                </div>
-                <div>
-                  <div class="w-row">
-                    <div class="column-4 w-col w-col-6" style="background-color: #333a56;border-bottom: 1px solid white; border-top-left-radius: 10px;">
-                      <h5 class="heading-6" style="color:white">Students</h5>
-                    </div>
-                    <div class="column-3 w-col w-col-6" style="border: 1px solid white; border-top-right-radius: 10px; background-color: #ddd">
-                      <h5 class="heading-7">2000 INR per person</h5>
-                    </div>
-                  </div>
-                </div>
-                <div>
-                  <div class="w-row">
-                    <div class="column-4 w-col w-col-6" style="background-color: #333a56;border-bottom: 1px solid white; border-top-left-radius: 10px; padding-bottom: 2px;">
-                      <h5 class="heading-6" style="color:white">Social Sector</h5>
-                    </div>
-                    <div class="column-3 w-col w-col-6" style="border: 1px solid white; border-top-right-radius: 10px;background-color: #ddd"">
-                      <h5 class="heading-7">1500 INR per person</h5>
-                    </div>
-                  </div>
-                </div>
-              </div>
+
+              <table class="table-fill">
+
+<tbody class="table-hover">
+<tr>
+<td class="text-left">Industry participant</td>
+<td class="text-left">8000 INR per person</td>
+</tr>
+<tr>
+<td class="text-left">Members of UN Global Compact Network</td>
+<td class="text-left">6000 INR per person</td>
+</tr>
+<tr>
+<td class="text-left">Academics</td>
+<td class="text-left">000 INR per person</td>
+</tr>
+<tr>
+<td class="text-left">Students</td>
+<td class="text-left">2000 INR per person</td>
+</tr>
+<tr>
+<td class="text-left">Social Sector</td>
+<td class="text-left">1500 INR per person</td>
+</tr>
+</tbody>
+</table>
+
             </div>
             <div data-w-tab="Tab 2" class="w-tab-pane w--tab-active">
-              <div class="div-block-4">
-                <div>
-                  <div class="w-row">
-                    <div class="column-4 w-col w-col-6" style="background-color: #333a56;border-bottom: 1px solid white; border-top-left-radius: 10px;">
-                      <h5 class="heading-6" style="color:white">Industry participant</h5>
-                    </div>
-                    <div class="column-3 w-col w-col-6" style="border: 1px solid white; border-top-right-radius: 10px;background-color: #ddd"">
-                      <h5 class="heading-7">120 USD per person</h5>
-                    </div>
-                  </div>
-                </div>
-                <div>
-                  <div class="w-row">
-                    <div class="column-4 w-col w-col-6" style="background-color: #333a56;border-bottom: 1px solid white; border-top-left-radius: 10px;">
-                      <h5 class="heading-6" style="color:white">Members of UN Global Compact Network</h5>
-                    </div>
-                    <div class="column-3 w-col w-col-6" style="border: 1px solid white; border-top-right-radius: 10px;background-color: #ddd"">
-                      <h5 class="heading-7">90 USD per person</h5>
-                    </div>
-                  </div>
-                </div>
-                <div>
-                  <div class="w-row">
-                    <div class="column-4 w-col w-col-6" style="background-color: #333a56;border-bottom: 1px solid white; border-top-left-radius: 10px;">
-                      <h5 class="heading-6" style="color:white">Academics</h5>
-                    </div>
-                    <div class="column-3 w-col w-col-6" style="border: 1px solid white; border-top-right-radius: 10px;background-color: #ddd">
-                      <h5 class="heading-7">90 USD per person</h5>
-                    </div>
-                  </div>
-                </div>
-                <div>
-                  <div class="w-row">
-                    <div class="column-4 w-col w-col-6" style="background-color: #333a56;border-bottom: 1px solid white; border-top-left-radius: 10px;">
-                      <h5 class="heading-6" style="color:white">Students</h5>
-                    </div>
-                    <div class="column-3 w-col w-col-6" style="border: 1px solid white; border-top-right-radius: 10px; background-color: #dddddd;">
-                      <h5 class="heading-7">30 USD per person</h5>
-                    </div>
-                  </div>
-                </div>
-                <div>
-                  <div class="w-row">
-                    <div class="column-4 w-col w-col-6" style="background-color: #333a56;border-bottom: 1px solid white; border-top-left-radius: 10px; padding-bottom: 2px;">
-                      <h5 class="heading-6" style="color:white">Social Sector</h5>
-                    </div>
-                    <div class="column-3 w-col w-col-6" style="border: 1px solid white; border-top-right-radius: 10px; background-color: #ddd">
-                      <h5 class="heading-7">20 USD per person</h5>
-                    </div>
-                  </div>
-                </div>
-              </div>
+
+              <table class="table-fill">
+
+<tbody class="table-hover">
+<tr>
+<td class="text-left">Industry participant</td>
+<td class="text-left">120 USD per person</td>
+</tr>
+<tr>
+<td class="text-left">Members of UN Global Compact Network</td>
+<td class="text-left">90 USD per person</td>
+</tr>
+<tr>
+<td class="text-left">Academics</td>
+<td class="text-left">90 USD per person</td>
+</tr>
+<tr>
+<td class="text-left">Students</td>
+<td class="text-left">30 USD per person</td>
+</tr>
+<tr>
+<td class="text-left">Social Sector</td>
+<td class="text-left">20 USD per person</td>
+</tr>
+</tbody>
+</table>
+
             </div>
           </div>
         </div>

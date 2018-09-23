@@ -24,6 +24,7 @@
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <%= yield :styles %>
+  <%= yield :scripts %>
   </head>
 
 
@@ -90,9 +91,8 @@
               <nav class="w-dropdown-list">
                 <%= link_to "List of Tracks", tracks_path, :class => "dropdown-links w-dropdown-link" %>
                 <a href="/trackchairs" class="dropdown-links w-dropdown-link">Track Chairs</a>
-                <a href="/trackdetails" class="dropdown-links w-dropdown-link">Track Details</a>
-                <%= link_to "Important Dates", dates_path, :class => "dropdown-links w-dropdown-link" %>
                 <%= link_to "Abstract Submissions", new_abstract_path, :class => "dropdown-links w-dropdown-link" %>
+                <%= link_to "Important Dates", dates_path, :class => "dropdown-links w-dropdown-link" %>
               </nav>
             </div>
             <div data-hover="1" data-delay="0" class="w-dropdown">
@@ -101,11 +101,25 @@
                 <div>Registration</div>
               </div>
               <nav class="w-dropdown-list">
-                <%= link_to "Fees", fees_path, :class => "dropdown-links w-dropdown-link" %>
                 <%= link_to "Dates", dates_path, :class => "dropdown-links w-dropdown-link" %>
+                <%= link_to "Fees", fees_path, :class => "dropdown-links w-dropdown-link" %>
                 <% if !current_user%>
                 <%= link_to "Sign Up", new_user_registration_path, :class => "dropdown-links w-dropdown-link" %>
                 <% end %>
+              </nav>
+            </div>
+            <div data-hover="1" data-delay="0" class="w-dropdown">
+              <div class="dropdwon-toggle w-dropdown-toggle">
+                <div class="icon-4 w-icon-dropdown-toggle"></div>
+                <div>Forum Schedule</div>
+              </div>
+              <nav class="w-dropdown-list">
+                <a href="/comingup" class="dropdown-links w-dropdown-link">Keynote Speakers</a>
+                <a href="/comingup" class="dropdown-links w-dropdown-link">Panels</a>
+                <a href="/workshopdetails" class="dropdown-links w-dropdown-link">Workshops</a>
+                <a href="/comingup" class="dropdown-links w-dropdown-link">Conference Schedules</a>
+                <a href="/comingup" class="dropdown-links w-dropdown-link">Paper Presentation Schedule</a>
+                
               </nav>
             </div>
             <div data-hover="1" data-delay="0" class="w-dropdown">
@@ -115,22 +129,11 @@
               </div>
               <nav class="w-dropdown-list">
                 <a href="/details" class="dropdown-links w-dropdown-link">Colloquium Details</a>
-                <a href="/application" class="dropdown-links w-dropdown-link">Applications</a>
                 <%= link_to "Co-Chairs", cochair_path, :class => "dropdown-links w-dropdown-link" %>
+                <a href="/application" class="dropdown-links w-dropdown-link">Applications</a>
               </nav>
             </div>
-            <div data-hover="1" data-delay="0" class="w-dropdown">
-              <div class="dropdwon-toggle w-dropdown-toggle">
-                <div class="icon-4 w-icon-dropdown-toggle"></div>
-                <div>Program Schedule</div>
-              </div>
-              <nav class="w-dropdown-list">
-                <a href="/comingup" class="dropdown-links w-dropdown-link">Keynote Speakers</a>
-                <a href="/comingup" class="dropdown-links w-dropdown-link">Conference Schedules</a>
-                <a href="/comingup" class="dropdown-links w-dropdown-link">Paper Presentation Schedule</a>
-                <a href="/workshopdetails" class="dropdown-links w-dropdown-link">Workshops</a>
-              </nav>
-            </div>
+
             <div data-hover="1" data-delay="0" class="w-dropdown">
               <div class="dropdwon-toggle w-dropdown-toggle">
                 <div class="icon-4 w-icon-dropdown-toggle"></div>
@@ -160,7 +163,12 @@
         </div>
 
       </div>
+
+
+
+
 </div>
+
     <div class="div-block">
 <!--     <div class="section-4">
       <div class="row w-row">
@@ -172,7 +180,7 @@
 <div class="section-3">
       <div class="ticker-wrap">
       <div class="ticker">
-        <div class="ticker__item">ABSTRACT SUBMISSIONS DEADLINE : SEPTEMBER 30</div>
+        <div class="ticker__item">ABSTRACT SUBMISSIONS DEADLINE : <p class="ticker__item " style="color: #e9385a; margin-left: 0pc;"> SEPTEMBER 30 </p> </div>
       </div>
     </div>
     </div><%= render 'partials/flash' %>

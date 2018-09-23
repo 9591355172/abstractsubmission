@@ -26,8 +26,8 @@
     visibility: visible;
   }
   100% {
-    -webkit-transform: translate3d(-400%, 0, 0);
-    transform: translate3d(-400%, 0, 0);
+    -webkit-transform: translate3d(-600%, 0, 0);
+    transform: translate3d(-600%, 0, 0);
   }
 }
 @keyframes ticker {
@@ -37,8 +37,8 @@
     visibility: visible;
   }
   100% {
-    -webkit-transform: translate3d(-400%, 0, 0);
-    transform: translate3d(-400%, 0, 0);
+    -webkit-transform: translate3d(-600%, 0, 0);
+    transform: translate3d(-600%, 0, 0);
   }
 }
 .ticker-wrap {
@@ -69,14 +69,50 @@
 }
 .ticker-wrap .ticker__item {
   display: inline-block;
-  padding: 0 2rem;
+  /*padding: 0 2rem;*/
   font-size: 1rem;
   color: #333a56;
 }
 
-.margin-on-select {
-  margin-left: 10px !important;
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 100%;
+    height: 155px;
+    background-color: #fafbf3;
+    margin-top: 20px;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.container {
+    padding: 2px 16px;
+}
+
+.card-new {
+      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 100%;
+    background-color: #fff;
+    
+}
+
+.card-new:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
 
+.card-track {
+      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 100%;
+    background-color: #fafbf3;
+    
+}
 
+.card-track:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}

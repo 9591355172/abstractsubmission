@@ -1,31 +1,126 @@
 
+
+<% content_for :styles do %>
+    <style type="text/css">
+        .heading-tittle h2 {
+          text-transform: uppercase;
+          position: relative;
+          text-align: center;
+          font-size: 28px;
+          font-weight: 400px;
+          line-height: 10px;
+          letter-spacing: 1px;
+          font-family: 'Roboto Condensed', sans-serif;
+     }
+
+
+     .button {
+  border-radius: 4px;
+  background-color: #3ec9cb !important;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 18px;
+  padding: 10px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.btn {
+    border-radius: 4px;
+  background-color: #3ec9cb !important;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 18px;
+  padding: 10px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+    
+
+    </style>
+<%end%> 
 <% if current_user%>
 
 <div>
-  <div class="container-5 w-container">
-    <h3 class="heading-5">Update Abstract</h3>
-    <h6 class="heading-5">(Name of the file should be studentname_abstract-track)</h6>
+  <div class="container-5 w-container" style="max-width: none !important; margin-bottom: 50px;">
+            <div>
+      <div data-delay="4000" data-animation="slide" data-autoplay="1" data-duration="500" data-infinite="1" class="w-slider">
+        <div class="w-slider-mask">
+          <div class="slide-1 w-slide"></div>
+          <div class="slide-5 w-slide">
+            <a href="/tracks" class="button" style="position: absolute; top: 63%; left: 47%;  cursor: pointer; opacity: 0">
+              
+            </a>
+          </div>
+          <!-- <div class="slide-6 w-slide"></div> -->
+        </div>
+        <div class="w-slider-arrow-left">
+          <div class="w-icon-slider-left"></div>
+        </div>
+        <div class="w-slider-arrow-right">
+          <div class="w-icon-slider-right"></div>
+        </div>
+        <div class="w-slider-nav w-round"></div>
+      </div>
+      <div class="w-container"></div>
+    </div>
+    <div class="heading-tittle color-black w-container" style="margin-top: 20px;">
+    <h2 class="heading-5" style=""><p style="text-decoration: underline; text-decoration-color: #3b1e9a;">Update Abstract</p></h2>
+    </div>
+    <h6 class="heading-5" style="font-family: 'Roboto Condensed', sans-serif;">(Name of the file should be <i> studentname_abstract-track</i>)</h6>
     <div class="div-block-4">
       <div>
         <% if current_user.abstract.present?%>
         <div>
         	<%= form_tag abstracts_path, enctype: 'multipart/form-data' do %>
             <div class="w-row">
-              <div class="column-3 w-col w-col-5">
-                <h5 class="heading-6">
+              <div class="column-3 w-col w-col-5" style="display: inline-block;">
+                <h5 class="heading-6" style="font-family: 'Roboto Condensed', sans-serif;">
                 	Uploaded abstract:
-                	<a href="<%= current_user.abstract.abstract_url%>" target="blank"> 	<%= current_user.abstract.title %> </a>
+                	 <a class="btn" href="<%= current_user.abstract.abstract_url%>" target="blank" style="font-size: 16px;"> 	<%= current_user.abstract.title %> </a>
                 </h5>
               </div>
               <div class="column-3 w-col w-col-7">
-                <h5 class="heading-7">
+                <h5 class="heading-7" style="font-family: 'Roboto Condensed', sans-serif;">
                 	Choose new abstract:
                 	<%= file_field_tag :file  %>
                 </h5>
               </div>
             </div>
-            <div class="w-row heading-5">
-            	<%= submit_tag 'Update file' %>
+            <div class="w-row heading-5" style="margin-top: 20px;">
+              <%= button_tag(type: "submit", class: "button") do %>
+                   <span class="">Update File</span>
+              <% end %>
         	</div>
             <% end %>
           </div>

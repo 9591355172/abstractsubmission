@@ -1,10 +1,131 @@
 
+
+<% content_for :styles do %>
+    <style type="text/css">
+        .heading-tittle h2 {
+          text-transform: uppercase;
+          position: relative;
+          text-align: center;
+          font-size: 28px;
+          font-weight: 400px;
+          line-height: 10px;
+          letter-spacing: 1px;
+          font-family: 'Roboto Condensed', sans-serif;
+     }
+          .button {
+  border-radius: 4px;
+  background-color: #a9a9a9!important;
+  border: none;
+  color: #000;
+  text-align: center;
+  font-size: 15px;
+  padding: 8px 5px 8px 5px;
+  /*width: 20px;*/
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+
+          .btb {
+  border-radius: 4px;
+  background-color: #a9a9a9 !important;
+  border: none;
+  color: #000;
+  text-align: center;
+  font-size: 15px;
+  padding: 8px 5px 8px 5px;
+  /*width: 20px;*/
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+
+.btb span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.btb span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.btb:hover span {
+  padding-right: 25px;
+}
+
+.btb:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+
+    </style>
+<%end%> 
 <% if current_user%>
 
 <div>
-  <div class="container-5 w-container">
-    <h3 class="heading-5">Upload Abstract</h3>
-    <h6 class="heading-5">(Name of the file should be studentname_abstract-track)</h6>
+  <div class="container-5 w-container" style="max-width: none !important; padding-top: 0px !important">
+            <div>
+      <div data-delay="4000" data-animation="slide" data-autoplay="1" data-duration="500" data-infinite="1" class="w-slider">
+        <div class="w-slider-mask">
+          <div class="slide-1 w-slide"></div>
+          <div class="slide-5 w-slide">
+            <a href="/tracks" class="button" style="position: absolute; top: 63%; left: 47%;  cursor: pointer; opacity: 0">
+              
+            </a>
+          </div>
+          <!-- <div class="slide-6 w-slide"></div> -->
+        </div>
+        <div class="w-slider-arrow-left">
+          <div class="w-icon-slider-left"></div>
+        </div>
+        <div class="w-slider-arrow-right">
+          <div class="w-icon-slider-right"></div>
+        </div>
+        <div class="w-slider-nav w-round"></div>
+      </div>
+      <div class="w-container"></div>
+    </div>
+    <div class="heading-tittle color-black w-container">
+    <h2 class="heading-5">Upload Abstract</h2>
+    </div>
+    <h6 class="heading-5" style="font-family: 'Roboto Condensed', sans-serif;">(Name of the file should be studentname_abstract-track)</h6>
     <div class="div-block-4">
       <div>
         <div class="w-row heading-5">
@@ -26,11 +147,36 @@
 
 <% elsif %>
 <div>
-  <div class="container-5 w-container">
-    <h6 class="heading-5">Please &nbsp;
-    	<%= link_to "Log in", new_user_session_path,class:"btn btn-sm btn-danger btn-cons" %>
+  <div class="container-5 w-container" style="max-width: none !important; padding-top: 0px !important ">
+        <div>
+      <div data-delay="4000" data-animation="slide" data-autoplay="1" data-duration="500" data-infinite="1" class="w-slider">
+        <div class="w-slider-mask">
+          <div class="slide-1 w-slide"></div>
+          <div class="slide-5 w-slide">
+            <a href="/tracks" class="button" style="position: absolute; top: 63%; left: 47%;  cursor: pointer; opacity: 0">
+              
+            </a>
+          </div>
+          <!-- <div class="slide-6 w-slide"></div> -->
+        </div>
+        <div class="w-slider-arrow-left">
+          <div class="w-icon-slider-left"></div>
+        </div>
+        <div class="w-slider-arrow-right">
+          <div class="w-icon-slider-right"></div>
+        </div>
+        <div class="w-slider-nav w-round"></div>
+      </div>
+      <div class="w-container"></div>
+    </div>
+    <h6 class="heading-5" style="background-color: #a9a9a9; color:#3a3a3a; margin: 0px !important; font-size: 14px; height: 40px;">Please &nbsp;
+    	<%= link_to new_user_session_path,class:"button" do %>
+        <span> Log In </span> 
+      <% end %>
     	/
-    	<%= link_to "Register", new_user_registration_path,class:"btn btn-sm btn-danger btn-cons" %>&nbsp;
+    	<%= link_to new_user_registration_path,class:"btb" do%>
+      <span> Register</span> 
+      <%end%>&nbsp;
      to upload abtract</h6>
   </div>
 </div>

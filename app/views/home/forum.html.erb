@@ -1,81 +1,53 @@
 
-
 <% content_for :styles do %>
     <style type="text/css">
         .heading-tittle h2 {
-    position: relative;
-    display: inline-block;
-    margin-bottom: 0;
-    background-color: inherit;
-    padding-left: 14px;
-    padding-right: 14px;
-    z-index: 2;
-    font-size: 26px;
-    line-height: 24px;
-    background: #fff;
-    margin: 0;
-    text-transform: uppercase; }
+          text-transform: uppercase;
+          position: relative;
+          text-align: center;
+          font-size: 28px;
+          font-weight: 400px;
+          line-height: 10px;
+          letter-spacing: 1px;
+          font-family: 'Roboto Condensed', sans-serif;
+     }
+    
 
-    .heading-tittle.color-black h2{
-            color: #222;
-    }
-    .heading-tittle {
-    position: relative;
-    text-align: center;
-}
-.heading-tittle::before, .heading-tittle::after {
-    content: "";
-    position: absolute;
-    width: 35%;
-    height: 0;
-    border-top-width: 2px;
-    color: #3b1e9a;}
-
-    .heading-tittle::after {
-    top: 39%;
-    border-top-style: solid;
-    left: auto;
-    right: 33%;
-}
-:after, :before {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-}
     </style>
 <%end%> 
 <div>
       <div class="heading-tittle color-black w-container" style="margin-top: 30px; margin-bottom: 30px;">
-        <h2 class="-5">About the forum</h2>
+        <h2 class="-5"><p style="text-decoration: underline; text-decoration-color: #3b1e9a;">About the forum</p></h2>
     </div>
+<div class="row-3 w-row">
 
-    <div class="w-container">
-    	<p>
-    		<div class="w-container" style="margin-top: 30px; text-align: left !important;">
-        <h5 class="heading-5" style="text-align: left !important;">OBJECTIVES</h5>
+  <div class="column-6 w-col w-col-6">
+        <div class="card-track" style="padding: 10px; margin: 20px;">
+      <h5 class="heading-5" style="text-align: center !important;"> <u> OBJECTIVES </u></h5>
+      <li>
+          To bring together advocates of responsible citizenship, management and leadership from universities, corporates, civil society and management institutions across the Asia- Pacific region.
+
+
+        </li>
+        <li>
+          To influence research, theory and practices in the domain of education; pedagogy; conscious capitalism; sustainability. 
+        </li>
     </div>
-    		<li>
-    			To bring together advocates of responsible citizenship, management and leadership from universities, corporates, civil society and management institutions across the Asia- Pacific region.
+  </div>
 
-
-    		</li>
-    		<li>
-    			To influence research, theory and practices in the domain of education; pedagogy; conscious capitalism; sustainability. 
-    		</li>
-    		 <br>
-    		 <div class="w-container" style="margin-top: 30px; text-align: left !important;">
-        <h5 class="heading-5" style="text-align: left !important;">OUTCOMES</h5>
-    </div>
-    <li>
-    	Create a network of scholars working in the domain.
+  <div class="column-6 w-col w-col-6">
+              <div class="card-track" style="padding: 10px; margin: 20px; height: 150px">
+            <h5 class="heading-5" style="text-align: center !important;"> <u> OUTCOMES </u></h5>
+            <li>
+      Create a network of scholars working in the domain.
     </li>
     <li>
-    	Creating awareness of best practices in the domain
+      Creating awareness of best practices in the domain
     </li>
     <li>
-    	To publish selected papers from proceedings of the forum by reputed journals and publishers
+      To publish selected papers from proceedings of the forum by reputed journals and publishers
     </li>
-
-		</p>
-    </div>
+          </div>
+  </div>
+  </div>
 </div>
