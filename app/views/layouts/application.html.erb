@@ -5,7 +5,7 @@
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <!-- <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %> -->
       <meta charset="utf-8">
   
   <meta content="All Layouts" property="og:title">
@@ -95,6 +95,7 @@
               </div>
               <nav class="w-dropdown-list">
                 <%= link_to "List of Tracks", tracks_path, :class => "dropdown-links w-dropdown-link" %>
+                <a href="/trackdetails" class="dropdown-links w-dropdown-link">Track Details</a>
                 <a href="/trackchairs" class="dropdown-links w-dropdown-link">Track Chairs</a>
                 <%= link_to "Abstract Submissions", new_abstract_path, :class => "dropdown-links w-dropdown-link" %>
                 <%= link_to "Important Dates", dates_path, :class => "dropdown-links w-dropdown-link" %>
