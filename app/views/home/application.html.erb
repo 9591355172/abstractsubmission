@@ -11,47 +11,211 @@
           letter-spacing: 1px;
           font-family: 'Roboto Condensed', sans-serif;
      }
-    
+    /* LIST #2 */
 
+
+
+#list2 ol li p { padding:8px; font-style:normal; border-left: 1px solid #999; }
+/*#list2 ol li p em { display:block; }*/
+    .table-fill {
+  background: white;
+  border-radius:3px;
+  border-collapse: collapse;
+  /*height: 320px;*/
+  margin: auto;
+  padding:5px;
+  width: 100%;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  animation: float 5s infinite;
+}
+ 
+th {
+  color:#fff;
+  background:#333a56;
+  border-bottom:4px solid #9ea7af;
+  border-right: 1px solid #fff;
+  font-size:15px;
+  font-weight: 100;
+  padding:24px;
+  text-align:left;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  vertical-align:middle;
+}
+
+th:first-child {
+  border-top-left-radius:3px;
+}
+ 
+th:last-child {
+  border-top-right-radius:3px;
+  border-right:none;
+}
+  
+tr {
+  border-top: 1px solid #C1C3D1;
+  border-bottom-: 1px solid #C1C3D1;
+  color:#666B85;
+  font-size:15px;
+  font-weight:normal;
+  text-shadow: 0 1px 1px rgba(256, 256, 256, 0.1);
+}
+ 
+tr:hover td {
+  background:#4E5066;
+  color:#FFFFFF;
+  border-top: 1px solid #22262e;
+}
+ 
+tr:first-child {
+  border-top:none;
+}
+
+tr:last-child {
+  border-bottom:none;
+}
+ 
+tr:nth-child(odd) td {
+  background:#EBEBEB;
+}
+ 
+tr:nth-child(odd):hover td {
+  background:#4E5066;
+}
+
+tr:last-child td:first-child {
+  border-bottom-left-radius:3px;
+}
+ 
+tr:last-child td:last-child {
+  border-bottom-right-radius:3px;
+}
+ 
+td {
+  background:#FFFFFF;
+  padding:20px;
+  text-align:left;
+  vertical-align:middle;
+  font-weight:300;
+  font-size:15px;
+  text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
+  border-right: 1px solid #C1C3D1;
+}
+
+td:last-child {
+  border-right: 0px;
+}
+
+th.text-left {
+  text-align: left;
+}
+
+th.text-center {
+  text-align: center;
+}
+
+th.text-right {
+  text-align: right;
+}
+
+td.text-left {
+  text-align: left;
+}
+
+td.text-center {
+  text-align: center;
+}
+
+td.text-right {
+  text-align: right;
+}
     </style>
 <%end%> 
-<div>
-      <div class="heading-tittle color-black w-container">
-        <h2 class="-5" style="margin: 30px 0px 30px 0px;"><p style="text-decoration: underline; text-decoration-color: #3b1e9a;">Applications</p></h2>
-    </div>
-    <div>
-          <h6 class="heading-2">
-          	Applicants should submit the following items by email : <br>
-            <b> E-Mail ID </b>: prme.doctoral@spjimr.org <br>
-            <b> Subject Line </b> : Doctoral Colloquium-The 8th PRME Asia Forum- YOURNAME
-
-          	    
-          	</h6>
-          </div>
+<div style="margin-bottom: 100px;">
+  <div class="heading-tittle color-black w-container">
+    <h2 class="-5" style="margin: 30px 0px 30px 0px;"><p style="text-decoration: underline; text-decoration-color: #3b1e9a;">Applications</p></h2>
+  </div>
           <div class="row">
+            <div class="" style="padding: 10px; text-align: justify;">
+              <h4 class="heading-8" style="text-align: left;font-family: 'Roboto Condensed', sans-serif; "> <p style="text-decoration: underline; text-decoration-color: #3b1e9a;"> WHO CAN PARTICIPATE?</p></h4>
+              <div class="card-track">
+                <p style="padding: 20px;">Doctoral scholars/young faculty colleagues with background in management, humanities,
+                social sciences, and other related fields in the domain of Sustainability. Multidisciplinary and
+                trans-disciplinary works are welcome.</p>
+              </div>
+            </div>
+            <div class="" style="padding: 10px; text-align: justify;">
+              <h4 class="heading-8" style="text-align: left;font-family: 'Roboto Condensed', sans-serif; "> <p style="text-decoration: underline; text-decoration-color: #3b1e9a;">PRESENTATION TYPE :</p></h4>
+              <div class="card-track" style="padding: 10px;">
+                <div id="list2">
+                  <ol>
+                    <li><p>Oral presentation ;  <br>
+                      <b style="margin-left: 20px;">Concept paper : </b>Synthesis of literature review, conceptual framework, theoretical
+                      development and insights etc.<br>
+                      <b style="margin-left: 20px;">Proposal : </b>Work in progress, with details on methodology to be followed <br>
+                      <b style="margin-left: 20px;">Full Paper : </b>Empirical work from different perspectives are welcome</p></li>
+                    <li><p>Poster presentation</p></li>
+                    <li><p>No presentation is required. All are welcome to attend.</p></li>
+                  </ol>
+                </div>
+              </div>         
+            </div>
+
+
       <div class="" style="padding: 10px; text-align: justify;">
-          <p>
-          	<b> All items below should be collated into one PDF file named .pdf (substitute your full name where it reads YOURNAME): </b>
-          	<li>
-          		A TWO-page overview of your doctoral research that describes your research question, work in progress, and expected contributions. This overview should also include (1) a paragraph that articulates what you hope to gain from attending the Doctoral Colloquium, and (2) an abstract of no more than 100 words.
-          	</li>
-          	<li>
-          	A short biographical sketch on another page.
-
-          	</li>
-          	<li>
-          		An up-to-date curriculum vita.
-
-          	</li>
-          	<li>
-             Optionally, one publication that you feel best illustrates your progress in your research. 
-            </li>
-            <li>
-              An email letter. These letters should also reference as to how you might benefit from the Doctoral Colloquium and how they expect that you might benefit the other students in this group experience.
-            </li> <br> <br>
-          	All submissions must be received by the chairs by September30th, 2018. Submissions received after this date will not be considered. Submissions will be acknowledged by email once they have been checked for completeness.
-
-          </p>
-          </div></div>
+        <h4 class="heading-8" style="text-align: left;font-family: 'Roboto Condensed', sans-serif; "> <p style="text-decoration: underline; text-decoration-color: #3b1e9a;">APPLICATION REQUIREMENTS :</p>
+        </h4>
+        <div class="card-track" style="padding: 10px;">
+          <div id="list2">
+            <ol>
+              <li>
+                <p>100 words abstract</p>
+              </li>
+              <li>
+                <p>An up-to-date curriculum vita</p>
+              </li>
+            </ol>
+          </div>
+        </div>         
+      </div>
+      <div class="" style="padding: 10px; text-align: justify;">
+        <h4 class="heading-8" style="text-align: left;font-family: 'Roboto Condensed', sans-serif; "> <p style="text-decoration: underline; text-decoration-color: #3b1e9a;"> APPLICATION PROCEDURE : </p>
+        </h4>
+        <div class="card-track" style="padding: 10px;">
+          <div id="list2">
+            <ol>
+              <li><p>Applicants should submit the application requirements by email : <br>
+                <b style="margin-left: 20px;">E-Mail ID : </b>prme.doctoral@spjimr.org <br>
+                <b style="margin-left: 20px;">Subject Line : </b>Doctoral Colloquium-The 8th PRME Asia Forum- YOURNAME</p></li>
+              <li><p>Indicate the preference as regards presentation type in the e-mail. For instance, if you
+                  wish to do an oral presentation-concept paper, then please mention ‘Ai’ in e-mail, if</p></li>
+              <li><p>Register online and make the payment. Please attach the payment receipt in the e-mail</p></li>
+              <li><p>All submissions must be received by the chairs by October 19 th , 2018. <br>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Submissions
+                     received after this date will not be considered. Submissions will be acknowledged by
+                      email once they have been checked for completeness.</p> </li>
+            </ol>
+          </div>
+        </div>
+      </div>
+            <div class="" style="padding: 10px; text-align: justify;">
+        <h4 class="heading-8" style="text-align: left;font-family: 'Roboto Condensed', sans-serif; "> <p style="text-decoration: underline; text-decoration-color: #3b1e9a;">FEES :</p>
+        </h4>
+        <div class="card-track" style="padding: 10px;">
+            <table class="table-fill">
+            <tbody class="table-hover">
+            <tr>
+            <td class="text-left">For attending Doctoral Colloquium</td>
+            <td class="text-left">1000 INR</td>
+            </tr>
+            <tr>
+            <td class="text-left">For attending Doctoral Colloquium &amp; 2 Day Forum</td>
+            <td class="text-left">3000 INR</td>
+            </tr>
+            
+            </tbody>
+            </table>
+        </div>         
+      </div>
+        </div>
 
 </div>
