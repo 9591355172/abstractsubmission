@@ -1627,7 +1627,7 @@ textarea.w-select {
 }
 .w-nav-link.w--current {
   color: white;
-  width: 50px;
+  /*width: 50px;*/
   text-align: center;
 }
 
