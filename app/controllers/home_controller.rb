@@ -1,5 +1,7 @@
 class HomeController < ApplicationController
 
+before_action :check_if_admin, only: [:admin_signin]
+
 	def index
 	end
 	
@@ -63,5 +65,21 @@ class HomeController < ApplicationController
 
 	def payment
 	end
+
+	  def admin_signin
+  end
+
+  private
+
+    def check_if_admin
+      if user_signed_in?
+        if current_user.admin == true
+          redirect_to rails_admin_path
+        else
+              STDOUT.puts "CHECK ADMIN"
+          redirect_to root_path
+        end
+      end
+    end
 	
 end
