@@ -1627,7 +1627,25 @@ textarea.w-select {
 }
 .w-nav-link.w--current {
   color: white;
+  width: 50px;
+  text-align: center;
 }
+
+@media only screen and (min-width: 1282px) {
+    .nav-link-3 {
+        font-size: 15px !important;
+    }
+
+    .dropdwon-toggle {
+      font-size: 15px !important;
+    }
+    .navbar-2 {
+      padding-left: 50px;
+    }
+}
+
+
+
 .w-nav-menu {
   position: relative;
   float: right;
