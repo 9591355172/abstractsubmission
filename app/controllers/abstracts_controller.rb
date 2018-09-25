@@ -71,7 +71,7 @@ class AbstractsController < ApplicationController
 		    # Save the upload
 		    if @upload.save
 		    	flash[:notice] = 'Abstract uploaded successfully'
-		      	redirect_to abstract_path(current_user.abstract.id)
+		      	redirect_to abstract_path(current_user.abstract.last.id)
 		    else
 		      flash[:alert] = 'There was an error'
 		      render :new
@@ -93,6 +93,7 @@ class AbstractsController < ApplicationController
   end
 
   def show
-  	@uploaded_abstract = current_user.abstract
+  	# render json: current_user.abstract.last
+  	@uploaded_abstract = current_user.abstract.last
   end
 end

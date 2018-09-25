@@ -1044,10 +1044,10 @@ figcaption {
 }
 
 .slide-2 {
-  background-image: url('../003_PRMEMICROSITEBanner_001_F2.jpg');
+  background-image: url('../purple/home3.jpg');
   background-position: 50% 50%;
   background-size: cover;
-  background-repeat: repeat;
+  
 }
 
 .slide-3 {
@@ -1063,7 +1063,7 @@ figcaption {
 }
 
 .slide-5 {
-  background-image: url('../home2.jpg');
+  background-image: url('../purple/home1.jpg');
   background-position: 50% 50%;
   background-size: contain;
   
