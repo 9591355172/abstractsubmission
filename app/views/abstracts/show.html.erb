@@ -97,26 +97,63 @@
     <div class="heading-tittle color-black w-container" style="margin-top: 20px;">
     <h2 class="heading-5" style=""><p style="text-decoration: underline; text-decoration-color: #3b1e9a;">Update Abstract</p></h2>
     </div>
-    <h6 class="heading-5" style="font-family: 'Roboto Condensed', sans-serif;">(Name of the file should be <i> studentname_abstract-track</i>)</h6>
+    <h6 class="heading-5" style="font-family: 'Roboto Condensed', sans-serif;"><p style="text-decoration: underline; text-decoration-color: #3b1e9a;">Name of the file should be : </p> < First Name Last Name_Track Name></h6>
     <div class="div-block-4">
       <div>
         <% if current_user.abstract.present?%>
         <div>
         	<%= form_tag abstracts_path, enctype: 'multipart/form-data' do %>
-            <div class="w-row">
-              <div class="column-3 w-col w-col-5" style="display: inline-block;">
-                <h5 class="heading-6" style="font-family: 'Roboto Condensed', sans-serif;">
-                	Uploaded abstract:
-                	 <a class="btn" href="<%= @uploaded_abstract.abstract_url%>" target="blank" style="font-size: 16px;"> 	<%= @uploaded_abstract.title %> </a>
-                </h5>
+            
+              <div class="card">
+                <div class="row-2 w-row">
+                  <div class="column-12 w-col w-col-12">
+                    <div class="column-6 w-col w-col-6">
+                    <h5 class="heading-10" style="font-size: 17px;font-family: 'Roboto Condensed', sans-serif; margin-left: 10px; color:#6c757d!important">Select from the following track lists:</h5>
+                    </div>
+                    <div class="column-6 w-col w-col-6" style="margin-top: 10px; padding-left: 5px;">
+                      <select>
+                        <option>List of tracks</option>
+                        <option value="volvo">Asian Way of Thinking: Integrating Local Diversities in Management Education</option>
+                        <option value="saab">Building Inclusive Markets</option>
+                        <option value="opel">Business Initiatives for Sustainable Development</option>
+                        <option value="audi">Engaging with SDGs - The Local Experiences</option>
+                        <option>Extreme Events, Disasters and Building Resilience</option>
+                        <option>Global Peace and Education</option>
+                        <option>Inequality : The Role for Businesses</option>
+                        <option>Innovating on Pedagogy and Curriculum</option>
+                        <option>Management Education for Future</option>
+                        <option>Re-thinking CSR</option>
+                        <option>Social Entrepreneurship</option>
+                        <option>Social Impact Investing</option>
+                        <option>Sustainability and Development</option>
+                        <option>Sustainable Businesses</option>
+                        <option>Sustainable Cities</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="column-12 w-col w-col-12">
+              <div class="column-6 w-col w-col-6" >
+                <h5 class="heading-10" style="font-size: 17px;font-family: 'Roboto Condensed', sans-serif; margin-left: 10px; color:#6c757d!important">Uploaded abstract</h5>
               </div>
-              <div class="column-3 w-col w-col-7">
-                <h5 class="heading-7" style="font-family: 'Roboto Condensed', sans-serif;">
-                	Choose new abstract:
-                	<%= file_field_tag :file  %>
-                </h5>
+              <div class="column-6 w-col w-col-6" style="margin-top: 10px;">
+                
+                	 <a class="btn" href="<%= @uploaded_abstract.abstract_url%>" target="blank" style="font-size: 16px; margin-top: 20px;"> 	<%= @uploaded_abstract.title %> </a>
+                
+              </div>
+              </div>
+              <div class="column-12 w-col w-col-12">
+              <div class="column-6 w-col w-col-6" >
+                <h5 class="heading-10" style="font-size: 17px;font-family: 'Roboto Condensed', sans-serif; margin-left: 10px; color:#6c757d!important">Choose new abstract</h5>
+              </div>
+              <div class="column-6 w-col w-col-6" style="margin-top: 10px; ">
+                
+                	<%= file_field_tag :file , :style => "margin-left: 5px;" %>
+                
               </div>
             </div>
+              </div>
+            </div>
+          
             <div class="w-row heading-5" style="margin-top: 20px;">
               <%= button_tag(type: "submit", class: "button") do %>
                    <span class="">Update File</span>

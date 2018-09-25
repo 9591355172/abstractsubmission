@@ -27,17 +27,17 @@
 }
 
 .btn {
-    border-radius: 2px;
-  background-color: #0095ff !important;
+    border-radius: 4px;
+  background-color: #3ec9cb !important;
   border: none;
   color: #FFFFFF;
   text-align: center;
-  font-size: 16px;
-  padding: 8px;
-  /*width: 200px;*/
+  font-size: 18px;
+  padding: 10px;
+  width: 200px;
   transition: all 0.5s;
   cursor: pointer;
-  margin: 2px;
+  margin: 5px;
 }
 .button span {
   cursor: pointer;
@@ -63,7 +63,7 @@
   opacity: 1;
   right: 0;
 }
-
+   
 
     </style>
 <%end%> 
@@ -93,46 +93,33 @@
       <div class="w-container"></div>
     </div>
     <div class="heading-tittle color-black w-container">
-    <h2 class="" style="margin-top: 30px; margin-bottom: 30px;"><p style="text-decoration: underline; text-decoration-color: #3b1e9a;">Upload Abstract</p></h2>
+    <h2 class="heading-5" style=""><p style="text-decoration: underline; text-decoration-color: #3b1e9a; margin-top: 50px;">Upload Abstract</p></h2>
     </div>
-    <h6 class="heading-5" style="font-family: 'Roboto Condensed', sans-serif;"> <p style="text-decoration: underline; text-decoration-color: #3b1e9a; display: inline; font-size: 18px;">Name of the file :</p>  &nbsp; <p style="display: inline; font-size: 16px;">< First Name Last Name_Track Name > </p> </h6>
-<%= form_for  abstracts_path, enctype: 'multipart/form-data' do %>
-    <div class="card-track">
-      <div class="column-6 w-col w-col-6" style="padding-top: 20px; ">
-                <h6 class="heading-6" style="text-align: right !important; margin: 0px 0px 0px 10px; font-size: 15px;font-family: 'Roboto Condensed', sans-serif;">Select from the track chairs the most closest topic related to your abstract:</h6>
-              </div>
-              <div class="column-6 w-col w-col-6" style="padding-top: 20px; ">
-              <%= select_tag "category", options_for_select([ "List of tracks","Asian Way of Thinking: Integrating Local Diversities in Management Education", "Building Inclusive Markets", "Business Initiatives for Sustainable Development", "Engaging with SDGs - The Local Experiences", "Extreme Events, Disasters and Building Resilience", "Global Peace and Education","Inequality : The Role for Businesses","Innovating on Pedagogy and Curriculum", "Management Education for Future","Re-thinking CSR","Social Entrepreneurship","Social Impact Investing","Sustainability and Development","Sustainable Businesses","Sustainable Cities"]) , :style => "margin-left: 10px;"%>
-              </div>
-              <div class="column-6 w-col w-col-6">
-                <h6 class="heading-6" style="font-size: 16px;font-family: 'Roboto Condensed', sans-serif; text-align: right; margin-top: 10px;">
-                    Upload abstract:</h6>
-              </div>
-              <div class="column-6 w-col w-col-6">
-                <%= file_field_tag :file , :style => " margin-top: 10px; margin-left:10px;"  %>
-              </div>
+    <h6 class="heading-5" style="font-family: 'Roboto Condensed', sans-serif;"><p style="text-decoration: underline; text-decoration-color: #3b1e9a;display: inline">Name of the file  </p> : &nbsp; <p style="display: inline; font-size: 15px;">< First Name Last Name_Track Name> </p> </h6>
+    <div class="div-block-4" style="margin-bottom: 50px;">
+      <div>
         <div class="w-row heading-5">
-          <% if current_user.abstract.present?%>
-              <h6 class="heading-5"><%= @uploaded_abstract.title %></h6>
-              
-
-          <% elsif %>
-              
+         
+              <%= form_tag abstracts_path, enctype: 'multipart/form-data' do %>
+              <div class="card" style="height: 90px; margin-bottom: 30px;">
+              <div class="column-6 w-col w-col-6" >
+                <h5 class="heading-10" style="font-size: 17px;font-family: 'Roboto Condensed', sans-serif; margin-left: 10px; color:#6c757d!important">Choose abstract</h5>
+              </div>
+              <div class="column-6 w-col w-col-6" style="margin-top: 10px; ">
                 
-                
-
-              <% end %>
-        </div>
-      
-    </div>
-    <div class="w-row heading-5" style="margin-top: 20px;">
-                  
-              <%= button_tag(type: "submit", class: "button") do %>
+                  <%= file_field_tag :file , :style => "margin-left: 5px;" %>
+                  <p class="heading-10" style="font-size: 14px;font-family: 'Roboto Condensed', sans-serif; margin-left: 0px; color:#6c757d; margin-right: 70px;">(Please upload pdf only)</p>
+              </div>
+              
+                </div>
+                <%= button_tag(type: "submit", class: "button") do %>
                    <span class="">Update File</span>
               <% end %>
-          </div>
-     <% end %>
-
+              <% end %>
+     
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 
