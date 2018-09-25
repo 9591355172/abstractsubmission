@@ -37,7 +37,7 @@ class AbstractsController < ApplicationController
   def new
   	if current_user
   		if current_user.abstract.present?
-  			redirect_to abstract_path(current_user.abstract.id)
+  			redirect_to abstract_path(current_user.abstract.last.id)
   		end
   		@uploaded_abstract = current_user.abstract
   	end

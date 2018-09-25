@@ -12,6 +12,19 @@
           letter-spacing: 1px;
           font-family: 'Roboto Condensed', sans-serif;
      }
+     @media only screen and (max-width: 1280px) {
+    .w-slider {
+        height: 233px !important;
+    }
+}
+
+@media only screen and (min-width: 1600px) {
+    .w-slider {
+        height: 298px !important;
+    }
+}
+
+.w-slider {height: 265px;}
 
 
      .button {
@@ -76,8 +89,8 @@
             <div>
       <div data-delay="4000" data-animation="slide" data-autoplay="1" data-duration="500" data-infinite="1" class="w-slider">
         <div class="w-slider-mask">
-          <div class="slide-1 w-slide"></div>
-          <div class="slide-5 w-slide">
+          <div class="slide-2 w-slide"></div>
+          <div class="slide-3 w-slide">
             <a href="/tracks" class="button" style="position: absolute; top: 63%; left: 47%;  cursor: pointer; opacity: 0">
               
             </a>
@@ -97,7 +110,7 @@
     <div class="heading-tittle color-black w-container" style="margin-top: 20px;">
     <h2 class="heading-5" style=""><p style="text-decoration: underline; text-decoration-color: #3b1e9a;">Update Abstract</p></h2>
     </div>
-    <h6 class="heading-5" style="font-family: 'Roboto Condensed', sans-serif;"><p style="text-decoration: underline; text-decoration-color: #3b1e9a;">Name of the file should be : </p> < First Name Last Name_Track Name></h6>
+    <h6 class="heading-5" style="font-family: 'Roboto Condensed', sans-serif;"><p style="text-decoration: underline; text-decoration-color: #3b1e9a; display: inline;">Name of the file should be : </p> < First Name Last Name_Track Name></h6>
     <div class="div-block-4">
       <div>
         <% if current_user.abstract.present?%>

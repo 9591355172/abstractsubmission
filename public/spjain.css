@@ -1044,14 +1044,15 @@ figcaption {
 }
 
 .slide-2 {
-  background-image: url('../purple/home3.jpg');
+  background-image: url('../purple/4.jpg');
   background-position: 50% 50%;
-  background-size: cover;
+  background-size: contain;
+
   
 }
 
 .slide-3 {
-  background-image: url('../carousel3.jpg');
+  background-image: url('../purple/5.jpg');
   background-position: 50% 50%;
   background-size: cover;
 }

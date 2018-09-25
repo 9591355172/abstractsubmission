@@ -12,8 +12,19 @@
           font-family: 'Roboto Condensed', sans-serif;
      }
     
+@media only screen and (max-width: 1280px) {
+    .w-slider {
+        height: 233px !important;
+    }
+}
 
+@media only screen and (min-width: 1600px) {
+    .w-slider {
+        height: 298px !important;
+    }
+}
 
+.w-slider {height: 265px;}
 .table-fill {
   background: white;
   border-radius:3px;
@@ -134,7 +145,7 @@ td.text-right {
       <div class="heading-tittle color-black  w-container " style="max-width: none !important;">
         
     <div>
-      <div data-delay="4000" data-animation="slide" data-autoplay="1" data-duration="500" data-infinite="1" class="w-slider" s>
+      <div data-delay="4000" data-animation="slide" data-autoplay="1" data-duration="500" data-infinite="1" class="w-slider" >
         <div class="w-slider-mask">
           
           <div class="slide-2 w-slide">
@@ -142,6 +153,7 @@ td.text-right {
               
             </a>
           </div>
+          <div class="slide-3 w-slide"></div>
           <!-- <div class="slide-6 w-slide"></div> -->
         </div>
         <div class="w-slider-arrow-left">

@@ -12,6 +12,20 @@
           letter-spacing: 1px;
           font-family: 'Roboto Condensed', sans-serif;
      }
+     @media only screen and (max-width: 1280px) {
+    .w-slider {
+        height: 233px !important;
+    }
+}
+
+@media only screen and (min-width: 1600px) {
+    .w-slider {
+        height: 298px !important;
+    }
+}
+
+.w-slider {height: 265px;}
+
      .button {
   border-radius: 4px;
   background-color: #3ec9cb !important;
@@ -21,6 +35,20 @@
   font-size: 18px;
   padding: 10px;
   width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+     .button1 {
+  border-radius: 4px;
+  background-color: #a9a9a9 !important;
+  border: none;
+  color: #3a3a3a;
+  text-align: center;
+  font-size: 14px;
+  padding: 10px;
+  /*width: 200px;*/
   transition: all 0.5s;
   cursor: pointer;
   margin: 5px;
@@ -63,6 +91,32 @@
   opacity: 1;
   right: 0;
 }
+
+
+.button1 span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button1 span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button1:hover span {
+  padding-right: 25px;
+}
+
+.button1:hover span:after {
+  opacity: 1;
+  right: 0;
+}
    
 
     </style>
@@ -74,8 +128,8 @@
             <div>
       <div data-delay="4000" data-animation="slide" data-autoplay="1" data-duration="500" data-infinite="1" class="w-slider">
         <div class="w-slider-mask">
-          <div class="slide-1 w-slide"></div>
-          <div class="slide-5 w-slide">
+          <div class="slide-2 w-slide"></div>
+          <div class="slide-3 w-slide">
             <a href="/tracks" class="button" style="position: absolute; top: 63%; left: 47%;  cursor: pointer; opacity: 0">
               
             </a>
@@ -129,8 +183,8 @@
         <div>
       <div data-delay="4000" data-animation="slide" data-autoplay="1" data-duration="500" data-infinite="1" class="w-slider">
         <div class="w-slider-mask">
-          <div class="slide-1 w-slide"></div>
-          <div class="slide-5 w-slide">
+          <div class="slide-2 w-slide"></div>
+          <div class="slide-3 w-slide">
             <a href="/tracks" class="button" style="position: absolute; top: 63%; left: 47%;  cursor: pointer; opacity: 0">
               
             </a>
@@ -147,12 +201,13 @@
       </div>
       <div class="w-container"></div>
     </div>
-    <h6 class="heading-5" style="background-color: #a9a9a9; color:#3a3a3a; margin: 0px !important; font-size: 14px; height: 40px;">Please &nbsp;
-    	<%= link_to new_user_session_path,class:"button" do %>
+    <h6 class="heading-5" style="background-color: #a9a9a9; color:#3a3a3a; margin: 0px !important; font-size: 14px; height: 40px;"> 
+      Please &nbsp;
+    	<%= link_to new_user_session_path,class:"button1" do %>
         <span> Log In </span> 
       <% end %>
     	/
-    	<%= link_to new_user_registration_path,class:"btb" do%>
+    	<%= link_to new_user_registration_path,class:"button1" do%>
       <span> Register</span> 
       <%end%>&nbsp;
      to upload abstract</h6>
