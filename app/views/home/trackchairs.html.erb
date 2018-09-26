@@ -11,7 +11,612 @@
           letter-spacing: 1px;
           font-family: 'Roboto Condensed', sans-serif;
      }
-    
+   .wrap-collabsible {
+  /*margin-bottom: 1.2rem 0;*/
+}
+
+input[type='checkbox'] {
+  display: none;
+}
+
+.lbl-toggle {
+  display: block;
+
+  font-weight: bold;
+  
+  font-size: 15px;
+  text-transform: uppercase;
+  text-align: center;
+
+  padding: 10px;
+
+  color: white;
+  background: #3a3a3a;
+
+  cursor: pointer;
+
+  /*border-radius: 7px;*/
+  transition: all 0.25s ease-out;
+}
+
+.lbl-toggle:hover {
+  color: #a9a9a9;
+}
+
+.lbl-toggle::before {
+  content: ' ';
+  display: inline-block;
+
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 5px solid currentColor;
+  vertical-align: middle;
+  margin-right: .7rem;
+  transform: translateY(-2px);
+
+  transition: transform .2s ease-out;
+}
+
+.toggle:checked + .lbl-toggle::before {
+  transform: rotate(90deg) translateX(-3px);
+}
+
+.collapsible-content {
+  max-height: 0px;
+  overflow: hidden;
+  transition: max-height .25s ease-in-out;
+}
+
+.toggle:checked + .lbl-toggle + .collapsible-content {
+  max-height: 350px;
+}
+
+.toggle:checked + .lbl-toggle {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.collapsible-content .content-inner {
+  background: #fefdfb;
+  border-bottom: 1px solid rgba(250, 224, 66, .45);
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
+  padding: .5rem 1rem;
+} 
+
+
+
+   .wrap-collabsible1 {
+  /*margin-bottom: 1.2rem 0;*/
+}
+
+input[type='checkbox'] {
+  display: none;
+}
+
+.lbl-toggle1 {
+  display: block;
+
+  font-weight: bold;
+  
+  font-size: 15px;
+  text-transform: uppercase;
+  text-align: center;
+
+  padding: 10px;
+
+  color: white;
+  background: #3a3a3a;
+
+  cursor: pointer;
+
+  /*border-radius: 7px;*/
+  transition: all 0.25s ease-out;
+}
+
+.lbl-toggle1:hover {
+  color: #a9a9a9;
+}
+
+.lbl-toggle1::before {
+  content: ' ';
+  display: inline-block;
+
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 5px solid currentColor;
+  vertical-align: middle;
+  margin-right: .7rem;
+  transform: translateY(-2px);
+
+  transition: transform .2s ease-out;
+}
+
+.toggle1:checked + .lbl-toggle1::before {
+  transform: rotate(90deg) translateX(-3px);
+}
+
+.collapsible-content1 {
+  max-height: 0px;
+  overflow: hidden;
+  transition: max-height .25s ease-in-out;
+}
+
+.toggle1:checked + .lbl-toggle1 + .collapsible-content1 {
+  max-height: 960px;
+}
+
+.toggle1:checked + .lbl-toggle1 {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.collapsible-content1 .content-inner1 {
+  background: #fefdfb;
+  border-bottom: 1px solid rgba(250, 224, 66, .45);
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
+  padding: .5rem 1rem;
+} 
+
+
+
+
+
+   .wrap-collabsible2 {
+  /*margin-bottom: 1.2rem 0;*/
+}
+
+input[type='checkbox'] {
+  display: none;
+}
+
+.lbl-toggle2 {
+  display: block;
+
+  font-weight: bold;
+  
+  font-size: 15px;
+  text-transform: uppercase;
+  text-align: center;
+
+  padding: 10px;
+
+  color: white;
+  background: #3a3a3a;
+
+  cursor: pointer;
+
+  /*border-radius: 7px;*/
+  transition: all 0.25s ease-out;
+}
+
+.lbl-toggle2:hover {
+  color: #a9a9a9;
+}
+
+.lbl-toggle2::before {
+  content: ' ';
+  display: inline-block;
+
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 5px solid currentColor;
+  vertical-align: middle;
+  margin-right: .7rem;
+  transform: translateY(-2px);
+
+  transition: transform .2s ease-out;
+}
+
+.toggle2:checked + .lbl-toggle2::before {
+  transform: rotate(90deg) translateX(-3px);
+}
+
+.collapsible-content2 {
+  max-height: 0px;
+  overflow: hidden;
+  transition: max-height .25s ease-in-out;
+}
+
+.toggle2:checked + .lbl-toggle2 + .collapsible-content2 {
+  max-height: 960px;
+}
+
+.toggle2:checked + .lbl-toggle2 {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.collapsible-content2 .content-inner2 {
+  background: #fefdfb;
+  border-bottom: 1px solid rgba(250, 224, 66, .45);
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
+  padding: .5rem 1rem;
+} 
+
+
+
+
+   .wrap-collabsible3 {
+  /*margin-bottom: 1.2rem 0;*/
+}
+
+input[type='checkbox'] {
+  display: none;
+}
+
+.lbl-toggle3 {
+  display: block;
+
+  font-weight: bold;
+  
+  font-size: 15px;
+  text-transform: uppercase;
+  text-align: center;
+
+  padding: 10px;
+
+  color: white;
+  background: #3a3a3a;
+
+  cursor: pointer;
+
+  /*border-radius: 7px;*/
+  transition: all 0.25s ease-out;
+}
+
+.lbl-toggle3:hover {
+  color: #a9a9a9;
+}
+
+.lbl-toggle3::before {
+  content: ' ';
+  display: inline-block;
+
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 5px solid currentColor;
+  vertical-align: middle;
+  margin-right: .7rem;
+  transform: translateY(-2px);
+
+  transition: transform .2s ease-out;
+}
+
+.toggle3:checked + .lbl-toggle3::before {
+  transform: rotate(90deg) translateX(-3px);
+}
+
+.collapsible-content3 {
+  max-height: 0px;
+  overflow: hidden;
+  transition: max-height .25s ease-in-out;
+}
+
+.toggle3:checked + .lbl-toggle3 + .collapsible-content3 {
+  max-height: 960px;
+}
+
+.toggle3:checked + .lbl-toggle3 {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.collapsible-content3 .content-inner3 {
+  background: #fefdfb;
+  border-bottom: 1px solid rgba(250, 224, 66, .45);
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
+  padding: .5rem 1rem;
+} 
+
+
+
+
+
+
+   .wrap-collabsible4 {
+  /*margin-bottom: 1.2rem 0;*/
+}
+
+input[type='checkbox'] {
+  display: none;
+}
+
+.lbl-toggle4 {
+  display: block;
+
+  font-weight: bold;
+  
+  font-size: 15px;
+  text-transform: uppercase;
+  text-align: center;
+
+  padding: 10px;
+
+  color: white;
+  background: #3a3a3a;
+
+  cursor: pointer;
+
+  /*border-radius: 7px;*/
+  transition: all 0.25s ease-out;
+}
+
+.lbl-toggle4:hover {
+  color: #a9a9a9;
+}
+
+.lbl-toggle4::before {
+  content: ' ';
+  display: inline-block;
+
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 5px solid currentColor;
+  vertical-align: middle;
+  margin-right: .7rem;
+  transform: translateY(-2px);
+
+  transition: transform .2s ease-out;
+}
+
+.toggle4:checked + .lbl-toggle4::before {
+  transform: rotate(90deg) translateX(-3px);
+}
+
+.collapsible-content4 {
+  max-height: 0px;
+  overflow: hidden;
+  transition: max-height .25s ease-in-out;
+}
+
+.toggle4:checked + .lbl-toggle4 + .collapsible-content4 {
+  max-height: 960px;
+}
+
+.toggle4:checked + .lbl-toggle4 {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.collapsible-content4 .content-inner4 {
+  background: #fefdfb;
+  border-bottom: 1px solid rgba(250, 224, 66, .45);
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
+  padding: .5rem 1rem;
+} 
+
+
+
+
+
+
+   .wrap-collabsible5 {
+  /*margin-bottom: 1.2rem 0;*/
+}
+
+input[type='checkbox'] {
+  display: none;
+}
+
+.lbl-toggle5 {
+  display: block;
+
+  font-weight: bold;
+  
+  font-size: 15px;
+  text-transform: uppercase;
+  text-align: center;
+
+  padding: 10px;
+
+  color: white;
+  background: #3a3a3a;
+
+  cursor: pointer;
+
+  /*border-radius: 7px;*/
+  transition: all 0.25s ease-out;
+}
+
+.lbl-toggle5:hover {
+  color: #a9a9a9;
+}
+
+.lbl-toggle5::before {
+  content: ' ';
+  display: inline-block;
+
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 5px solid currentColor;
+  vertical-align: middle;
+  margin-right: .7rem;
+  transform: translateY(-2px);
+
+  transition: transform .2s ease-out;
+}
+
+.toggle5:checked + .lbl-toggle5::before {
+  transform: rotate(90deg) translateX(-3px);
+}
+
+.collapsible-content5 {
+  max-height: 0px;
+  overflow: hidden;
+  transition: max-height .25s ease-in-out;
+}
+
+.toggle5:checked + .lbl-toggle5 + .collapsible-content5 {
+  max-height: 960px;
+}
+
+.toggle5:checked + .lbl-toggle5 {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.collapsible-content5 .content-inner5 {
+  background: #fefdfb;
+  border-bottom: 1px solid rgba(250, 224, 66, .45);
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
+  padding: .5rem 1rem;
+} 
+
+
+
+   .wrap-collabsible6 {
+  /*margin-bottom: 1.2rem 0;*/
+}
+
+input[type='checkbox'] {
+  display: none;
+}
+
+.lbl-toggle6 {
+  display: block;
+
+  font-weight: bold;
+  
+  font-size: 15px;
+  text-transform: uppercase;
+  text-align: center;
+
+  padding: 10px;
+
+  color: white;
+  background: #3a3a3a;
+
+  cursor: pointer;
+
+  /*border-radius: 7px;*/
+  transition: all 0.25s ease-out;
+}
+
+.lbl-toggle6:hover {
+  color: #a9a9a9;
+}
+
+.lbl-toggle6::before {
+  content: ' ';
+  display: inline-block;
+
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 5px solid currentColor;
+  vertical-align: middle;
+  margin-right: .7rem;
+  transform: translateY(-2px);
+
+  transition: transform .2s ease-out;
+}
+
+.toggle6:checked + .lbl-toggle6::before {
+  transform: rotate(90deg) translateX(-3px);
+}
+
+.collapsible-content6 {
+  max-height: 0px;
+  overflow: hidden;
+  transition: max-height .25s ease-in-out;
+}
+
+.toggle6:checked + .lbl-toggle6 + .collapsible-content6 {
+  max-height: 960px;
+}
+
+.toggle6:checked + .lbl-toggle6 {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.collapsible-content6 .content-inner6 {
+  background: #fefdfb;
+  border-bottom: 1px solid rgba(250, 224, 66, .45);
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
+  padding: .5rem 1rem;
+} 
+
+
+   .wrap-collabsible7 {
+  /*margin-bottom: 1.2rem 0;*/
+}
+
+input[type='checkbox'] {
+  display: none;
+}
+
+.lbl-toggle7 {
+  display: block;
+
+  font-weight: bold;
+  
+  font-size: 15px;
+  text-transform: uppercase;
+  text-align: center;
+
+  padding: 10px;
+
+  color: white;
+  background: #3a3a3a;
+
+  cursor: pointer;
+
+  /*border-radius: 7px;*/
+  transition: all 0.25s ease-out;
+}
+
+.lbl-toggle7:hover {
+  color: #a9a9a9;
+}
+
+.lbl-toggle7::before {
+  content: ' ';
+  display: inline-block;
+
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 5px solid currentColor;
+  vertical-align: middle;
+  margin-right: .7rem;
+  transform: translateY(-2px);
+
+  transition: transform .2s ease-out;
+}
+
+.toggle7:checked + .lbl-toggle7::before {
+  transform: rotate(90deg) translateX(-3px);
+}
+
+.collapsible-content7 {
+  max-height: 0px;
+  overflow: hidden;
+  transition: max-height .25s ease-in-out;
+}
+
+.toggle7:checked + .lbl-toggle7 + .collapsible-content7 {
+  max-height: 960px;
+}
+
+.toggle7:checked + .lbl-toggle7 {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.collapsible-content7 .content-inner7 {
+  background: #fefdfb;
+  border-bottom: 1px solid rgba(250, 224, 66, .45);
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
+  padding: .5rem 1rem;
+} 
+
 
     </style>
 <%end%> 
@@ -19,7 +624,159 @@
   <div class="heading-tittle color-black w-container">
     <h2 class="-5" style="margin-top: 30px; margin-bottom: 30px"> <p style="text-decoration: underline; text-decoration-color: #3b1e9a;">Track chairs</p></h2>
     <div class="row-3 w-row">
-      <div class="column-12 w-col w-col-12">
+                  <div class="column-6 w-col w-col-6" style="margin-top: 20px;">
+        <div class="card-track" >
+          <div class="row-5 w-row">
+            <div class="w-col w-col-3" style="text-align: center"><img src="../ProfAnilKulkarni.jpg" width="225" class="image-6" style="border-radius: 50%; height: 120px; width: 120px; object-fit: cover; object-position: 50% 0%"></div>
+            <div class="w-col w-col-9">
+              <h4 class="heading-8" style="margin-bottom: 0px !important; padding-top: 22px;font-family: 'Roboto Condensed', sans-serif;">Prof. Anil Kulkarni</h4>
+              <p style="text-align: center; margin-bottom: 20px !important; font-size: 14px; color:#6c757d">(kulkarni@spjimr.org)</p>
+              
+              <h5 class="heading-10" style="font-size: 16px;font-family: 'Roboto Condensed', sans-serif;">Adjunct Professor
+              </h5>
+              <h5 class="heading-10" style="font-size: 16px;font-family: 'Roboto Condensed', sans-serif;">SPJIMR</h5>
+            </div>
+          </div>
+          <div class="row-5 w-row" style="padding: 10px;">
+            <div class="w-col w-col-12">
+                                  <div class="wrap-collabsible7">
+  <input id="collapsible7" class="toggle7" type="checkbox">
+  <label for="collapsible7" class="lbl-toggle7">About Prof. Anil Kulkarni</label>
+  <div class="collapsible-content7">
+    <div class="content-inner7">
+      <p style="font-size: 14px; text-align: justify;">
+               Content coming soon
+
+              </p>
+    </div>
+  </div>
+</div>
+            </div>
+          </div>
+        </div>
+      </div>
+                  <div class="column-6 w-col w-col-6" style="margin-top: 20px;">
+        <div class="card-track" >
+          <div class="row-5 w-row">
+            <div class="w-col w-col-3" style="text-align: center"><img src="../DrAnshulVerma.jpg" width="225" class="image-6" style="border-radius: 50%; height: 120px; width: 120px; object-fit: cover; object-position: 50% 0%"></div>
+            <div class="w-col w-col-9">
+              <h4 class="heading-8" style="margin-bottom: 0px !important; padding-top: 22px;font-family: 'Roboto Condensed', sans-serif;">Dr. Anshul Verma</h4>
+              <p style="text-align: center; margin-bottom: 20px !important; font-size: 14px; color:#6c757d">(anshul.verma@spjimr.org)</p>
+              
+              <h5 class="heading-10" style="font-size: 16px;font-family: 'Roboto Condensed', sans-serif;">Associate Professor (Finance)
+              </h5>
+              <h5 class="heading-10" style="font-size: 16px;font-family: 'Roboto Condensed', sans-serif;">SPJIMR</h5>
+            </div>
+          </div>
+          <div class="row-5 w-row" style="padding: 10px;">
+            <div class="w-col w-col-12">
+                                  <div class="wrap-collabsible6">
+  <input id="collapsible6" class="toggle6" type="checkbox">
+  <label for="collapsible6" class="lbl-toggle6">About Dr. Anshul Verma</label>
+  <div class="collapsible-content6">
+    <div class="content-inner6">
+      <p style="font-size: 14px; text-align: justify;">
+               Content coming soon
+
+              </p>
+    </div>
+  </div>
+</div>
+            </div>
+          </div>
+        </div>
+      </div>
+            <div class="column-6 w-col w-col-6" style="margin-top: 20px;">
+        <div class="card-track" >
+          <div class="row-5 w-row">
+            <div class="w-col w-col-3" style="text-align: center"><img src="../track/DrDivyaSinghal.jpg" width="225" class="image-6" style="border-radius: 50%; height: 120px; width: 120px; object-fit: cover; object-position: 50% 0%"></div>
+            <div class="w-col w-col-9">
+              <h4 class="heading-8" style="margin-bottom: 0px !important; padding-top: 22px;font-family: 'Roboto Condensed', sans-serif;">Dr. Divya Singhal</h4>
+              <p style="text-align: center; margin-bottom: 20px !important; font-size: 14px; color:#6c757d">(divyasinghal@gim.ac.in)</p>
+              
+              <h5 class="heading-10" style="font-size: 16px;font-family: 'Roboto Condensed', sans-serif;">Associate Professor (General Management)
+              </h5>
+              <h5 class="heading-10" style="font-size: 16px;font-family: 'Roboto Condensed', sans-serif;">Goa Institute of Management</h5>
+            </div>
+          </div>
+          <div class="row-5 w-row" style="padding: 10px;">
+            <div class="w-col w-col-12">
+                                  <div class="wrap-collabsible4" style="margin-top: 21px;">
+  <input id="collapsible4" class="toggle4" type="checkbox">
+  <label for="collapsible4" class="lbl-toggle4">About Dr. Divya Singhal</label>
+  <div class="collapsible-content4">
+    <div class="content-inner4">
+      <p style="font-size: 14px; text-align: justify;">
+               Dr. Divya Singhal is working as Associate Professor at the Goa Institute of Management, Goa since 2006. She has four years of experience in journalism and almost four years of experience in teaching prior to GIM. She was a Doctoral Fellow, ICSSR Ministry of Human Resource Development, Government of India and was a recipient of President Guide Award.
+ <br>
+Dr. Divya was a founder member of the coordination committee of institute’s Social Responsibility initiative named GiveGoa. The initiative aims to help students become more socially aware and responsible towards the broader good of society. Dr. Singhal is a member Representative on “Social Responsibility Sectional Committee, MSD 10” formed by the “Bureau of Indian Standards”, which is a national standards body and national representative member of ISO (International Organization for Standardization). She is part of UN supported PRME working group on Sharing Information on Progress (SIP) and PRME Anti-poverty WG.  Her research interest is in the area of education, gender, social responsibility, quality and other developmental issues.
+
+              </p>
+    </div>
+  </div>
+</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="column-6 w-col w-col-6" style="margin-top: 20px;">
+        <div class="card-track" >
+          <div class="row-5 w-row">
+            <div class="w-col w-col-3" style="text-align: center"><img src="../track/ProfJankiAndharia.jpeg" width="225" class="image-6" style="border-radius: 50%; height: 120px; width: 120px; object-fit: cover; object-position: 50% 0%"></div>
+            <div class="w-col w-col-9">
+              <h4 class="heading-8" style="margin-bottom: 0px !important; font-family: 'Roboto Condensed', sans-serif;">Prof. Janki Andharia</h4>
+              <p style="text-align: center; margin-bottom: 20px !important; font-size: 14px;color:#6c757d!important ">(andharia@tiss.edu)</p>
+              <h5 class="heading-10" style="font-size: 16px;font-family: 'Roboto Condensed', sans-serif;">Dean - Jamsetji Tata School of Disaster Studies <br>
+Chairperson - Centre for Disasters and Development, Jamsetji Tata School of Disaster Studies 
+              </h5>
+              <h5 class="heading-10" style="font-size: 16px;font-family: 'Roboto Condensed', sans-serif;">Tata Institute of Social Sciences (TISS, Mumbai)</h5>
+            </div>
+          </div>
+          <div class="row-5 w-row" style="padding: 10px;">
+            <div class="w-col w-col-12">
+                                  <div class="wrap-collabsible5" >
+  <input id="collapsible5" class="toggle5" type="checkbox">
+  <label for="collapsible5" class="lbl-toggle5">About Prof. Janki Andharia</label>
+  <div class="collapsible-content5">
+    <div class="content-inner5">
+      <p style="font-size: 14px; text-align: justify;">
+               Professor Janki Andharia is the Dean of the School of Disaster Studies, Tata Institute of Social Sciences, Mumbai and has over 32 years of experience in the field of community organization and social development. Her areas of work focuses on gender issues, environmental concerns and democratic governance. She received an award for her outstanding contribution to education, at the World Education Congress Global Awards for Excellence in Education, Leadership and Teaching in 2015. <br>
+She has been involved in national and state level policy making work and has had a long association with grassroots organizations. She was awarded the Association of Commonwealth Universities Scholarship to pursue her Ph.D. from School of Environment Sciences, University of East Anglia U.K. in the area of Gender, Development and Environment. Professor Andharia was the recipient of the ‘Best Professor in Disaster Management award’, instituted by National Education Leadership Awards, Lokmat, Mumbai for the critical leadership she provided to the establishment of a multidisciplinary Centre for Disaster Management.
+
+              </p>
+    </div>
+  </div>
+</div>
+            </div>
+          </div>
+        </div>
+      </div>
+            <div class="column-6 w-col w-col-6" style="margin-top: 20px;">
+        <div class="card-track" >
+          <div class="row-5 w-row">
+            <div class="w-col w-col-3" style="text-align: center"><img src="../track/DrKKuperanVishwanathan.jpg" width="225" class="image-6" style="border-radius: 50%; height: 120px; width: 120px; object-fit: cover; object-position: 50% 0%"></div>
+            <div class="w-col w-col-9">
+              <h4 class="heading-8" style="margin-bottom: 0px !important;font-family: 'Roboto Condensed', sans-serif;">Dr. K Kuperan Vishwanathan</h4>
+              <p style="text-align: center; margin-bottom: 20px !important; font-size: 14px ; color:#6c757d!important">(kuperan@uum.edu.my)</p>
+              <h5 class="heading-10" style="font-size: 16px;font-family: 'Roboto Condensed', sans-serif;">Professor and Head of Financial Analysis and Policy Group
+              </h5>
+              <h5 class="heading-10" style="font-size: 16px;font-family: 'Roboto Condensed', sans-serif;">Othman Yeop Abdullah Graduate School of Business Malaysia</h5>
+            </div>
+          </div>
+                              <div class="wrap-collabsible3">
+  <input id="collapsible3" class="toggle3" type="checkbox">
+  <label for="collapsible3" class="lbl-toggle3">About Dr. K Kuperan Vishwanathan</label>
+  <div class="collapsible-content3">
+    <div class="content-inner3">
+      <p style="font-size: 14px; text-align: justify;">
+               Dr. K Kuperan Viswanathan is Professor of Resource Economics and Management. Before joining Othman Yeop Abdullah Graduate School of Business Malaysia, he was an Associate Professor of Resource Economics at the Faculty of Economics and Management, University Putra Malaysia. Dr. Kuperan is a leading natural resource economist with more than 30 years of experience in resource economics, policy and development research, social science research capacity building, education and training. He was a member of the World Bank Affiliated Centres for International Agricultural Research (CGIAR) senior researchers' team of the World Fish Centre and led the Centre’s Dhaka and South Asia office from January 2004 – March 2005. On the international level, he has served on the board of the Marine Steward Council, United Kingdom and is currently the Chair of the United Nations Global Compact on Responsible Management Education (PRME), ASEAN+ Chapter. He has published over 45 technical publications. 
+              </p>
+    </div>
+  </div>
+</div>
+        </div>
+      </div>
+      <div class="column-6 w-col w-col-6" style="margin-top: 20px;">
         <div class="card-track">
           <div class="row-5 w-row">
             <div class="w-col w-col-3" style="text-align: center"><img src="../track/DrPamsyHui.jpg" width="225" class="image-6" style="border-radius: 50%; height: 120px; width: 120px; object-fit: cover; object-position: 0% 0%; text-align: center;"></div>
@@ -31,49 +788,60 @@
               <h5 class="heading-10" style="font-size: 16px;font-family: 'Roboto Condensed', sans-serif;">The Hong Kong Polytechnic University</h5>
             </div>
           </div>
-          <div class="row-5 w-row" style="padding: 10px;">
+          <div class="row-5 w-row" style="margin-top: 33px;" >
             <div class="w-col w-col-12">
-              <p style="font-size: 14px; text-align: justify;">
+              
+          <div class="wrap-collabsible">
+  <input id="collapsible" class="toggle" type="checkbox">
+  <label for="collapsible" class="lbl-toggle">About Dr. Pamsy Hui</label>
+  <div class="collapsible-content">
+    <div class="content-inner">
+      <p style="font-size: 14px; text-align: justify;">
                 Dr Pamsy Hui is the MBA Program Director at the Faculty of Business, the Hong Kong Polytechnic University.  She is the current Chair of the PRME Advisory Committee, as well as the Coordinator for PRME Chapter East Asia.  She teaches leadership, strategic management, and social innovation.  Her current research interests include international management and responsible management education.  Dr Hui obtained her PhD in Organization Science at University of Texas at Austin.  Prior to joining the Hong Kong Polytechnic University, she was a faculty member at Nanyang Technological University in Singapore and Chinese University of Hong Kong.
               </p>
+    </div>
+  </div>
+</div>
             </div>
           </div>
         </div>
       </div>
-      <div class="column-12 w-col w-col-12" style="margin-top: 20px;">
+      <div class="column-6 w-col w-col-6" style="margin-top: 20px;">
         <div class="card-track">
           <div class="row-5 w-row">
             <div class="w-col w-col-3" style="text-align: center"><img src="../track/ProfSanrtoshKumar.jpg" width="225" class="image-6" style="border-radius: 50%; height: 120px; width: 120px; object-fit: cover; object-position: 50% 0%"></div>
             <div class="w-col w-col-9">
-              <h4 class="heading-8" style="margin-bottom: 0px !important; padding-top: 20px;font-family: 'Roboto Condensed', sans-serif;">Prof. Santosh Kumar</h4>
-              <p style="text-align: center; margin-bottom: 10px !important; font-size: 14px;color:#6c757d!important ">(Santosh.kumar@aurouniversity.edu.in; kumar29466@yahoo.co.in)</p>
+              <h4 class="heading-8" style="margin-bottom: 0px !important; font-family: 'Roboto Condensed', sans-serif;">Prof. Santosh Kumar</h4>
+              <p style="text-align: center; font-size: 14px;font-family: 'Roboto Condensed', sans-serif;color:#6c757d!important ">(Santosh.kumar@aurouniversity.edu.in; kumar29466@yahoo.co.in)</p>
               <h5 class="heading-10" style="font-size: 16px;font-family: 'Roboto Condensed', sans-serif;">Head, Public Policy
               </h5>
               <h5 class="heading-10" style="font-size: 16px;font-family: 'Roboto Condensed', sans-serif;">School of Liberal Arts and Human Sciences
 AURO University</h5>
             </div>
           </div>
-          <div class="row-5 w-row" style="padding: 10px;">
-            <div class="w-col w-col-12">
-              <p style="font-size: 14px; text-align: justify;">
-                Prof. Santosh Kumar has been an academic in the area of Politics, Public Policy, Governance and Administration. Having pursued his academics at Jawaharlal Nehru University (JNU), University of Glasgow (on a short term Fellowship from Commonwealth) and Delhi University, his professional career commenced with Tata Institute of Social Sciences, and subsequently, he has been associated with various Universities of national and international repute, in different capacities of academics and administration. Each of these positions involved a combination of research, teaching and policy interventions.  Besides concerning himself as student of public policy, development, etc., he has been engaged with a quest to understand and assimilate pedagogical tools of inter and cross disciplinary perspectives in liberal framework of generating and imparting knowledge. The multiple perspectives from liberal pedagogical frameworks have contributed immensely to understanding of the policy sciences in a non-conventional mode. <br>
 
-As a specialist in the field of Public Policy, he has been engaged with Social Accountability Mechanisms in the Service Delivery Context, Community-based monitoring and evaluations, Decentralization and Good Governance Policies, etc. he has been involved with the public administration structures and have worked on many projects in Poverty Reduction programmes, particularly in South Asia (Bangladesh, Bhutan, Nepal, Sri Lanka, and in India - Maharashtra, Andhra Pradesh, Rajasthan, Tamil Nadu, Chhattisgarh and Madhya Pradesh), with the World Bank, UNDP, ADB and others. <br>
-
-Ha has also developed curriculum and syllabus on Human Development and Social Accountability for various academic institutions of South Asian countries, including BRAC University, Dhaka, ASCI, Hyderabad, TISS, etc. His work on Alternative Paradigms of Development in the Semi-Arid and Arid Regions of India (special emphasis on the Deccan Plateau) led to development of a one-year programme on Sustainable Development for the Semi-Arid and Arid region of Ladakh. <br>
-
-While for the state of Gujarat, he has been in the policy formulation and implementation in the field of Human Development, Health Insurance, Planning for Even Development across Districts, Solar and Alternative Energy Policy, etc. At each stage while interspersed with research and administrative responsibilities he has taught varied subjects, relating to Social and Human Development, Rural Livelihoods, Citizen-Centric Administrative perspectives, Public Policy etc. with the backdrop of Social Accountability in the Service Delivery Context. In the editorial board of two journals, Prof. Kumar has been associated with several international and national academic and policy planning bodies. He has participated in various national and international deliberations, presented papers and chaired sessions in Seminar and Conferences. He has authored two books, has publications in national and international journals, and has been associated with the Open Source Learning programme of UGC. <br>
+          <div class="wrap-collabsible1">
+  <input id="collapsible1" class="toggle1" type="checkbox">
+  <label for="collapsible1" class="lbl-toggle1">About Prof. Santosh Kumar</label>
+  <div class="collapsible-content1">
+    <div class="content-inner1">
+      <p style="font-size: 14px; text-align: justify;">
+                Prof. Santosh Kumar is the Professor and Head of Public Policy, School of Liberal Arts and Human Sciences in Auro University. He has been an enthusiast in the area of Politics, Public Policy, Governance and Administration. Having pursued his academics at Jawaharlal Nehru University (JNU), University of Glasgow and Delhi University, his professional career commenced with TISS and subsequently, he got associated with various Universities of national and international repute. 
+<br>
+As a specialist in the field of Public Policy, he has been engaged with Social Accountability Mechanisms in the Service Delivery Context, Community-based monitoring and evaluations, Decentralization and Good Governance Policies, etc. He has worked on many projects in Poverty Reduction programmes, particularly in South Asia, with the World Bank, UNDP, ADB and others. He has worked on Alternative Paradigms of Development in the Semi-Arid and Arid Regions of India. While for the state of Gujarat, he has been in the policy formulation and implementation in the field of Human Development, Health Insurance, Planning for Even Development across Districts, Solar and Alternative Energy Policy, etc. He has authored two books, has publications in national and international journals, and has been associated with the Open Source Learning programme of UGC. <br>
               </p>
-            </div>
-          </div>
+    </div>
+  </div>
+</div>
+
         </div>
       </div>
       <div class="column-6 w-col w-col-6" style="margin-top: 20px;">
-        <div class="card-track" style="height: 229px;">
+        <div class="card-track">
           <div class="row-5 w-row">
             <div class="w-col w-col-3" style="text-align: center"><img src="../track/ProfSatyajitMajumdar.jpg" width="225" class="image-6" style="border-radius: 50%; height: 120px; width: 120px; object-fit: cover; object-position: 50% 0%"></div>
             <div class="w-col w-col-9">
-              <h4 class="heading-8" style="margin-bottom: 0px !important; padding-top: 10px;font-family: 'Roboto Condensed', sans-serif;">Prof. Satyajit Majumdar</h4>
+              <h4 class="heading-8" style="margin-bottom: 0px !important; font-family: 'Roboto Condensed', sans-serif;">Prof. Satyajit Majumdar</h4>
               <p style="text-align: center; margin-bottom: 20px !important; font-size: 14px;color:#6c757d!important ">(satyajit@tiss.edu)</p>
               
               <h5 class="heading-10" style="font-size: 16px;font-family: 'Roboto Condensed', sans-serif;">Professor and Chairperson,
@@ -82,72 +850,22 @@ Center for Social Entrepreneurship
               <h5 class="heading-10" style="font-size: 16px;font-family: 'Roboto Condensed', sans-serif;">Tata Institute of Social Sciences (TISS, Mumbai)</h5>
             </div>
           </div>
-          <div class="row-5 w-row" style="padding: 10px;">
-            <div class="w-col w-col-12">
-              
-            </div>
-          </div>
+                    <div class="wrap-collabsible2" style="margin-top: 21px;">
+  <input id="collapsible2" class="toggle2" type="checkbox">
+  <label for="collapsible2" class="lbl-toggle2">About Prof. Satyajit Majumdar</label>
+  <div class="collapsible-content2">
+    <div class="content-inner2">
+      <p style="font-size: 14px; text-align: justify;">
+               Dr. Satyajit Majumdar is a Professor at Centre for Social Entrepreneurship, School of Management and Labour Studies in Tata Institute of Social Science, Mumbai, India. Apart from being a teacher, consultant and researcher, he has been conferred with many awards including Best Case Writer Award, Galpin International Research Fellowship, etc. He is also associated as Expert with UNESCO - Asia-Pacific, UNCTAD – Geneva and British Council – India.  <br>
+His primary areas of interest in research are business entrepreneurship and social entrepreneurship with specific focus on 'growth strategy', 'business models' and 'CSR'. He has more than 37 years of experience, previous engagement with Coal India Limited in maintenance and projects, with Indian Statistical Institute as consultant, with Confederation of Indian Industry (CII), Madhya Pradesh as advisor on Small and Medium Enterprises (SME). He has published a lot of papers in reputed journals and also co-authored various books.
+              </p>
+    </div>
+  </div>
+</div>
         </div>
       </div>
-      <div class="column-6 w-col w-col-6" style="margin-top: 20px;">
-        <div class="card-track" style="height: 229px;">
-          <div class="row-5 w-row">
-            <div class="w-col w-col-3" style="text-align: center"><img src="../track/DrKKuperanVishwanathan.jpg" width="225" class="image-6" style="border-radius: 50%; height: 120px; width: 120px; object-fit: cover; object-position: 50% 0%"></div>
-            <div class="w-col w-col-9">
-              <h4 class="heading-8" style="margin-bottom: 0px !important; padding-top: 10px;font-family: 'Roboto Condensed', sans-serif;">Dr. K Kuperan Vishwanathan</h4>
-              <p style="text-align: center; margin-bottom: 20px !important; font-size: 14px ; color:#6c757d!important">(kuperan@uum.edu.my)</p>
-              <h5 class="heading-10" style="font-size: 16px;font-family: 'Roboto Condensed', sans-serif;">Professor and Head of Financial Analysis and Policy Group
-              </h5>
-              <h5 class="heading-10" style="font-size: 16px;font-family: 'Roboto Condensed', sans-serif;">Othman Yeop Abdullah Graduate School of Business Malaysia</h5>
-            </div>
-          </div>
-          <div class="row-5 w-row" style="padding: 10px;">
-            <div class="w-col w-col-12">
-              
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="column-6 w-col w-col-6" style="margin-top: 20px;">
-        <div class="card-track" style="height: 229px;">
-          <div class="row-5 w-row">
-            <div class="w-col w-col-3" style="text-align: center"><img src="../track/DrDivyaSinghal.jpg" width="225" class="image-6" style="border-radius: 50%; height: 120px; width: 120px; object-fit: cover; object-position: 50% 0%"></div>
-            <div class="w-col w-col-9">
-              <h4 class="heading-8" style="margin-bottom: 0px !important; padding-top: 10px;font-family: 'Roboto Condensed', sans-serif;">Dr. Divya Singhal</h4>
-              <p style="text-align: center; margin-bottom: 20px !important; font-size: 14px; color:#6c757d">(divyasinghal@gim.ac.in)</p>
-              
-              <h5 class="heading-10" style="font-size: 16px;font-family: 'Roboto Condensed', sans-serif;">Associate Professor (General Management)
-              </h5>
-              <h5 class="heading-10" style="font-size: 16px;font-family: 'Roboto Condensed', sans-serif;">Goa Institute of Management</h5>
-            </div>
-          </div>
-          <div class="row-5 w-row" style="padding: 10px;">
-            <div class="w-col w-col-12">
-              
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="column-6 w-col w-col-6" style="margin-top: 20px;">
-        <div class="card-track" style="height: 229px;">
-          <div class="row-5 w-row">
-            <div class="w-col w-col-3" style="text-align: center"><img src="../track/ProfJankiAndharia.jpeg" width="225" class="image-6" style="border-radius: 50%; height: 120px; width: 120px; object-fit: cover; object-position: 50% 0%"></div>
-            <div class="w-col w-col-9">
-              <h4 class="heading-8" style="margin-bottom: 0px !important; padding-top: 10px;font-family: 'Roboto Condensed', sans-serif;">Prof. Janki Andharia</h4>
-              <p style="text-align: center; margin-bottom: 20px !important; font-size: 14px;color:#6c757d!important ">(andharia@tiss.edu)</p>
-              <h5 class="heading-10" style="font-size: 16px;font-family: 'Roboto Condensed', sans-serif;">Dean - Jamsetji Tata School of Disaster Studies <br>
-Chairperson - Centre for Disasters and Development, Jamsetji Tata School of Disaster Studies 
-              </h5>
-              <h5 class="heading-10" style="font-size: 16px;font-family: 'Roboto Condensed', sans-serif;">Tata Institute of Social Sciences (TISS, Mumbai)</h5>
-            </div>
-          </div>
-          <div class="row-5 w-row" style="padding: 10px;">
-            <div class="w-col w-col-12">
-              
-            </div>
-          </div>
-        </div>
-      </div>
+
+
     </div>
 
   </div>

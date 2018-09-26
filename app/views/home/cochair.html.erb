@@ -11,7 +11,228 @@
           letter-spacing: 1px;
           font-family: 'Roboto Condensed', sans-serif;
      }
-    
+       .wrap-collabsible {
+  /*margin-bottom: 1.2rem 0;*/
+}
+
+input[type='checkbox'] {
+  display: none;
+}
+
+.lbl-toggle {
+  display: block;
+
+  font-weight: bold;
+  
+  font-size: 15px;
+  text-transform: uppercase;
+  text-align: center;
+
+  padding: 10px;
+
+  color: white;
+  background: #3a3a3a;
+
+  cursor: pointer;
+
+  /*border-radius: 7px;*/
+  transition: all 0.25s ease-out;
+}
+
+.lbl-toggle:hover {
+  color: #a9a9a9;
+}
+
+.lbl-toggle::before {
+  content: ' ';
+  display: inline-block;
+
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 5px solid currentColor;
+  vertical-align: middle;
+  margin-right: .7rem;
+  transform: translateY(-2px);
+
+  transition: transform .2s ease-out;
+}
+
+.toggle:checked + .lbl-toggle::before {
+  transform: rotate(90deg) translateX(-3px);
+}
+
+.collapsible-content {
+  max-height: 0px;
+  overflow: hidden;
+  transition: max-height .25s ease-in-out;
+}
+
+.toggle:checked + .lbl-toggle + .collapsible-content {
+  max-height: 500px;
+}
+
+.toggle:checked + .lbl-toggle {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.collapsible-content .content-inner {
+  background: #fefdfb;
+  border-bottom: 1px solid rgba(250, 224, 66, .45);
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
+  padding: .5rem 1rem;
+} 
+
+
+   .wrap-collabsible1 {
+  /*margin-bottom: 1.2rem 0;*/
+}
+
+input[type='checkbox'] {
+  display: none;
+}
+
+.lbl-toggle1 {
+  display: block;
+
+  font-weight: bold;
+  
+  font-size: 15px;
+  text-transform: uppercase;
+  text-align: center;
+
+  padding: 10px;
+
+  color: white;
+  background: #3a3a3a;
+
+  cursor: pointer;
+
+  /*border-radius: 7px;*/
+  transition: all 0.25s ease-out;
+}
+
+.lbl-toggle1:hover {
+  color: #a9a9a9;
+}
+
+.lbl-toggle1::before {
+  content: ' ';
+  display: inline-block;
+
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 5px solid currentColor;
+  vertical-align: middle;
+  margin-right: .7rem;
+  transform: translateY(-2px);
+
+  transition: transform .2s ease-out;
+}
+
+.toggle1:checked + .lbl-toggle1::before {
+  transform: rotate(90deg) translateX(-3px);
+}
+
+.collapsible-content1 {
+  max-height: 0px;
+  overflow: hidden;
+  transition: max-height .25s ease-in-out;
+}
+
+.toggle1:checked + .lbl-toggle1 + .collapsible-content1 {
+  max-height: 960px;
+}
+
+.toggle1:checked + .lbl-toggle1 {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.collapsible-content1 .content-inner1 {
+  background: #fefdfb;
+  border-bottom: 1px solid rgba(250, 224, 66, .45);
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
+  padding: .5rem 1rem;
+} 
+
+
+
+   .wrap-collabsible2 {
+  /*margin-bottom: 1.2rem 0;*/
+}
+
+input[type='checkbox'] {
+  display: none;
+}
+
+.lbl-toggle2 {
+  display: block;
+
+  font-weight: bold;
+  
+  font-size: 15px;
+  text-transform: uppercase;
+  text-align: center;
+
+  padding: 10px;
+
+  color: white;
+  background: #3a3a3a;
+
+  cursor: pointer;
+
+  /*border-radius: 7px;*/
+  transition: all 0.25s ease-out;
+}
+
+.lbl-toggle2:hover {
+  color: #a9a9a9;
+}
+
+.lbl-toggle2::before {
+  content: ' ';
+  display: inline-block;
+
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 5px solid currentColor;
+  vertical-align: middle;
+  margin-right: .7rem;
+  transform: translateY(-2px);
+
+  transition: transform .2s ease-out;
+}
+
+.toggle2:checked + .lbl-toggle2::before {
+  transform: rotate(90deg) translateX(-3px);
+}
+
+.collapsible-content2 {
+  max-height: 0px;
+  overflow: hidden;
+  transition: max-height .25s ease-in-out;
+}
+
+.toggle2:checked + .lbl-toggle2 + .collapsible-content2 {
+  max-height: 960px;
+}
+
+.toggle2:checked + .lbl-toggle2 {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.collapsible-content2 .content-inner2 {
+  background: #fefdfb;
+  border-bottom: 1px solid rgba(250, 224, 66, .45);
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
+  padding: .5rem 1rem;
+} 
+
 
     </style>
 <%end%> 
@@ -20,8 +241,8 @@
     <h2 class="-5" style="margin: 30px 0px 30px 0px"><p style="text-decoration: underline; text-decoration-color: #3b1e9a;">Co chairs</p></h2>
     <div class="row-2 w-row">
       <div class="column-6 w-col w-col-6">
-        <div class="card" style="height: 140px !important;">
-          <div class="row-12 w-row">
+        <div class="card-track">
+          <div class="row-5 w-row">
             <div class="w-col w-col-3"><img src="../Dr.-Sandip-Anand.jpg" width="225" class="image-6" style="border-radius: 50%; height: 120px; width: 120px; object-fit: cover; object-position: 50% 0%;"></div>
             <div class="w-col w-col-9">
               <h4 class="heading-8" style="font-family: 'Roboto Condensed', sans-serif;">Dr. Sandip Anand</h4>
@@ -31,11 +252,29 @@
               <h5 class="heading-10" style="font-size: 17px;font-family: 'Roboto Condensed', sans-serif;color:#6c757d!important">Xavier University Bubaneswar</h5>
             </div>
           </div>
+                    <div class="row-5 w-row" >
+            <div class="w-col w-col-12">
+              
+          <div class="wrap-collabsible">
+  <input id="collapsible" class="toggle" type="checkbox">
+  <label for="collapsible" class="lbl-toggle">About Dr. Sandip Anand</label>
+  <div class="collapsible-content">
+    <div class="content-inner">
+      <p style="font-size: 14px; text-align: justify;">
+                Dr. Sandip Anand is a professor of marketing at the Xavier Institute of Management, Bhubaneswar, India. As Associate Dean of Doctoral programs at Xavier’s University Bhubaneshwar, he was instrumental in designing different doctoral-level programs and related policies for various schools of XUB. Other than XIMB, he has taught marketing courses at Mudra Institute of Communications, Ahmedabad (MICA), IIM Ranchi, Shiv Nadar University, and Ravenshaw University India. He has provided training to executives from JK paper, Infosys, Mahindra FES, Paradeep Phosphates, SBI, etc. He has shared his research at various institutions/forums such as Guttmacher Institute, New York, IIM Ahmedabad, IIM Lucknow, IIT Delhi, IIT Bombay, International Institute for Population Sciences (IIPS), Saint Louis University Madrid, Villanova University, etc. In 2015, he was a co-chair of TCR track on poverty. In 2014, he was conferred with the K. Srinivasan Award by Indian association for the study of population (IASP) for his published work on public-private partnerships in India. Sandip’s articles have appeared in refereed journals such as Journal of Marketing Communications, Journal of Food Products Marketing, International Journal of Health Care Quality Assurance, IIMB Management Review, International Journal of Rural Management, Demography India, Journal of Health Management, PAA proceedings (Princeton University), proceedings of World Marketing Congress etc. He has authored/co-authored three books. 
+
+
+              </p>
+    </div>
+  </div>
+</div>
+            </div>
+          </div>
         </div>
       </div>
       <div class="column-6 w-col w-col-6">
-        <div class="card" style="height: 140px !important;">
-          <div class="row-12 w-row">
+        <div class="card-track">
+          <div class="row-5 w-row">
             <div class="w-col w-col-3"><img src="../Dr.-Sapna-Narula.jpg" class="image-6" style="border-radius: 50%; height: 120px; width: 120px; object-fit: cover; object-position: 50% 0%;"></div>
             <div class="column-7 w-col w-col-9">
               <h4 class="heading-8" style="font-family: 'Roboto Condensed', sans-serif;">Dr. Sapna Narula</h4>
@@ -43,18 +282,54 @@
               <h5 class="heading-10" style="font-size: 17px;font-family: 'Roboto Condensed', sans-serif;color:#6c757d!important">TERI School of Advanced Studies</h5>
             </div>
           </div>
+                              <div class="row-5 w-row" style="margin-top: 3px;">
+            <div class="w-col w-col-12">
+              
+          <div class="wrap-collabsible1">
+  <input id="collapsible1" class="toggle1" type="checkbox">
+  <label for="collapsible1" class="lbl-toggle1">About Dr. Sapna Narula</label>
+  <div class="collapsible-content1">
+    <div class="content-inner1">
+      <p style="font-size: 14px; text-align: justify;">
+              Dr. Sapna Narula is a Professor and the Head of the Department of Business Sustainability at the TERI School of Advanced Studies. With over 18 years’ experience in teaching and research in the fields of business strategy, sustainability, CSR and marketing, Dr. Narula has been a part of several of India’s sustainability drives, and is currently working with Coal India Lt.d on Eco restoration and livelihood generation activities in Jharia Coal Mines. <br>
+Dr. Narula is an extraordinary scholar, with a gold medal from Delhi University and awards from the top international organizations including the UN and the German Ministry. She also has to her name several publications in the top journals across the globe.
+              </p>
+    </div>
+  </div>
+</div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
     <div class="row-2 w-row">
       <div class="column-6 w-col w-col-6">
-        <div class="card" style="height: 140px !important;">
-          <div class="row-12 w-row">
+        <div class="card-track" >
+          <div class="row-5 w-row">
             <div class="w-col w-col-3"><img src="../Dr.Preeti-Tiwari.jpg" width="84" class="image-6" style="border-radius: 50%; height: 120px; width: 120px; object-fit: cover; object-position: 50% 0%;"></div>
             <div class="w-col w-col-9" style="margin-top: 5px;">
               <h4 class="heading-8" style="font-family: 'Roboto Condensed', sans-serif;">Dr. Preeti Tiwari</h4>
               <h5 class="heading-10" style="font-size: 16px;font-family: 'Roboto Condensed', sans-serif;color:#6c757d!important">Assistant Professor (Strategy)</h5>
               <h5 class="heading-10" style="font-size: 17px;font-family: 'Roboto Condensed', sans-serif;color:#6c757d!important">T A PAI Management Institute</h5>
+            </div>
+          </div>
+                                        <div class="row-5 w-row" style="margin-top: 3px;">
+            <div class="w-col w-col-12">
+              
+          <div class="wrap-collabsible2">
+  <input id="collapsible2" class="toggle2" type="checkbox">
+  <label for="collapsible2" class="lbl-toggle2">About Dr. Preeti Tiwari</label>
+  <div class="collapsible-content2">
+    <div class="content-inner2">
+      <p style="font-size: 14px; text-align: justify;">
+             Preeti Tiwari is an Associate Professor of Strategy at T.A. Pai Management Institute, Manipal Karnataka.  She teaches courses on Sustainability responsibility and ethics, Business Leadership and New Venture Challenge. Prior to joining T. A. Pai Management Institute, she did her PhD from BITS Pilani in the area of Social Entrepreneurship.
+ <br>
+Her current research focuses on how individual-level helpful in developing intentions toward social entrepreneurship. She has published in top-tier management journals like Entrepreneurship Theory & Practice, The Journal of Social Entrepreneurship etc.
+
+              </p>
+    </div>
+  </div>
+</div>
             </div>
           </div>
         </div>
