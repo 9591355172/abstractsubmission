@@ -28,6 +28,6 @@ Rails.application.routes.draw do
   get 'application' => 'home#application'
   get 'trackchairs' => 'home#trackchairs'
   get 'sponsorship' => 'home#sponsors'
-  
+  get 'schedule' => 'home#schedule'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
