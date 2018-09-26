@@ -618,13 +618,167 @@ input[type='checkbox'] {
 } 
 
 
+
+
+
+   .wrap-collabsible8 {
+  /*margin-bottom: 1.2rem 0;*/
+}
+
+input[type='checkbox'] {
+  display: none;
+}
+
+.lbl-toggle8 {
+  display: block;
+
+  font-weight: bold;
+  
+  font-size: 15px;
+  text-transform: uppercase;
+  text-align: center;
+
+  padding: 10px;
+
+  color: white;
+  background: #3a3a3a;
+
+  cursor: pointer;
+
+  /*border-radius: 7px;*/
+  transition: all 0.25s ease-out;
+}
+
+.lbl-toggle8:hover {
+  color: #a9a9a9;
+}
+
+.lbl-toggle8::before {
+  content: ' ';
+  display: inline-block;
+
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 5px solid currentColor;
+  vertical-align: middle;
+  margin-right: .7rem;
+  transform: translateY(-2px);
+
+  transition: transform .2s ease-out;
+}
+
+.toggle8:checked + .lbl-toggle8::before {
+  transform: rotate(90deg) translateX(-3px);
+}
+
+.collapsible-content8 {
+  max-height: 0px;
+  overflow: hidden;
+  transition: max-height .25s ease-in-out;
+}
+
+.toggle8:checked + .lbl-toggle8 + .collapsible-content8 {
+  max-height: 960px;
+}
+
+.toggle8:checked + .lbl-toggle8 {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.collapsible-content8 .content-inner8 {
+  background: #fefdfb;
+  border-bottom: 1px solid rgba(250, 224, 66, .45);
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
+  padding: .5rem 1rem;
+} 
+
+
+
+
+   .wrap-collabsible9 {
+  /*margin-bottom: 1.2rem 0;*/
+}
+
+input[type='checkbox'] {
+  display: none;
+}
+
+.lbl-toggle9 {
+  display: block;
+
+  font-weight: bold;
+  
+  font-size: 15px;
+  text-transform: uppercase;
+  text-align: center;
+
+  padding: 10px;
+
+  color: white;
+  background: #3a3a3a;
+
+  cursor: pointer;
+
+  /*border-radius: 7px;*/
+  transition: all 0.25s ease-out;
+}
+
+.lbl-toggle9:hover {
+  color: #a9a9a9;
+}
+
+.lbl-toggle9::before {
+  content: ' ';
+  display: inline-block;
+
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 5px solid currentColor;
+  vertical-align: middle;
+  margin-right: .7rem;
+  transform: translateY(-2px);
+
+  transition: transform .2s ease-out;
+}
+
+.toggle9:checked + .lbl-toggle9::before {
+  transform: rotate(90deg) translateX(-3px);
+}
+
+.collapsible-content9 {
+  max-height: 0px;
+  overflow: hidden;
+  transition: max-height .25s ease-in-out;
+}
+
+.toggle9:checked + .lbl-toggle9 + .collapsible-content9 {
+  max-height: 960px;
+}
+
+.toggle9:checked + .lbl-toggle9 {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.collapsible-content9 .content-inner9 {
+  background: #fefdfb;
+  border-bottom: 1px solid rgba(250, 224, 66, .45);
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
+  padding: .5rem 1rem;
+} 
+
+
+
     </style>
 <%end%> 
 <div>
   <div class="heading-tittle color-black w-container">
     <h2 class="-5" style="margin-top: 30px; margin-bottom: 30px"> <p style="text-decoration: underline; text-decoration-color: #3b1e9a;">Track chairs</p></h2>
     <div class="row-3 w-row">
-                  <div class="column-6 w-col w-col-6" style="margin-top: 20px;">
+                  <div class="column-6 w-col w-col-6" id="1" style="margin-top: 20px;">
         <div class="card-track" >
           <div class="row-5 w-row">
             <div class="w-col w-col-3" style="text-align: center"><img src="../ProfAnilKulkarni.jpg" width="225" class="image-6" style="border-radius: 50%; height: 120px; width: 120px; object-fit: cover; object-position: 50% 0%"></div>
@@ -637,7 +791,7 @@ input[type='checkbox'] {
               <h5 class="heading-10" style="font-size: 16px;font-family: 'Roboto Condensed', sans-serif;">SPJIMR</h5>
             </div>
           </div>
-          <div class="row-5 w-row" style="padding: 10px;">
+          <div class="row-5 w-row">
             <div class="w-col w-col-12">
                                   <div class="wrap-collabsible7">
   <input id="collapsible7" class="toggle7" type="checkbox">
@@ -655,7 +809,7 @@ input[type='checkbox'] {
           </div>
         </div>
       </div>
-                  <div class="column-6 w-col w-col-6" style="margin-top: 20px;">
+                  <div class="column-6 w-col w-col-6" id="2" style="margin-top: 20px;">
         <div class="card-track" >
           <div class="row-5 w-row">
             <div class="w-col w-col-3" style="text-align: center"><img src="../DrAnshulVerma.jpg" width="225" class="image-6" style="border-radius: 50%; height: 120px; width: 120px; object-fit: cover; object-position: 50% 0%"></div>
@@ -668,7 +822,7 @@ input[type='checkbox'] {
               <h5 class="heading-10" style="font-size: 16px;font-family: 'Roboto Condensed', sans-serif;">SPJIMR</h5>
             </div>
           </div>
-          <div class="row-5 w-row" style="padding: 10px;">
+          <div class="row-5 w-row">
             <div class="w-col w-col-12">
                                   <div class="wrap-collabsible6">
   <input id="collapsible6" class="toggle6" type="checkbox">
@@ -686,7 +840,7 @@ input[type='checkbox'] {
           </div>
         </div>
       </div>
-            <div class="column-6 w-col w-col-6" style="margin-top: 20px;">
+            <div class="column-6 w-col w-col-6" id="3" style="margin-top: 20px;">
         <div class="card-track" >
           <div class="row-5 w-row">
             <div class="w-col w-col-3" style="text-align: center"><img src="../track/DrDivyaSinghal.jpg" width="225" class="image-6" style="border-radius: 50%; height: 120px; width: 120px; object-fit: cover; object-position: 50% 0%"></div>
@@ -699,7 +853,7 @@ input[type='checkbox'] {
               <h5 class="heading-10" style="font-size: 16px;font-family: 'Roboto Condensed', sans-serif;">Goa Institute of Management</h5>
             </div>
           </div>
-          <div class="row-5 w-row" style="padding: 10px;">
+          <div class="row-5 w-row">
             <div class="w-col w-col-12">
                                   <div class="wrap-collabsible4" style="margin-top: 21px;">
   <input id="collapsible4" class="toggle4" type="checkbox">
@@ -719,7 +873,7 @@ Dr. Divya was a founder member of the coordination committee of institute’s So
           </div>
         </div>
       </div>
-      <div class="column-6 w-col w-col-6" style="margin-top: 20px;">
+      <div class="column-6 w-col w-col-6" id="4" style="margin-top: 20px;">
         <div class="card-track" >
           <div class="row-5 w-row">
             <div class="w-col w-col-3" style="text-align: center"><img src="../track/ProfJankiAndharia.jpeg" width="225" class="image-6" style="border-radius: 50%; height: 120px; width: 120px; object-fit: cover; object-position: 50% 0%"></div>
@@ -732,7 +886,7 @@ Chairperson - Centre for Disasters and Development, Jamsetji Tata School of Disa
               <h5 class="heading-10" style="font-size: 16px;font-family: 'Roboto Condensed', sans-serif;">Tata Institute of Social Sciences (TISS, Mumbai)</h5>
             </div>
           </div>
-          <div class="row-5 w-row" style="padding: 10px;">
+          <div class="row-5 w-row">
             <div class="w-col w-col-12">
                                   <div class="wrap-collabsible5" >
   <input id="collapsible5" class="toggle5" type="checkbox">
@@ -751,7 +905,43 @@ She has been involved in national and state level policy making work and has had
           </div>
         </div>
       </div>
-            <div class="column-6 w-col w-col-6" style="margin-top: 20px;">
+
+
+
+            <div class="column-6 w-col w-col-6" id="5" style="margin-top: 20px;">
+        <div class="card-track" >
+          <div class="row-5 w-row">
+            <div class="w-col w-col-3" style="text-align: center"><img src="../Kartik_Dave6.jpg" width="225" class="image-6" style="border-radius: 50%; height: 120px; width: 120px; object-fit: cover; object-position: 50% 0%"></div>
+            <div class="w-col w-col-9">
+              <h4 class="heading-8" style="margin-bottom: 0px !important; font-family: 'Roboto Condensed', sans-serif;">Prof. Kartik Dave</h4>
+              <p style="text-align: center; margin-bottom: 20px !important; font-size: 14px;color:#6c757d!important ">(kartik@aud.ac.in)</p>
+              <h5 class="heading-10" style="font-size: 16px;font-family: 'Roboto Condensed', sans-serif;">Professor (Marketing and Strategy)
+              </h5>
+              <h5 class="heading-10" style="font-size: 16px;font-family: 'Roboto Condensed', sans-serif;">mbedkar University, Delhi</h5>
+            </div>
+          </div>
+          <div class="row-5 w-row" >
+            <div class="w-col w-col-12">
+                                  <div class="wrap-collabsible9" style="margin-top: 33px;">
+  <input id="collapsible9" class="toggle9" type="checkbox">
+  <label for="collapsible9" class="lbl-toggle9">About Prof. Kartik Dave</label>
+  <div class="collapsible-content9">
+    <div class="content-inner5">
+      <p style="font-size: 14px; text-align: justify;">
+               Content coming soon
+
+              </p>
+    </div>
+  </div>
+</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+            <div class="column-6 w-col w-col-6" id="6" style="margin-top: 20px;">
         <div class="card-track" >
           <div class="row-5 w-row">
             <div class="w-col w-col-3" style="text-align: center"><img src="../track/DrKKuperanVishwanathan.jpg" width="225" class="image-6" style="border-radius: 50%; height: 120px; width: 120px; object-fit: cover; object-position: 50% 0%"></div>
@@ -776,7 +966,7 @@ She has been involved in national and state level policy making work and has had
 </div>
         </div>
       </div>
-      <div class="column-6 w-col w-col-6" style="margin-top: 20px;">
+      <div class="column-6 w-col w-col-6" id="7" style="margin-top: 20px;">
         <div class="card-track">
           <div class="row-5 w-row">
             <div class="w-col w-col-3" style="text-align: center"><img src="../track/DrPamsyHui.jpg" width="225" class="image-6" style="border-radius: 50%; height: 120px; width: 120px; object-fit: cover; object-position: 0% 0%; text-align: center;"></div>
@@ -806,7 +996,44 @@ She has been involved in national and state level policy making work and has had
           </div>
         </div>
       </div>
-      <div class="column-6 w-col w-col-6" style="margin-top: 20px;">
+
+
+
+
+            <div class="column-6 w-col w-col-6" id="8" style="margin-top: 20px;">
+        <div class="card-track">
+          <div class="row-5 w-row">
+            <div class="w-col w-col-3" style="text-align: center"><img src="../DrRadhaSharma.png" width="225" class="image-6" style="border-radius: 50%; height: 120px; width: 120px; object-fit: cover; object-position: 0% 0%; text-align: center;"></div>
+            <div class="w-col w-col-9">
+              <h4 class="heading-8" style="margin-bottom: 0px !important;font-family: 'Roboto Condensed', sans-serif;">Dr. Radha Sharma</h4>
+              <p style="text-align: center; font-size: 14px;font-family: 'Roboto Condensed', sans-serif;color:#6c757d!important ">(radha@mdi.ac.in)</p>
+              <h5 class="heading-10" style="font-size: 16px;font-family: 'Roboto Condensed', sans-serif;">Professor (Organizational Behavior) 
+              </h5>
+              <h5 class="heading-10" style="font-size: 16px;font-family: 'Roboto Condensed', sans-serif;">MDI Gurgaon</h5>
+            </div>
+          </div>
+          <div class="row-5 w-row" style="margin-top: 33px;" >
+            <div class="w-col w-col-12">
+              
+          <div class="wrap-collabsible8">
+  <input id="collapsible8" class="toggle8" type="checkbox">
+  <label for="collapsible8" class="lbl-toggle8">About Dr. Radha Sharma</label>
+  <div class="collapsible-content8">
+    <div class="content-inner8">
+      <p style="font-size: 14px; text-align: justify;">
+                Content coming soon.
+              </p>
+    </div>
+  </div>
+</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="column-6 w-col w-col-6" id="9" style="margin-top: 20px;">
         <div class="card-track">
           <div class="row-5 w-row">
             <div class="w-col w-col-3" style="text-align: center"><img src="../track/ProfSanrtoshKumar.jpg" width="225" class="image-6" style="border-radius: 50%; height: 120px; width: 120px; object-fit: cover; object-position: 50% 0%"></div>
@@ -836,7 +1063,7 @@ As a specialist in the field of Public Policy, he has been engaged with Social A
 
         </div>
       </div>
-      <div class="column-6 w-col w-col-6" style="margin-top: 20px;">
+      <div class="column-6 w-col w-col-6" id="10" style="margin-top: 20px;">
         <div class="card-track">
           <div class="row-5 w-row">
             <div class="w-col w-col-3" style="text-align: center"><img src="../track/ProfSatyajitMajumdar.jpg" width="225" class="image-6" style="border-radius: 50%; height: 120px; width: 120px; object-fit: cover; object-position: 50% 0%"></div>
