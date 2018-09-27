@@ -66,6 +66,9 @@ before_action :check_if_admin, only: [:admin_signin]
 	def payment
 	end
 
+	def hotels
+	end
+
 	def schedule
 	end
 

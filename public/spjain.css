@@ -248,6 +248,15 @@ figcaption {
   background-color: #f2f2f2;
 }
 
+
+
+@media only screen and (max-width: 600px) {
+    .navigation-bar.dark {
+        height: 60px !important;
+    }
+}
+
+
 .navigation-bar.top {
   margin-top: 58px;
   margin-bottom: 124px;
@@ -1177,6 +1186,7 @@ figcaption {
   color: #000;
 }
 
+
 .nav-link-3 {
   margin-top: -16px;
   padding: 10px 9px 8px 10px;  
@@ -1185,6 +1195,12 @@ figcaption {
   
   color: #fff;
   font-size: 14px;
+}
+
+@media only screen and (max-width: 600px) {
+    .nav-link-3 {
+      margin-top: 0px !important;
+    }
 }
 
 .nav-link-3:hover {

@@ -1678,11 +1678,17 @@ textarea.w-select {
   top: 100%;
   left: 0;
   right: 0;
-  width: 100%;
+  width: 200px;
 }
 .w-nav-overlay .w--nav-menu-open {
   top: 0;
 }
+@media only screen and (max-width: 600px) {
+  .w-nav-overlay .w--nav-menu-open {
+    height: 40px !important;
+  }
+}
+
 .w-nav[data-animation="over-left"] .w-nav-overlay {
   width: auto;
 }
@@ -1731,6 +1737,7 @@ textarea.w-select {
   }
   .w-nav[data-collapse="medium"] .w-nav-button {
     display: block;
+        background-color: #C8C8C8;
   }
 }
 @media screen and (max-width: 767px) {
