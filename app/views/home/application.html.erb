@@ -13,7 +13,58 @@
      }
     /* LIST #2 */
 
+     .button {
+  border-radius: 4px;
+  background-color: #3ec9cb !important;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 18px;
+  padding: 10px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
 
+.btn {
+    border-radius: 4px;
+  background-color: #3ec9cb !important;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 18px;
+  padding: 10px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+    
 
 #list2 ol li p { padding:8px; font-style:normal; border-left: 1px solid #999; }
 /*#list2 ol li p em { display:block; }*/
@@ -206,15 +257,82 @@ td.text-right {
             <tr>
             <td class="text-left">For attending Doctoral Colloquium</td>
             <td class="text-left">1000 INR</td>
+            <!-- <td class="text-left"><button id="btnSubmit" class="button"><span>Make a Payment</span></button></td> -->
             </tr>
             <tr>
             <td class="text-left">For attending Doctoral Colloquium &amp; 2 Day Forum</td>
             <td class="text-left">3000 INR</td>
+            <!-- <td class="text-left"><button id="btnSubmit" class="button"><span>Make a Payment</span></button></td> -->
             </tr>
             
             </tbody>
-            </table>
-        </div>         
+            </table>  
+            <button id="btnSubmit" class="button"><span>Make a Payment</span></button>
+            <% @txnid = current_user.id%>
+            <% @txnid = "9090" + @txnid.to_s %>
+
+    
+    <script type="text/javascript" src="https://www.paynimo.com/Paynimocheckout/server/lib/checkout.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            function handleResponse(res) {
+                if (typeof res != 'undefined' && typeof res.paymentMethod != 'undefined' && typeof res.paymentMethod.paymentTransaction != 'undefined' && typeof res.paymentMethod.paymentTransaction.statusCode != 'undefined' && res.paymentMethod.paymentTransaction.statusCode == '0300') {
+                    // success block
+                } else if (typeof res != 'undefined' && typeof res.paymentMethod != 'undefined' && typeof res.paymentMethod.paymentTransaction != 'undefined' && typeof res.paymentMethod.paymentTransaction.statusCode != 'undefined' && res.paymentMethod.paymentTransaction.statusCode == '0398') {
+                    // initiated block
+                } else {
+                    // error block
+                }
+            };
+
+            $(document).off('click', '#btnSubmit').on('click', '#btnSubmit', function(e) {
+                e.preventDefault();
+
+                var configJson = {
+                    'tarCall': false,
+                    'features': {
+                        'showPGResponseMsg': true,
+                        'enableExpressPay': true,
+                        'enableNewWindowFlow': true    //for hybrid applications please disable this by passing false
+                    },
+                    'consumerData': {
+                        'deviceId': 'WEBSH3', //possible values 'WEBSH1', 'WEBSH2' and 'WEBMD5'
+                        'token': '<%= STDOUT.puts Digest::SHA2.new(512).hexdigest(" L522|@txnid|1||1|9591355172|abhijeet428001@gmail.com||||||||||9567859878ALCMJH ") %>',
+                        'returnUrl': 'https://www.tekprocess.co.in/MerchantIntegrationClient/MerchantResponsePage.jsp',
+                        'responseHandler': handleResponse,
+                        'paymentMode': 'all',
+                        'merchantLogoUrl': '../home1.jpg',  //provided merchant logo will be displayed
+                        'disclaimerMsg': "Payment may take 2-3 days to process",
+                        'merchantId': 'L522',
+                        'currency': 'INR',
+                        'consumerId': '1',
+                        'consumerMobileNo': '9591355172',
+                        'consumerEmailId': 'abhijeet428001@gmail.com',
+                        'txnId': '<%= @txnid%>',   //Unique merchant transaction ID
+                        'items': [{
+                            'itemId': 'PRME',
+                            'amount': '1',
+                            'comAmt': '0'
+                        }],
+                        'customStyle': {
+                            'PRIMARY_COLOR_CODE': '#3977b7',   //merchant primary color code
+                            'SECONDARY_COLOR_CODE': '#FFFFFF',   //provide merchant's suitable color code
+                            'BUTTON_COLOR_CODE_1': '#1969bb',   //merchant's button background color code
+                            'BUTTON_COLOR_CODE_2': '#FFFFFF'   //provide merchant's suitable color code for button text
+                        }
+                    }
+                };
+
+                $.pnCheckout(configJson);
+                if(configJson.features.enableNewWindowFlow){
+                    pnCheckoutShared.openNewWindow();
+                }
+            });
+        });
+    </script>
+        </div> 
+
       </div>
         </div>
 

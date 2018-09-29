@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   devise_for :users
 
   root to: 'home#index'
-
+  resources :payments
   resources :abstracts
   get 'abstract' => 'home#abstract'
   get 'about' => 'home#about'
