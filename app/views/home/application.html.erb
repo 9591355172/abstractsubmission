@@ -267,10 +267,11 @@ td.text-right {
             
             </tbody>
             </table>  
+            <% if current_user %>
             <button id="btnSubmit" class="button"><span>Make a Payment</span></button>
             <% @txnid = current_user.id%>
             <% @txnid = "9090" + @txnid.to_s %>
-
+            <%end%>
     
     <script type="text/javascript" src="https://www.paynimo.com/Paynimocheckout/server/lib/checkout.js"></script>
 
