@@ -1080,9 +1080,9 @@ figcaption {
 }
 
 .slide-6 {
-  background-image: url('../images/carousel3.jpg');
-  background-position: 50% 50%;
-  background-size: cover;
+  background-image: url('../col-detail.jpg');
+  background-position: 50% 35%;
+  background-size: contain;
 }
 
 .icon-3 {

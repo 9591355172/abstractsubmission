@@ -12,7 +12,24 @@
           font-family: 'Roboto Condensed', sans-serif;
      }
     
+/*@media only screen and (max-width: 1280px) {
+    .w-slider {
+        height: 233px !important;
+    }
+}
 
+@media only screen and (min-width: 1600px) {
+    .w-slider {
+        height: 298px !important;
+    }
+}
+
+
+@media only screen and (max-width: 600px) {
+  .w-slider {
+    height: 60px !important;
+  }
+}*/
     </style>
 <%end%> 
 
@@ -23,8 +40,32 @@
 <%end%>
 
 <div>
-    <div class="heading-tittle color-black w-container" style="margin-top: 0px;">
-      <h2 class="" style="margin: 30px 0px 30px 0px"><p style="text-decoration: underline; text-decoration-color: #3b1e9a;">Colloquium Details</p></h2>
+
+    <div class="heading-tittle color-black w-container" style="max-width: none !important;">
+          <div>
+      <div data-delay="4000" data-animation="slide" data-autoplay="1" data-duration="500" data-infinite="1" class="w-slider" >
+        <div class="w-slider-mask">
+         <!--  
+          <div class="slide-2 w-slide">
+            <a href="/tracks" class="button" style="position: absolute; top: 63%; left: 47%;  cursor: pointer; opacity: 0">
+              
+            </a>
+          </div> -->
+          <div class="slide-6 w-slide"></div>
+          <!-- <div class="slide-6 w-slide"></div> -->
+        </div>
+        <div class="w-slider-arrow-left">
+          <div class="w-icon-slider-left"></div>
+        </div>
+        <div class="w-slider-arrow-right">
+          <div class="w-icon-slider-right"></div>
+        </div>
+        <div class="w-slider-nav w-round"></div>
+      </div>
+      <div class="w-container"></div>
+     <h2 class="" style="margin: 30px 0px 30px 0px"><p style="text-decoration: underline; text-decoration-color: #3b1e9a;">Colloquium Details</p></h2>
+    </div>
+      
     </div>
     <div>
       <h6 class="heading-2" style="font-family: 'Roboto Condensed', sans-serif;">
@@ -43,11 +84,11 @@
         The Colloquium committee will select approximately 25 participants who will be expected to participate in peer-review exercises, give short, informal presentations of their work during the Colloquium, and follow it up with extensive group discussion.
 
       </li>
-      <li style="padding-left: 10px;">
+      <li style="padding-left: 10px; margin-top: 10px;">
         Faculty members at institutions in India and abroad would be invited as discussants for each of the shortlisted papers. Each paper invited for full-fledged presentation would be assigned a discussant.
 
       </li>
-      <li style="padding-left: 10px;">
+      <li style="padding-left: 10px; margin-top: 10px;">
         The conference is designed to ensure focussed discussions among the doctoral student participants, faculty discussants and other academician invitees on each paper.
       </li>
       <br>
