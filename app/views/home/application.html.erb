@@ -282,18 +282,18 @@ td.text-right {
             <tr>
             <td class="text-left">For attending Doctoral Colloquium</td>
             <td class="text-left">1000 INR</td>
-            <!-- <td class="text-left"><button id="btnSubmit" class="button"><span>Make a Payment</span></button></td> -->
+            <!-- <td class="text-center"><button id="btnSubmit" class="button"><span>Make a Payment</span></button></td> -->
             </tr>
             <tr>
             <td class="text-left">For attending Doctoral Colloquium &amp; 2 Day Forum</td>
             <td class="text-left">3000 INR</td>
-            <!-- <td class="text-left"><button id="btnSubmit" class="button"><span>Make a Payment</span></button></td> -->
+            <!-- <td class="text-center"><button id="btnSubmit1" class="button"><span>Make a Payment</span></button></td> -->
             </tr>
             
             </tbody>
             </table>  
             <% if current_user %>
-            <button id="btnSubmit" class="button"><span>Make a Payment</span></button>
+            <!-- <button id="btnSubmit" class="button"><span>Make a Payment</span></button> -->
             <% @txnid = current_user.id%>
             <% @txnid = "9090" + @txnid.to_s %>
             <%end%>
@@ -324,7 +324,7 @@ td.text-right {
                     },
                     'consumerData': {
                         'deviceId': 'WEBSH3', //possible values 'WEBSH1', 'WEBSH2' and 'WEBMD5'
-                        'token': '<%= STDOUT.puts Digest::SHA2.new(512).hexdigest(" L522|@txnid|1||1|9591355172|abhijeet428001@gmail.com||||||||||9567859878ALCMJH ") %>',
+                        'token': '<%= STDOUT.puts Digest::SHA2.new(512).hexdigest(" L522|@txnid|1000||1|9591355172|abhijeet428001@gmail.com||||||||||9567859878ALCMJH ") %>',
                         'returnUrl': 'https://www.tekprocess.co.in/MerchantIntegrationClient/MerchantResponsePage.jsp',
                         'responseHandler': handleResponse,
                         'paymentMode': 'all',
@@ -338,7 +338,68 @@ td.text-right {
                         'txnId': '<%= @txnid%>',   //Unique merchant transaction ID
                         'items': [{
                             'itemId': 'PRME',
-                            'amount': '1',
+                            'amount': '1000',
+                            'comAmt': '0'
+                        }],
+                        'customStyle': {
+                            'PRIMARY_COLOR_CODE': '#3977b7',   //merchant primary color code
+                            'SECONDARY_COLOR_CODE': '#FFFFFF',   //provide merchant's suitable color code
+                            'BUTTON_COLOR_CODE_1': '#1969bb',   //merchant's button background color code
+                            'BUTTON_COLOR_CODE_2': '#FFFFFF'   //provide merchant's suitable color code for button text
+                        }
+                    }
+                };
+
+                $.pnCheckout(configJson);
+                if(configJson.features.enableNewWindowFlow){
+                    pnCheckoutShared.openNewWindow();
+                }
+            });
+        });
+    </script>
+
+
+
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            function handleResponse(res) {
+                if (typeof res != 'undefined' && typeof res.paymentMethod != 'undefined' && typeof res.paymentMethod.paymentTransaction != 'undefined' && typeof res.paymentMethod.paymentTransaction.statusCode != 'undefined' && res.paymentMethod.paymentTransaction.statusCode == '0300') {
+                    // success block
+                } else if (typeof res != 'undefined' && typeof res.paymentMethod != 'undefined' && typeof res.paymentMethod.paymentTransaction != 'undefined' && typeof res.paymentMethod.paymentTransaction.statusCode != 'undefined' && res.paymentMethod.paymentTransaction.statusCode == '0398') {
+                    // initiated block
+                } else {
+                    // error block
+                }
+            };
+
+            $(document).off('click', '#btnSubmit1').on('click', '#btnSubmit1', function(e) {
+                e.preventDefault();
+
+                var configJson = {
+                    'tarCall': false,
+                    'features': {
+                        'showPGResponseMsg': true,
+                        'enableExpressPay': true,
+                        'enableNewWindowFlow': true    //for hybrid applications please disable this by passing false
+                    },
+                    'consumerData': {
+                        'deviceId': 'WEBSH3', //possible values 'WEBSH1', 'WEBSH2' and 'WEBMD5'
+                        'token': '<%= STDOUT.puts Digest::SHA2.new(512).hexdigest(" L522|@txnid|3000||1|9591355172|abhijeet428001@gmail.com||||||||||9567859878ALCMJH ") %>',
+                        'returnUrl': 'https://www.tekprocess.co.in/MerchantIntegrationClient/MerchantResponsePage.jsp',
+                        'responseHandler': handleResponse,
+                        'paymentMode': 'all',
+                        'merchantLogoUrl': '../home1.jpg',  //provided merchant logo will be displayed
+                        'disclaimerMsg': "Payment may take 2-3 days to process",
+                        'merchantId': 'L522',
+                        'currency': 'INR',
+                        'consumerId': '1',
+                        'consumerMobileNo': '9591355172',
+                        'consumerEmailId': 'abhijeet428001@gmail.com',
+                        'txnId': '<%= @txnid%>',   //Unique merchant transaction ID
+                        'items': [{
+                            'itemId': 'PRME',
+                            'amount': '3000',
                             'comAmt': '0'
                         }],
                         'customStyle': {
