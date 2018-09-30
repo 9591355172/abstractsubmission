@@ -173,7 +173,7 @@
               
                 </div>
                 <%= button_tag(type: "submit", class: "button") do %>
-                   <span class="">Update File</span>
+                   <span class="">Upload File</span>
               <% end %>
               <% end %>
      
@@ -184,6 +184,9 @@
 </div>
 
 <% elsif %>
+
+
+
 <div>
   <div class="container-5 w-container" style="max-width: none !important; padding-top: 0px !important ">
         <div>
@@ -207,16 +210,65 @@
       </div>
       <div class="w-container"></div>
     </div>
-    <h6 class="heading-5" style="background-color: #a9a9a9; color:#3a3a3a; margin: 0px !important; font-size: 14px; height: 40px;"> 
-      Please &nbsp;
-    	<%= link_to new_user_session_path,class:"button1" do %>
+
+
+          <div id="6" style="height: 800px; margin-top: 00px;">
+      <div class="column-12 w-col w-col-12">
+        <div class="">
+          <div class="row-5 w-row">
+            <div class="w-col w-col-12" style="padding: 10px;">
+              
+
+              <div class="row-5 w-row">
+              <div class="column-7 w-col w-col-7">
+                <div class="column-1 w-col w-col-1">
+                  
+                </div>
+                <div class="column-8 w-col w-col-8">
+                  <h4 class="heading-8" style="text-align: left !important;font-family: 'Roboto Condensed', sans-serif;font-size: 20px;"><u>ABSTRACT SUBMISSION GUIDELINES</u><br></h4>
+        </h4>
+                  <div class="card-track" style="padding: 10px;">
+                <div id="list2">
+                  <dl>
+                    <dt>1. Prepare your abstract file </dt>
+                      <dd>•  You are expected to submit a 200 words abstract</dd>
+                      <dd>•  Name the file < First Name Last Name_Track Name></dd>
+                      <dd>•  Convert it into a PDF file</dd>
+                    <dt style="margin-top: 10px;">2. Register your details</dt>
+                    <dt style="margin-top: 10px;">3. Login if you have already registered</dt>
+                    <dt style="margin-top: 10px;">4. Upload your PDF file</dt>
+                  </dl>
+                </div>
+              </div> 
+                </div>
+                <div class="column-3 w-col w-col-3"></div>
+                
+              </div>
+              <div class="column-5 w-col w-col-5" style="padding-top: 100px; ">
+              <div class="column-12 w-col w-col-12">
+                 
+                 <h4 class="heading-8" style="text-align: left;font-family: 'Roboto Condensed', sans-serif; font-size: 18px"> <p style=" display: inline"> 
+                Please </p>
+      <%= link_to new_user_session_path,class:"button1" do %>
         <span> Log In </span> 
       <% end %>
-    	/
-    	<%= link_to new_user_registration_path,class:"button1" do%>
+      /
+      <%= link_to new_user_registration_path,class:"button1" do%>
       <span> Register</span> 
-      <%end%>&nbsp;
-     to upload abstract</h6>
+      <%end%>
+      <p style=" display: inline">
+     to upload abstract
+              </p></h4>
+              </div>
+              
+            </div>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+</div>
+    
   </div>
 </div>
 <% end %>
