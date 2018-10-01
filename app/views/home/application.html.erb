@@ -292,16 +292,35 @@ td.text-right {
             
             </tbody>
             </table>  
+            <div class="row-2 w-row" style="margin: 20px;"> 
+              <div class="column-3 w-col w-col-3"></div>
+              <div class="column-4 w-col w-col-4" style="padding-top: 13px; border-right: none">
+                 <select id="YourSelectComponentID">
+                    <option value="1000">For attending Doctoral Colloquium</option>
+                    <option value="3000">For attending Doctoral Colloquium and 2 day forum</option>
+                    
+                    
+                    
+                 </select>
+              </div>
+              <div class="column-2 w-col w-col-2" style="padding-top: 0px; border-right: none">
+                <button id="btnSubmit" class="button"><span>Make a Payment</span></button>
+              </div>
+              <div class="column-3 w-col w-col-3"></div>
+            </div>
             <% if current_user %>
-            <!-- <button id="btnSubmit" class="button"><span>Make a Payment</span></button> -->
-            <% @txnid = current_user.id%>
-            <% @txnid = "9090" + @txnid.to_s %>
+            
+            
             <%end%>
     
     <script type="text/javascript" src="https://www.paynimo.com/Paynimocheckout/server/lib/checkout.js"></script>
 
     <script type="text/javascript">
-        $(document).ready(function() {
+        document.getElementById('btnSubmit').onclick = function() {
+
+                    if(document.getElementById("YourSelectComponentID").value == 1000)
+                    {
+                        $(document).ready(function() {
             function handleResponse(res) {
                 if (typeof res != 'undefined' && typeof res.paymentMethod != 'undefined' && typeof res.paymentMethod.paymentTransaction != 'undefined' && typeof res.paymentMethod.paymentTransaction.statusCode != 'undefined' && res.paymentMethod.paymentTransaction.statusCode == '0300') {
                     // success block
@@ -323,28 +342,28 @@ td.text-right {
                         'enableNewWindowFlow': true    //for hybrid applications please disable this by passing false
                     },
                     'consumerData': {
-                        'deviceId': 'WEBSH3', //possible values 'WEBSH1', 'WEBSH2' and 'WEBMD5'
-                        'token': '<%= STDOUT.puts Digest::SHA2.new(512).hexdigest(" L522|@txnid|1000||1|9591355172|abhijeet428001@gmail.com||||||||||9567859878ALCMJH ") %>',
-                        'returnUrl': 'https://www.tekprocess.co.in/MerchantIntegrationClient/MerchantResponsePage.jsp',
+                        'deviceId': 'WEBSH2', //possible values 'WEBSH1', 'WEBSH2' and 'WEBMD5'
+                        'token': '<%= @token1 %>',
+                        'returnUrl': '<%= payments_path %>',
                         'responseHandler': handleResponse,
                         'paymentMode': 'all',
                         'merchantLogoUrl': '../home1.jpg',  //provided merchant logo will be displayed
-                        'disclaimerMsg': "Payment may take 2-3 days to process",
+                        'disclaimerMsg': "INDUSTRY PARTICIPANT",
                         'merchantId': 'L522',
                         'currency': 'INR',
                         'consumerId': '1',
                         'consumerMobileNo': '9591355172',
                         'consumerEmailId': 'abhijeet428001@gmail.com',
-                        'txnId': '<%= @txnid%>',   //Unique merchant transaction ID
+                        'txnId': '<%= @txnid %>',   //Unique merchant transaction ID
                         'items': [{
                             'itemId': 'PRME',
                             'amount': '1000',
                             'comAmt': '0'
                         }],
                         'customStyle': {
-                            'PRIMARY_COLOR_CODE': '#3977b7',   //merchant primary color code
+                            'PRIMARY_COLOR_CODE': '#333a56',   //merchant primary color code
                             'SECONDARY_COLOR_CODE': '#FFFFFF',   //provide merchant's suitable color code
-                            'BUTTON_COLOR_CODE_1': '#1969bb',   //merchant's button background color code
+                            'BUTTON_COLOR_CODE_1': '#52658f',   //merchant's button background color code
                             'BUTTON_COLOR_CODE_2': '#FFFFFF'   //provide merchant's suitable color code for button text
                         }
                     }
@@ -356,13 +375,8 @@ td.text-right {
                 }
             });
         });
-    </script>
-
-
-
-
-    <script type="text/javascript">
-        $(document).ready(function() {
+                    } else if(document.getElementById("YourSelectComponentID").value == 3000) {
+                        $(document).ready(function() {
             function handleResponse(res) {
                 if (typeof res != 'undefined' && typeof res.paymentMethod != 'undefined' && typeof res.paymentMethod.paymentTransaction != 'undefined' && typeof res.paymentMethod.paymentTransaction.statusCode != 'undefined' && res.paymentMethod.paymentTransaction.statusCode == '0300') {
                     // success block
@@ -373,7 +387,7 @@ td.text-right {
                 }
             };
 
-            $(document).off('click', '#btnSubmit1').on('click', '#btnSubmit1', function(e) {
+            $(document).off('click', '#btnSubmit').on('click', '#btnSubmit', function(e) {
                 e.preventDefault();
 
                 var configJson = {
@@ -384,28 +398,28 @@ td.text-right {
                         'enableNewWindowFlow': true    //for hybrid applications please disable this by passing false
                     },
                     'consumerData': {
-                        'deviceId': 'WEBSH3', //possible values 'WEBSH1', 'WEBSH2' and 'WEBMD5'
-                        'token': '<%= STDOUT.puts Digest::SHA2.new(512).hexdigest(" L522|@txnid|3000||1|9591355172|abhijeet428001@gmail.com||||||||||9567859878ALCMJH ") %>',
-                        'returnUrl': 'https://www.tekprocess.co.in/MerchantIntegrationClient/MerchantResponsePage.jsp',
+                        'deviceId': 'WEBSH2', //possible values 'WEBSH1', 'WEBSH2' and 'WEBMD5'
+                        'token': '<%= @token2 %>',
+                        'returnUrl': '<%= payments_path %>',
                         'responseHandler': handleResponse,
                         'paymentMode': 'all',
                         'merchantLogoUrl': '../home1.jpg',  //provided merchant logo will be displayed
-                        'disclaimerMsg': "Payment may take 2-3 days to process",
+                        'disclaimerMsg': "Members of UN Global Compact Network",
                         'merchantId': 'L522',
                         'currency': 'INR',
                         'consumerId': '1',
                         'consumerMobileNo': '9591355172',
                         'consumerEmailId': 'abhijeet428001@gmail.com',
-                        'txnId': '<%= @txnid%>',   //Unique merchant transaction ID
+                        'txnId': '<%= @txnid %>',   //Unique merchant transaction ID
                         'items': [{
                             'itemId': 'PRME',
                             'amount': '3000',
                             'comAmt': '0'
                         }],
                         'customStyle': {
-                            'PRIMARY_COLOR_CODE': '#3977b7',   //merchant primary color code
+                            'PRIMARY_COLOR_CODE': '#333a56',   //merchant primary color code
                             'SECONDARY_COLOR_CODE': '#FFFFFF',   //provide merchant's suitable color code
-                            'BUTTON_COLOR_CODE_1': '#1969bb',   //merchant's button background color code
+                            'BUTTON_COLOR_CODE_1': '#52658f',   //merchant's button background color code
                             'BUTTON_COLOR_CODE_2': '#FFFFFF'   //provide merchant's suitable color code for button text
                         }
                     }
@@ -417,6 +431,10 @@ td.text-right {
                 }
             });
         });
+                    } 
+
+                  };
+                 
     </script>
         </div> 
 

@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   devise_for :users
 
   root to: 'home#index'
-  resources :payments
+  # resources :payments
   resources :abstracts
   get 'abstract' => 'home#abstract'
   get 'about' => 'home#about'
@@ -30,5 +30,6 @@ Rails.application.routes.draw do
   get 'sponsorship' => 'home#sponsors'
   get 'schedule' => 'home#schedule'
   get 'hotels' => 'home#hotels'
+  post 'payments' => 'home#payment'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
