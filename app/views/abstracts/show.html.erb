@@ -130,26 +130,10 @@
                     <h5 class="heading-10" style="font-size: 17px;font-family: 'Roboto Condensed', sans-serif; margin-left: 10px; color:#6c757d!important">Select from the following track lists:</h5>
                     </div>
                     <div class="column-6 w-col w-col-6" style="margin-top: 10px; padding-left: 5px;">
-                      <select>
-                        <option>List of tracks</option>
-                        <option value="volvo">Asian Way of Thinking: Integrating Local Diversities in Management Education</option>
-                        <option value="saab">Building Inclusive Markets</option>
-                        <option value="opel">Business Initiatives for Sustainable Development</option>
-                        <option value="audi">Engaging with SDGs - The Local Experiences</option>
-                        <option>Extreme Events, Disasters and Building Resilience</option>
-                        <option>Global Peace and Education</option>
-                        <option>Inequality : The Role for Businesses</option>
-                        <option>Innovating on Pedagogy and Curriculum</option>
-                        <option>Management Education for Future</option>
-                        <option>Re-thinking CSR</option>
-                        <option>Social Entrepreneurship</option>
-                        <option>Social Impact Investing</option>
-                        <option>Sustainability and Development</option>
-                        <option>Sustainable Businesses</option>
-                        <option>Sustainable Cities</option>
-                        <option>Others</option>
-                      </select>
+                      <%= select_tag(:category, options_for_select(['Asian Way of Thinking: Integrating Local Diversities in Management Education', 'Building Inclusive Markets', 'Business Initiatives for Sustainable Development','Engaging with SDGs - The Local Experiences', 'Extreme Events, Disasters and Building Resilience','Global Peace and Education','Inequality : The Role for Businesses','Innovating on Pedagogy and Curriculum','Management Education for Future','Re-thinking CSR','Social Entrepreneurship','Social Impact Investing','Sustainability and Development','Sustainable Businesses','Sustainable Cities','Others']), :include_blank => false, :required => true, :class => 'select' )%>
                     </div>
+
+   
                   </div>
                   <div class="column-12 w-col w-col-12">
               <div class="column-6 w-col w-col-6" >

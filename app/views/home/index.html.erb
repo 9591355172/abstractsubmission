@@ -7,6 +7,61 @@
     }
 }
 
+
+
+     .button {
+  border-radius: 4px;
+  background-color: #3ec9cb !important;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 14px;
+  padding: 10px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.btn {
+    border-radius: 4px;
+  background-color: #3ec9cb !important;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 18px;
+  padding: 10px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+
 </style>
   
 <% end %>
@@ -66,16 +121,37 @@
   
 
   <p>
-    <div class="row">
-      <div class="" style="padding: 10px; text-align: justify; font-size: 16px;">
+    <div class="row-3 w-row">
+      <div class="column-8 w-col w-col-8" style="padding: 10px; text-align: justify; font-size: 16px; padding-right: 20px;">
        The 21st century corporations must provide principled leadership, meaningful jobs and a sustainable, inclusive agenda.  Over the last nine months SPJIMR has been hosting meetings, in different regions of India to promote conversations and partnerships around education, corporate citizenship and sustainable futures. <br>
  
 <p style="margin-top: 15px">The 8th PRME Asia Forum aims to broaden this conversation, by bringing together management and leadership from universities, management schools, corporates and civil society from the Asia-pacific region. The Forum is open to academic and corporate and social sector audiences, and not limited to members of the PRME Chapter in the region or signatories of the UN-supported PRME.</p>
 
 <p >SPJIMR will host the forum between 12- 14 December, 2018 in Mumbai, India.</p> 
-<i class="fa fa-envelope w3-xxxlarge" style="font-size: 18px !important; "></i> <p style="text-decoration: underline; text-decoration-color: #3b1e9a;display: inline"> prme.asiaforum@spjimr.org </p>
 
 
+
+      </div>
+      <div class="column-1 w-col w-col-1" style=" text-align: justify; font-size: 16px;  border-right: 2px solid #d3d3d3;height: 220px; width:5%;">
+        
+      </div>
+      <div class="column-3 w-col w-col-3" style=" text-align: justify; font-size: 16px; border-right: none;padding-left: 60px;">
+        <div class="row-3 w-row">
+          <!-- <div class="card" style="height: 200px;"> -->
+          <div class="column-12 w-col w-col-12" style="padding: 10px; text-align: center; font-size: 18px;">
+            <p style="text-decoration: underline; text-decoration-color: #3b1e9a;">REGISTRATION: </p>
+          </div>
+          <div class="column-12 w-col w-col-12" style="padding: 0px; text-align: center; font-size: 16px; margin">
+            <a href="/fees"><button id="btnSubmit" class="button"><span>FORUM</span></button></a>
+          </div>
+          <div class="column-12 w-col w-col-12" style="padding: 0px; text-align: center; font-size: 16px;">
+            <a href="/application#register"><button id="btnSubmit" class="button"><span>DOCTORAL COLLOQUIUM</span></button></a>
+          </div>
+          <div class="column-12 w-col w-col-12" style="padding: 0px; text-align: center; font-size: 16px;margin-top: 25px;">
+          <i class="fa fa-envelope w3-xxxlarge" style="font-size: 18px !important; "></i> <p style="text-decoration: underline; text-decoration-color: #3b1e9a;display: inline"> prme.asiaforum@spjimr.org </p>
+        </div>
+          <!-- </div> -->
+        </div>
       </div>
     </div>
   </p>

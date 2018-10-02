@@ -199,6 +199,98 @@ td.text-right {
   right: 0;
 }
 
+    .button {
+  border-radius: 4px;
+  background-color: #3ec9cb !important;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 18px;
+  padding: 10px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+     .button1 {
+  border-radius: 4px;
+  background-color: #a9a9a9 !important;
+  border: none;
+  color: #3a3a3a;
+  text-align: center;
+  font-size: 14px;
+  padding: 10px;
+  /*width: 200px;*/
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.btn {
+    border-radius: 4px;
+  background-color: #3ec9cb !important;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 18px;
+  padding: 10px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+
+.button1 span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button1 span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button1:hover span {
+  padding-right: 25px;
+}
+
+.button1:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
 
     </style>
 <%end%> 
@@ -305,6 +397,27 @@ td.text-right {
 
             </div>
             <div class="row-2 w-row" style="margin: 20px;"> 
+              <% if !current_user %>
+              <div class="row-2 w-row">
+              <div class="column-12 w-col w-col-12" style="text-align: center">
+                <h4 class="heading-8" style="font-family: 'Roboto Condensed', sans-serif; font-size: 18px"> <p style=" display: inline"> 
+                Please </p>
+      <%= link_to new_user_session_path,class:"button1" do %>
+        <span> Log In </span> 
+      <% end %>
+      /
+      <%= link_to new_user_registration_path,class:"button1" do%>
+      <span> Register</span> 
+      <%end%>
+      <p style=" display: inline">
+     to register for forum.
+              </p></h4>
+            </div>
+          </div>
+              <% else %>
+              <div class="column-12 w-col w-col-12" style="padding-top: 10px;">
+                <p style="text-decoration: underline; text-decoration-color: #3b1e9a; font-size: 18px;">SELECT CATEGORY OF PARTICIPATION</p>
+              </div>
               <div class="column-6 w-col w-col-6" style="padding-top: 10px;">
                  <select id="YourSelectComponentID">
                     <option value="8000">Industry Participant</option>
@@ -614,7 +727,7 @@ td.text-right {
                  
                 </script>
               </div>
-                 
+            <% end %>
 
 <script type="text/javascript">
         

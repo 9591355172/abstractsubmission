@@ -155,22 +155,38 @@
     <div class="heading-tittle color-black w-container">
     <h2 class="heading-5" style=""><p style="text-decoration: underline; text-decoration-color: #3b1e9a; margin-top: 50px;">Upload Abstract</p></h2>
     </div>
-    <h6 class="heading-5" style="font-family: 'Roboto Condensed', sans-serif;"><p style="text-decoration: underline; text-decoration-color: #3b1e9a;display: inline">Name of the file  </p> : &nbsp; <p style="display: inline; font-size: 15px;">< First Name Last Name_Track Name> </p> </h6>
+    
     <div class="div-block-4" style="margin-bottom: 50px;">
       <div>
         <div class="w-row heading-5">
          
               <%= form_tag abstracts_path, enctype: 'multipart/form-data' do %>
-              <div class="card" style="height: 90px; margin-bottom: 30px;">
-              <div class="column-6 w-col w-col-6" >
-                <h5 class="heading-10" style="font-size: 17px;font-family: 'Roboto Condensed', sans-serif; margin-left: 10px; color:#6c757d!important">Choose abstract</h5>
+              <div class="card" style="height: 100%; margin-bottom: 30px;">
+                <div class="row- w-row" style="padding-top: 0px;">
+                <div class="column-12 w-col w-col-12" >
+                  <h6 class="heading-5" style="font-family: 'Roboto Condensed', sans-serif;"><p style="text-decoration: underline; text-decoration-color: #3b1e9a;display: inline">Name of the file  </p> : &nbsp; <p style="display: inline; font-size: 15px;">< First Name Last Name_Track Name> </p> </h6>
+                </div>
+              </div>
+
+                <div class="row- w-row" style="padding-top: 10px;">
+                <div class="column-5 w-col w-col-5" >
+                  <h5 class="heading-10" style="font-size: 16px;font-family: 'Roboto Condensed', sans-serif; margin-left: 10px; color:#6c757d!important; text-align: right;">Select from the following track lists</h5>
+                </div>
+                <div class="column-6 w-col w-col-6" style="padding-top: 10px;">
+                  <%= select_tag(:category, options_for_select(['Asian Way of Thinking: Integrating Local Diversities in Management Education', 'Building Inclusive Markets', 'Business Initiatives for Sustainable Development','Engaging with SDGs - The Local Experiences', 'Extreme Events, Disasters and Building Resilience','Global Peace and Education','Inequality : The Role for Businesses','Innovating on Pedagogy and Curriculum','Management Education for Future','Re-thinking CSR','Social Entrepreneurship','Social Impact Investing','Sustainability and Development','Sustainable Businesses','Sustainable Cities','Others']), :include_blank => false, :required => true, :class => 'select' )%>
+                </div>
+                
+              </div>
+              <div class="row- w-row">
+              <div class="column-5 w-col w-col-5" >
+                <h5 class="heading-10" style="text-align: right;font-size: 16px;font-family: 'Roboto Condensed', sans-serif; margin-left: 10px; color:#6c757d!important">Select abstract</h5>
               </div>
               <div class="column-6 w-col w-col-6" style="margin-top: 10px; ">
                 
-                  <%= file_field_tag :file , :style => "margin-left: 5px;" %>
-                  <p class="heading-10" style="font-size: 14px;font-family: 'Roboto Condensed', sans-serif; margin-left: 0px; color:#6c757d; margin-right: 70px;">(Please upload pdf only)</p>
+                  <%= file_field_tag :file , :style => "margin-left: 5px; display:inline" %>
+                  <p class="heading-10" style="display: inline;font-size: 14px;font-family: 'Roboto Condensed', sans-serif; margin-left: 0px; color:#6c757d; margin-right: 70px;">(Please upload pdf only)</p>
               </div>
-              
+              </div>
                 </div>
                 <%= button_tag(type: "submit", class: "button") do %>
                    <span class="">Upload File</span>

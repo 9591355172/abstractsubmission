@@ -53,6 +53,7 @@ class AbstractsController < ApplicationController
 	    	flash[:notice] = 'Please upload a pdf file'
 	    	redirect_to root_path
 	    else
+
 	    	    obj = S3_BUCKET.objects[params[:file].original_filename]
 
 		    # Upload the file
@@ -65,7 +66,8 @@ class AbstractsController < ApplicationController
 		    @upload = Abstract.new(
 		    		abstract_url: obj.public_url,
 				title: obj.key,
-				user_id: current_user.id
+				user_id: current_user.id,
+				category: params[:category]
 		    	)
 
 		    # Save the upload
