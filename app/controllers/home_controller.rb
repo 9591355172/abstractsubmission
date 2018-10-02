@@ -90,8 +90,34 @@ skip_before_action :verify_authenticity_token, only: [:payment]
 		if @arr[1] == 'failure'
 			flash[:notice] = @arr[2]
 			redirect_to root_path
-		elsif @arr[1] == 'Success'
-			@payment = Pay.new(first_name: current_user.first_name, last_name: current_user.last_name, email: current_user.email, txnid: @arr[3], user_id: current_user.id)
+		elsif @arr[1] == 'success'
+			if @arr[6] = "1000.00"
+				@payment = Pay.new(first_name: current_user.first_name,
+				 					last_name: current_user.last_name, email: current_user.email,
+				  					txnid: @arr[3], user_id: current_user.id, category: "For attending doctoral colloquium only")
+			elsif @arr[6] = "3000.00"
+				@payment = Pay.new(first_name: current_user.first_name,
+				 					last_name: current_user.last_name, email: current_user.email,
+				  					txnid: @arr[3], user_id: current_user.id, category: "For attending doctoral colloquium and 2 day forum")
+			elsif @arr[6] = "8000.00"
+				@payment = Pay.new(first_name: current_user.first_name,
+				 					last_name: current_user.last_name, email: current_user.email,
+				  					txnid: @arr[3], user_id: current_user.id, category: "Industry participant")
+			elsif @arr[6] = "6000.00"
+				@payment = Pay.new(first_name: current_user.first_name,
+				 					last_name: current_user.last_name, email: current_user.email,
+				  					txnid: @arr[3], user_id: current_user.id, category: "Member of UN Global compact")
+			elsif @arr[6] = "2000.00"
+				@payment = Pay.new(first_name: current_user.first_name,
+				 					last_name: current_user.last_name, email: current_user.email,
+				  					txnid: @arr[3], user_id: current_user.id, category: "Academics / Students")
+			elsif @arr[6] = "1500.00"
+				@payment = Pay.new(first_name: current_user.first_name,
+				 					last_name: current_user.last_name, email: current_user.email,
+				  					txnid: @arr[3], user_id: current_user.id, category: "Social sector")
+					
+			end
+
 			if @payment.save!
 				flash[:notice] = "Payment complete" 
 				redirect_to root_path
@@ -99,8 +125,12 @@ skip_before_action :verify_authenticity_token, only: [:payment]
 				flash[:notice] = "Payment incomplete"
 				redirect_to root_path
 			end 
-		else @arr[1] = 'Aborted'
+		elsif @arr[1] == 'Aborted' 
 			flash[:notice] = "Payment Aborted"
+			redirect_to root_path
+		else
+			flash[:notice] = "Payment unsuccessful"
+			redirect_to root_path
 		end
 	end
 
