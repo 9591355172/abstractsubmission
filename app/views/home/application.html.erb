@@ -509,9 +509,9 @@ td.text-right {
                         'disclaimerMsg': "INDUSTRY PARTICIPANT",
                         'merchantId': 'L522',
                         'currency': 'INR',
-                        'consumerId': '1',
-                        'consumerMobileNo': '9591355172',
-                        'consumerEmailId': 'abhijeet428001@gmail.com',
+                        'consumerId': '<%= current_user.id%>',
+                        'consumerMobileNo': '<%= current_user.mobile_number%>',
+                        'consumerEmailId': '<%= current_user.email %>',
                         'txnId': '<%= @txnid %>',   //Unique merchant transaction ID
                         'items': [{
                             'itemId': 'PRME',
@@ -565,9 +565,9 @@ td.text-right {
                         'disclaimerMsg': "Members of UN Global Compact Network",
                         'merchantId': 'L522',
                         'currency': 'INR',
-                        'consumerId': '1',
-                        'consumerMobileNo': '9591355172',
-                        'consumerEmailId': 'abhijeet428001@gmail.com',
+                        'consumerId': '<%= current_user.id%>',
+                        'consumerMobileNo': '<%= current_user.mobile_number%>',
+                        'consumerEmailId': '<%= current_user.email %>',
                         'txnId': '<%= @txnid %>',   //Unique merchant transaction ID
                         'items': [{
                             'itemId': 'PRME',
