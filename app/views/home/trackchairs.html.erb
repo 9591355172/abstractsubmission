@@ -772,6 +772,81 @@ input[type='checkbox'] {
 
 
 
+
+   .wrap-collabsible10 {
+  /*margin-bottom: 1.2rem 0;*/
+}
+
+input[type='checkbox'] {
+  display: none;
+}
+
+.lbl-toggle10 {
+  display: block;
+
+  font-weight: bold;
+  
+  font-size: 15px;
+  text-transform: uppercase;
+  text-align: center;
+
+  padding: 10px;
+
+  color: white;
+  background: #3a3a3a;
+
+  cursor: pointer;
+
+  /*border-radius: 7px;*/
+  transition: all 0.25s ease-out;
+}
+
+.lbl-toggle10:hover {
+  color: #a9a9a9;
+}
+
+.lbl-toggle10::before {
+  content: ' ';
+  display: inline-block;
+
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 5px solid currentColor;
+  vertical-align: middle;
+  margin-right: .7rem;
+  transform: translateY(-2px);
+
+  transition: transform .2s ease-out;
+}
+
+.toggle10:checked + .lbl-toggle10::before {
+  transform: rotate(90deg) translateX(-3px);
+}
+
+.collapsible-content10 {
+  max-height: 0px;
+  overflow: hidden;
+  transition: max-height .25s ease-in-out;
+}
+
+.toggle10:checked + .lbl-toggle10 + .collapsible-content10 {
+  max-height: 960px;
+}
+
+.toggle10:checked + .lbl-toggle10 {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.collapsible-content10 .content-inner10 {
+  background: #fefdfb;
+  border-bottom: 1px solid rgba(250, 224, 66, .45);
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
+  padding: .5rem 1rem;
+} 
+
+
     </style>
 <%end%> 
 <div>
@@ -1072,6 +1147,40 @@ As a specialist in the field of Public Policy, he has been engaged with Social A
         </div>
       </div>
       <div class="column-6 w-col w-col-6" id="10" style="margin-top: 20px;">
+        <div class="card-track">
+          <div class="row-5 w-row">
+            <div class="w-col w-col-3" style="text-align: center"><img src="../DrSandipAnand.jpeg" width="225" class="image-6" style="border-radius: 50%; height: 120px; width: 120px; object-fit: cover; object-position: 50% 0%"></div>
+            <div class="w-col w-col-9">
+              <h4 class="heading-8" style="margin-bottom: 0px !important; font-family: 'Roboto Condensed', sans-serif;">Dr. Sandip Anand</h4>
+              <p style="text-align: center; margin-bottom: 20px !important; font-size: 14px;color:#6c757d!important ">DESIGN THINKING IN MANAGEMENT</p>
+              
+              <h5 class="heading-10" style="font-size: 16px;font-family: 'Roboto Condensed', sans-serif;">Professor, Xavier Institute of Management
+              </h5>
+              <h5 class="heading-10" style="font-size: 16px;font-family: 'Roboto Condensed', sans-serif;">Founding Associate Dean, Doctoral Programs, <br> Xavier University Bhubaneswar </h5>
+            </div>
+          </div>
+                    <div class="wrap-collabsible10" style="margin-top: 21px;">
+  <input id="collapsible10" class="toggle10" type="checkbox">
+  <label for="collapsible10" class="lbl-toggle10">About Dr. Sandip Anand</label>
+  <div class="collapsible-content10">
+    <div class="content-inner10">
+      <p style="font-size: 14px; text-align: justify;">
+               Dr. Sandip Anand is a professor of marketing at the Xavier Institute of Management, Bhubaneswar, India. As Associate Dean of Doctoral programs at Xavier’s University Bhubaneshwar, he was instrumental in designing different doctoral-level programs and related policies for various schools of XUB. Other than XIMB, he has taught marketing courses at Mudra Institute of Communications, Ahmedabad (MICA), IIM Ranchi, Shiv Nadar University, and Ravenshaw University India. He has provided training to executives from JK paper, Infosys, Mahindra FES, Paradeep Phosphates, SBI, etc. He has shared his research at various institutions/forums such as Guttmacher Institute, New York, IIM Ahmedabad, IIM Lucknow, IIT Delhi, IIT Bombay, International Institute for Population Sciences (IIPS), Saint Louis University Madrid, Villanova University, etc. In 2015, he was a co-chair of TCR track on poverty. In 2014, he was conferred with the K. Srinivasan Award by Indian association for the study of population (IASP) for his published work on public-private partnerships in India. Sandip’s articles have appeared in refereed journals such as Journal of Marketing Communications, Journal of Food Products Marketing, International Journal of Health Care Quality Assurance, IIMB Management Review, International Journal of Rural Management, Demography India, Journal of Health Management, PAA proceedings (Princeton University), proceedings of World Marketing Congress etc. He has authored/co-authored three books. 
+              </p>
+    </div>
+  </div>
+</div>
+        </div>
+      </div>
+
+
+
+
+
+
+
+
+            <div class="column-6 w-col w-col-6" id="11" style="margin-top: 20px;">
         <div class="card-track">
           <div class="row-5 w-row">
             <div class="w-col w-col-3" style="text-align: center"><img src="../track/ProfSatyajitMajumdar.jpg" width="225" class="image-6" style="border-radius: 50%; height: 120px; width: 120px; object-fit: cover; object-position: 50% 0%"></div>
