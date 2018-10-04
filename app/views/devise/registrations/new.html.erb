@@ -185,12 +185,15 @@
                   </div>
                 </div>
                 <div class="w-row">
-                  <div class="column-3 w-col w-col-3"></div>
                   <div class="column-6 w-col w-col-6">
-                  <h6 class="heading-6" style="text-align: left !important; margin: 0px 0px 0px 10px; font-size: 14px;">Where did you hear about the conference?</h6>
+                    <h6 class="heading-6" style="text-align: left !important; margin: 0px 0px 0px 10px; font-size: 14px;">Where did you hear about the conference?</h6>
                     <%= f.select :promotion, options_for_select(['Website', 'E-mailers', 'Social Media','Colleagues', 'Others']), {}, { class: "form-control required w-input margin-on-select", style: "margin-left:10px;"}%>
                   </div>
-                  <div class="column-3 w-col w-col-3"></div>
+                  <div class="column-6 w-col w-col-6">
+                  <%= flash[:recaptcha_error] %>
+<%= recaptcha_tags %>
+                  </div>
+                  
                 </div>
               </div>
               <div>
