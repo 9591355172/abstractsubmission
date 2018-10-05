@@ -472,7 +472,7 @@ td.text-right {
             </div>
     
     <script type="text/javascript" src="https://www.paynimo.com/Paynimocheckout/server/lib/checkout.js"></script>
-
+    <% if current_user %>
     <script type="text/javascript">
         document.getElementById('btnSubmit').onclick = function() {
 
@@ -594,6 +594,7 @@ td.text-right {
                   };
                  
     </script>
+    <%end%>
         </div> 
 
       </div>

@@ -1067,13 +1067,13 @@ figcaption {
 }
 
 .slide-4 {
-  background-image: url('../carousel1.jpg');
+  background-image: url('../123456.jpg');
   background-position: 50% 50%;
-  background-size: 960px;
+  background-size: cover;
 }
 
 .slide-5 {
-  background-image: url('../purple/home1.jpg');
+  background-image: url('../12345.jpg');
   background-position: 50% 50%;
   background-size: contain;
   
