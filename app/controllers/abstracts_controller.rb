@@ -72,8 +72,9 @@ class AbstractsController < ApplicationController
 
 		    # Save the upload
 		    if @upload.save
+		    	@user = current_user
 		    	flash[:notice] = 'Abstract uploaded successfully'
-		    	# AbstractMailer.with(user: current_user).welcome_email.deliver_now
+		    	AbstractMailer.welcome_email(@user).deliver_now
 		      	redirect_to abstract_path(current_user.abstract.last.id)
 		    else
 		      flash[:alert] = 'There was an error'
