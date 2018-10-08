@@ -2,6 +2,7 @@
 class AbstractMailerPreview < ActionMailer::Preview
 	def welcome_email
 		user = User.last
-		AbstractMailer.welcome_email(user)
+		abstract = Abstract.last
+		AbstractMailer.welcome_email(user, abstract)
 	end
 end
