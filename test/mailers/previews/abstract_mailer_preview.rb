@@ -5,4 +5,10 @@ class AbstractMailerPreview < ActionMailer::Preview
 		abstract = Abstract.last
 		AbstractMailer.welcome_email(user, abstract)
 	end
+
+	def payment
+		# user = User.last
+		abstract = Pay.last
+		AbstractMailer.payment(abstract)
+	end
 end

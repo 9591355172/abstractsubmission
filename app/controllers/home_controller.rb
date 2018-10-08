@@ -120,6 +120,7 @@ skip_before_action :verify_authenticity_token, only: [:payment]
 
 			if @payment.save!
 				flash[:notice] = "Payment complete" 
+				AbstractMailer.payment(@payment).deliver_now
 				redirect_to root_path
 			else
 				flash[:notice] = "Payment incomplete"

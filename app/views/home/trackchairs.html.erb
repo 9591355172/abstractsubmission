@@ -920,12 +920,115 @@ input[type='checkbox'] {
   padding: .5rem 1rem;
 } 
 
+
+
+
+
+.lbl-toggle12 {
+  display: block;
+
+  font-weight: bold;
+  
+  font-size: 15px;
+  text-transform: uppercase;
+  text-align: center;
+
+  padding: 10px;
+
+  color: white;
+  background: #3a3a3a;
+
+  cursor: pointer;
+
+  /*border-radius: 7px;*/
+  transition: all 0.25s ease-out;
+}
+
+.lbl-toggle12:hover {
+  color: #a9a9a9;
+}
+
+.lbl-toggle12::before {
+  content: ' ';
+  display: inline-block;
+
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 5px solid currentColor;
+  vertical-align: middle;
+  margin-right: .7rem;
+  transform: translateY(-2px);
+
+  transition: transform .2s ease-out;
+}
+
+.toggle12:checked + .lbl-toggle12::before {
+  transform: rotate(90deg) translateX(-3px);
+}
+
+.collapsible-content12 {
+  max-height: 0px;
+  overflow: hidden;
+  transition: max-height .25s ease-in-out;
+}
+
+.toggle12:checked + .lbl-toggle12 + .collapsible-content12 {
+  max-height: 960px;
+}
+
+.toggle12:checked + .lbl-toggle12 {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.collapsible-content12 .content-inner12 {
+  background: #fefdfb;
+  border-bottom: 1px solid rgba(250, 224, 66, .45);
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
+  padding: .5rem 1rem;
+} 
     </style>
 <%end%> 
 <div>
   <div class="heading-tittle color-black w-container">
     <h2 class="-5" style="margin-top: 30px; margin-bottom: 30px"> <p style="text-decoration: underline; text-decoration-color: #3b1e9a;">Track chairs</p></h2>
     <div class="row-3 w-row">
+
+       <div class="column-6 w-col w-col-6" id="1" style="margin-top: 20px;">
+        <div class="card-track" >
+          <div class="row-5 w-row">
+            <div class="w-col w-col-3" style="text-align: center"><img src="../DrAmbikaZutshi.jpg" width="225" class="image-6" style="border-radius: 50%; height: 120px; width: 120px; object-fit: cover; object-position: 50% 0%"></div>
+            <div class="w-col w-col-9">
+              <h4 class="heading-8" style="margin-bottom: 0px !important; padding-top: 0px;font-family: 'Roboto Condensed', sans-serif;">Dr. Ambika Zutshi</h4>
+              <p style="text-align: center; margin-bottom: 20px !important; font-size: 14px; color:#6c757d">SUSTAINABLE BUSINESSES</p>
+              
+              <h5 class="heading-10" style="font-size: 16px;font-family: 'Roboto Condensed', sans-serif;">Associate Professor & HDR Director, Department of Management
+              </h5>
+              <h5 class="heading-10" style="font-size: 16px;font-family: 'Roboto Condensed', sans-serif;">Deakin University, Melbourne</h5>
+            </div>
+          </div>
+          <div class="row-5 w-row">
+            <div class="w-col w-col-12">
+                                  <div class="wrap-collabsible12">
+  <input id="collapsible12" class="toggle12" type="checkbox">
+  <label for="collapsible12" class="lbl-toggle12">About Dr. Ambika Zutshi</label>
+  <div class="collapsible-content12">
+    <div class="content-inner12">
+      <p style="font-size: 14px; text-align: justify;">
+               Content coming soon
+
+              </p>
+    </div>
+  </div>
+</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
                   <div class="column-6 w-col w-col-6" id="1" style="margin-top: 20px;">
         <div class="card-track" >
           <div class="row-5 w-row">
@@ -971,7 +1074,7 @@ input[type='checkbox'] {
             </div>
           </div>
           <div class="row-5 w-row">
-            <div class="w-col w-col-12">
+            <div class="w-col w-col-12" style="margin-top: 68px;">
                                   <div class="wrap-collabsible11">
   <input id="collapsible11" class="toggle11" type="checkbox">
   <label for="collapsible11" class="lbl-toggle11">About Dr. Anshul Verma</label>
@@ -1035,7 +1138,7 @@ DESIGN THINKING IN MANAGEMENT</p>
 
 
             <div class="column-6 w-col w-col-6" id="3" style="margin-top: 20px;">
-        <div class="card-track" style="height: 302px;">
+        <div class="card-track">
           <div class="row-5 w-row">
             <div class="w-col w-col-3" style="text-align: center"><img src="../track/DrDivyaSinghal.jpg" width="225" class="image-6" style="border-radius: 50%; height: 120px; width: 120px; object-fit: cover; object-position: 50% 0%"></div>
             <div class="w-col w-col-9">
@@ -1049,7 +1152,7 @@ DESIGN THINKING IN MANAGEMENT</p>
           </div>
           <div class="row-5 w-row">
             <div class="w-col w-col-12">
-                                  <div class="wrap-collabsible4" style="margin-top: 68px;">
+                                  <div class="wrap-collabsible4" style="margin-top: 44px;">
   <input id="collapsible4" class="toggle4" type="checkbox">
   <label for="collapsible4" class="lbl-toggle4">About Dr. Divya Singhal</label>
   <div class="collapsible-content4">
@@ -1103,7 +1206,7 @@ She has been involved in national and state level policy making work and has had
 
 
             <div class="column-6 w-col w-col-6" id="5" style="margin-top: 20px;">
-        <div class="card-track" style="height: 278px;">
+        <div class="card-track">
           <div class="row-5 w-row">
             <div class="w-col w-col-3" style="text-align: center"><img src="../Kartik_Dave6.jpg" width="225" class="image-6" style="border-radius: 50%; height: 120px; width: 120px; object-fit: cover; object-position: 50% 0%"></div>
             <div class="w-col w-col-9">
@@ -1116,7 +1219,7 @@ She has been involved in national and state level policy making work and has had
           </div>
           <div class="row-5 w-row" >
             <div class="w-col w-col-12">
-                                  <div class="wrap-collabsible9" style="margin-top: 66px;">
+                                  <div class="wrap-collabsible9" style="margin-top: 33px;">
   <input id="collapsible9" class="toggle9" type="checkbox">
   <label for="collapsible9" class="lbl-toggle9">About Prof. Kartik Dave</label>
   <div class="collapsible-content9">
@@ -1229,7 +1332,7 @@ She has been involved in national and state level policy making work and has had
 
 
       <div class="column-6 w-col w-col-6" id="9" style="margin-top: 20px;">
-        <div class="card-track" style="height: 245px;">
+        <div class="card-track">
           <div class="row-5 w-row">
             <div class="w-col w-col-3" style="text-align: center"><img src="../track/ProfSanrtoshKumar.jpg" width="225" class="image-6" style="border-radius: 50%; height: 120px; width: 120px; object-fit: cover; object-position: 50% 0%"></div>
             <div class="w-col w-col-9">
@@ -1242,7 +1345,7 @@ AURO University</h5>
             </div>
           </div>
 
-          <div class="wrap-collabsible1" style="margin-top: 20px;">
+          <div class="wrap-collabsible1" style="margin-top: 21px;">
   <input id="collapsible1" class="toggle1" type="checkbox">
   <label for="collapsible1" class="lbl-toggle1">About Prof. Santosh Kumar</label>
   <div class="collapsible-content1">

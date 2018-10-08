@@ -12,4 +12,9 @@ default from: 'prme.asiaforum@spjimr.org'
   	@user = user
   	mail(to: @user.email, subject: 'New Abstract Uploaded')
   end
+
+  def payment(payment)
+  	@payment = payment
+  	mail(to: @payment.email, subject: 'Payment Information (PRMEASIA)')
+  end
 end

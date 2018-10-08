@@ -47,9 +47,11 @@
 
 
   <body class="body" style="height: 100%;">
-  	  <div data-collapse="medium" data-animation="default" data-duration="400" class="navigation-bar dark w-nav">
+  	  <div data-collapse="medium" data-animation="default" data-duration="400" class="navigation-bar dark w-nav" style="position: fixed;
+    top: 0px;
+    width: 100%;">
         <a href="index.html" class="brand-link left-spacing w-nav-brand"></a>
-    <nav role="navigation" class="navigation-menu w-nav-menu">
+    <nav role="navigation" class="navigation-menu w-nav-menu top-bar fixed" >
 
       <% if !current_user %>
   
@@ -79,9 +81,13 @@
       <div class="w-icon-nav-menu"></div>
     </div>
   </div>
-  <div class="div-block-2"></div>
+  <div class="div-block-2" style="position: fixed;
+    top: 40px;
+    width: 100%; z-index: 100"></div>
 
-  <div class="div-block" style="background-color: #333a56">
+  <div class="div-block" style="background-color: #333a56;position: fixed;
+    top: 42px;
+    width: 100%; z-index:100">
           <div data-collapse="medium" data-animation="default" data-duration="400" data-easing="ease-out" class="navbar-2 w-nav" >
         <div class="container-3 w-container">
           <nav role="navigation" class="nav-menu-3 w-nav-menu">
@@ -199,7 +205,7 @@
 
 </div>
 
-    <div class="div-block">
+    <div class="div-block" style="margin-top: 82px;">
 <!--     <div class="section-4">
       <div class="row w-row">
         <div class="w-col w-col-4"><img src="../UNGC Logo.png" height="80" class="image-4"></div>
@@ -207,7 +213,7 @@
         <div class="column w-clearfix w-col w-col-4"><img src="../spjimr.png" class="image-3"></div>
       </div>
     </div> -->
-<div class="section-3">
+<div class="section-3" >
       <div class="ticker-wrap">
       <div class="ticker">
         <div class="ticker__item">ABSTRACT SUBMISSIONS DEADLINE EXTENDED : <p class="ticker__item " style="color: #e9385a; margin-left: 0pc;"> 19TH OCTOBER, 2018 </p> </div>
