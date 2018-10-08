@@ -847,6 +847,79 @@ input[type='checkbox'] {
 } 
 
 
+   .wrap-collabsible11 {
+  /*margin-bottom: 1.2rem 0;*/
+}
+
+input[type='checkbox'] {
+  display: none;
+}
+
+.lbl-toggle11 {
+  display: block;
+
+  font-weight: bold;
+  
+  font-size: 15px;
+  text-transform: uppercase;
+  text-align: center;
+
+  padding: 10px;
+
+  color: white;
+  background: #3a3a3a;
+
+  cursor: pointer;
+
+  /*border-radius: 7px;*/
+  transition: all 0.25s ease-out;
+}
+
+.lbl-toggle11:hover {
+  color: #a9a9a9;
+}
+
+.lbl-toggle11::before {
+  content: ' ';
+  display: inline-block;
+
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 5px solid currentColor;
+  vertical-align: middle;
+  margin-right: .7rem;
+  transform: translateY(-2px);
+
+  transition: transform .2s ease-out;
+}
+
+.toggle11:checked + .lbl-toggle11::before {
+  transform: rotate(90deg) translateX(-3px);
+}
+
+.collapsible-content11 {
+  max-height: 0px;
+  overflow: hidden;
+  transition: max-height .25s ease-in-out;
+}
+
+.toggle11:checked + .lbl-toggle11 + .collapsible-content11 {
+  max-height: 960px;
+}
+
+.toggle11:checked + .lbl-toggle11 {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.collapsible-content11 .content-inner11 {
+  background: #fefdfb;
+  border-bottom: 1px solid rgba(250, 224, 66, .45);
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
+  padding: .5rem 1rem;
+} 
+
     </style>
 <%end%> 
 <div>
@@ -899,11 +972,11 @@ input[type='checkbox'] {
           </div>
           <div class="row-5 w-row">
             <div class="w-col w-col-12">
-                                  <div class="wrap-collabsible6">
-  <input id="collapsible6" class="toggle6" type="checkbox">
-  <label for="collapsible6" class="lbl-toggle6">About Dr. Anshul Verma</label>
-  <div class="collapsible-content6">
-    <div class="content-inner6">
+                                  <div class="wrap-collabsible11">
+  <input id="collapsible11" class="toggle11" type="checkbox">
+  <label for="collapsible11" class="lbl-toggle11">About Dr. Anshul Verma</label>
+  <div class="collapsible-content11">
+    <div class="content-inner11">
       <p style="font-size: 14px; text-align: justify;">
                Dr. Anshul Verma is an Associate Professor in Finance area at SPJIMR. Previously, he worked as Associate Professor and Chairperson(PGDM-Executive) at IMT, Ghaziabad. Prior to IMT, Ghaziabad, he worked as Associate Professor in Accounting and Finance Area and Associate Programme Head for PGEMP Programme at SPJIMR. He also worked for Birla Institute of Management Technology, Greater Noida. 
  <br> <br>
@@ -922,8 +995,47 @@ He has more than 16 years of experience in teaching, training and research in ar
           </div>
         </div>
       </div>
-            <div class="column-6 w-col w-col-6" id="3" style="margin-top: 20px;">
+
+
+ <div class="column-6 w-col w-col-6" id="2" style="margin-top: 20px;">
         <div class="card-track" >
+          <div class="row-5 w-row">
+            <div class="w-col w-col-3" style="text-align: center"><img src="../DrArvindShatdal.jpg" width="225" class="image-6" style="border-radius: 50%; height: 120px; width: 120px; object-fit: cover; object-position: 50% 0%"></div>
+            <div class="w-col w-col-9">
+              <h4 class="heading-8" style="margin-bottom: 0px !important; padding-top: 2px;font-family: 'Roboto Condensed', sans-serif;">Dr. Arvind Shatdal
+</h4>
+              <p style="text-align: center; margin-bottom: 20px !important; font-size: 14px; color:#6c757d">
+DESIGN THINKING IN MANAGEMENT</p>
+              
+              <h5 class="heading-10" style="font-size: 16px;font-family: 'Roboto Condensed', sans-serif;">Assistant Professor and Head, Department of Organization Behavior and Human Resource Management/Founding Coordinator, <br> MBA Program/School of Management and Entrepreneurship (SME)
+              </h5>
+              <h5 class="heading-10" style="font-size: 16px;font-family: 'Roboto Condensed', sans-serif;">Shiv Nadar University</h5>
+            </div>
+          </div>
+          <div class="row-5 w-row">
+            <div class="w-col w-col-12">
+                                  <div class="wrap-collabsible6">
+  <input id="collapsible6" class="toggle6" type="checkbox">
+  <label for="collapsible6" class="lbl-toggle6">About Dr. Arvind Shatdal</label>
+  <div class="collapsible-content6">
+    <div class="content-inner6">
+      <p style="font-size: 14px; text-align: justify;">
+               Content coming soon.
+
+
+
+              </p>
+    </div>
+  </div>
+</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+            <div class="column-6 w-col w-col-6" id="3" style="margin-top: 20px;">
+        <div class="card-track" style="height: 302px;">
           <div class="row-5 w-row">
             <div class="w-col w-col-3" style="text-align: center"><img src="../track/DrDivyaSinghal.jpg" width="225" class="image-6" style="border-radius: 50%; height: 120px; width: 120px; object-fit: cover; object-position: 50% 0%"></div>
             <div class="w-col w-col-9">
@@ -937,7 +1049,7 @@ He has more than 16 years of experience in teaching, training and research in ar
           </div>
           <div class="row-5 w-row">
             <div class="w-col w-col-12">
-                                  <div class="wrap-collabsible4" style="margin-top: 43px;">
+                                  <div class="wrap-collabsible4" style="margin-top: 68px;">
   <input id="collapsible4" class="toggle4" type="checkbox">
   <label for="collapsible4" class="lbl-toggle4">About Dr. Divya Singhal</label>
   <div class="collapsible-content4">
@@ -991,7 +1103,7 @@ She has been involved in national and state level policy making work and has had
 
 
             <div class="column-6 w-col w-col-6" id="5" style="margin-top: 20px;">
-        <div class="card-track" >
+        <div class="card-track" style="height: 278px;">
           <div class="row-5 w-row">
             <div class="w-col w-col-3" style="text-align: center"><img src="../Kartik_Dave6.jpg" width="225" class="image-6" style="border-radius: 50%; height: 120px; width: 120px; object-fit: cover; object-position: 50% 0%"></div>
             <div class="w-col w-col-9">
@@ -1004,7 +1116,7 @@ She has been involved in national and state level policy making work and has had
           </div>
           <div class="row-5 w-row" >
             <div class="w-col w-col-12">
-                                  <div class="wrap-collabsible9" style="margin-top: 33px;">
+                                  <div class="wrap-collabsible9" style="margin-top: 66px;">
   <input id="collapsible9" class="toggle9" type="checkbox">
   <label for="collapsible9" class="lbl-toggle9">About Prof. Kartik Dave</label>
   <div class="collapsible-content9">
@@ -1117,7 +1229,7 @@ She has been involved in national and state level policy making work and has had
 
 
       <div class="column-6 w-col w-col-6" id="9" style="margin-top: 20px;">
-        <div class="card-track">
+        <div class="card-track" style="height: 245px;">
           <div class="row-5 w-row">
             <div class="w-col w-col-3" style="text-align: center"><img src="../track/ProfSanrtoshKumar.jpg" width="225" class="image-6" style="border-radius: 50%; height: 120px; width: 120px; object-fit: cover; object-position: 50% 0%"></div>
             <div class="w-col w-col-9">
