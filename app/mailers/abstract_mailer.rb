@@ -1,5 +1,5 @@
 class AbstractMailer < ApplicationMailer
-default from: 'abhijeet428001@gmail.com'
+default from: 'prme.asiaforum@spjimr.org'
  
   def welcome_email(user, upload)
   	@upload = upload
