@@ -1063,7 +1063,7 @@ figcaption {
 .slide-3 {
   background-image: url('../purple/5.jpg');
   background-position: 50% 50%;
-  background-size: cover;
+  background-size: contain;
 }
 
 .slide-4 {
@@ -1201,6 +1201,11 @@ figcaption {
     .nav-link-3 {
       margin-top: 0px !important;
     }
+
+      .dropdown-toggle {
+      margin-top: 0px !important;
+    }
+
 }
 
 .nav-link-3:hover {

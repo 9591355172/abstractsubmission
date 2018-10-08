@@ -61,6 +61,23 @@
   right: 0;
 }
 
+.line_adjust_mobile {
+   text-align: justify; font-size: 16px;  border-right: 2px solid #d3d3d3;height: 220px; width:5%;
+}
+@media only screen and (max-width: 600px) {
+  .line_adjust_mobile {
+    text-align: justify;
+    font-size: 16px;  
+    border-right:none;
+    height:0px; 
+    width:0px;
+  }
+  .adjust_padding_for_mobile {
+    padding-left: 30px !important;
+  }
+}
+
+
 
 </style>
   
@@ -157,10 +174,10 @@
 
 
       </div>
-      <div class="column-1 w-col w-col-1" style=" text-align: justify; font-size: 16px;  border-right: 2px solid #d3d3d3;height: 220px; width:5%;">
+      <div class="column-1 w-col w-col-1 line_adjust_mobile" style="">
         
       </div>
-      <div class="column-3 w-col w-col-3" style=" text-align: justify; font-size: 16px; border-right: none;padding-left: 60px;">
+      <div class="column-3 w-col w-col-3 adjust_padding_for_mobile" style=" text-align: justify; font-size: 16px; border-right: none;padding-left: 60px;">
         <div class="row-3 w-row">
           <!-- <div class="card" style="height: 200px;"> -->
           <div class="column-12 w-col w-col-12" style="padding: 10px; text-align: center; font-size: 18px;">

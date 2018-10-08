@@ -4,7 +4,7 @@
     <title>The 8th PRME ASIA Forum</title>
     <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <!-- <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>  -->
       <meta charset="utf-8">
   
@@ -41,6 +41,16 @@
 
   <%= yield :styles %>
   <%= yield :script %>
+
+
+              <style type="text/css">
+@media only screen and (max-width: 600px) {
+    .dropdown-toggle {
+      margin-top: 0px !important;
+    }
+}
+</style>    
+                
   </head>
 
 
@@ -119,6 +129,7 @@
             </div>
             <div data-hover="1" data-delay="0" class="w-dropdown">
               <div class="dropdwon-toggle w-dropdown-toggle">
+                
                 <div class="icon-4 w-icon-dropdown-toggle"></div>
                 <div>Submissions</div>
               </div>

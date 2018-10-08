@@ -89,13 +89,18 @@
   opacity: 1;
   right: 0;
 }
-    
+
+@media only screen and (max-width: 600px) {
+  .adjust_height_for_mobile {
+    height: 1200px !important;
+  }
+}
 
     </style>
 <%end%> 
   <div>
     <div class="container-4 w-container">
-      <div class="card" style=" height: 650px !important;font-family: 'Roboto Condensed', sans-serif;">
+      <div class="card adjust_height_for_mobile" style=" height: 650px ;font-family: 'Roboto Condensed', sans-serif;">
         <div>
           <h3 class="heading" style="font-family: 'Roboto Condensed', sans-serif; padding-top: 10px">Sign up</h3>
         </div>
