@@ -5,6 +5,6 @@ default from: 'abhijeet428001@gmail.com'
   	@upload = upload
     @user = user
     @url  = 'http://prmeasia.spjimr.org/users/sign_in'
-    mail(to: 'abhijeet428001@gmail.com', subject: 'New Abstract Uploaded')
+    mail(to: 'prme.asiaforum@spjimr.org', subject: 'New Abstract Uploaded')
   end
 end
