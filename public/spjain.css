@@ -1224,6 +1224,14 @@ figcaption {
   flex-direction: column;
 }
 
+@media only screen and (max-width: 600px) {
+.div-block {
+    padding-right: 0px !important;
+  padding-left: 0px !important;
+}
+
+}
+
 .body {
   background-color: white;
   font-family: 'Roboto Condensed', sans-serif;

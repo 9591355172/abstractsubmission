@@ -1662,7 +1662,7 @@ textarea.w-select {
   top: 100%;
   left: 0;
   right: 0;
-  background: #C8C8C8;
+  background: #f2f2f2;
   text-align: center;
   overflow: visible;
   min-width: 200px;
@@ -1676,8 +1676,8 @@ textarea.w-select {
   overflow: hidden;
   display: none;
   top: 100%;
-  left: 0;
-  right: 0;
+  left: 55% ;
+  /*right: 0;*/
   width: 200px;
 }
 .w-nav-overlay .w--nav-menu-open {

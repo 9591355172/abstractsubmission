@@ -48,6 +48,17 @@
     .dropdown-toggle {
       margin-top: 0px !important;
     }
+
+    .nav-color-mobile {
+      background-color: #f2f2f2 !important;
+      color: white;
+    }
+
+    .mobile-background-color {
+      background-color: #f2f2f2 !important;
+    }
+
+    
 }
 </style>    
                 
@@ -61,7 +72,7 @@
     top: 0px;
     width: 100%;">
         <a href="index.html" class="brand-link left-spacing w-nav-brand"></a>
-    <nav role="navigation" class="navigation-menu w-nav-menu top-bar fixed" >
+    <nav role="navigation" class="navigation-menu w-nav-menu top-bar fixed mobile-background-color" >
 
       <% if !current_user %>
   
@@ -95,7 +106,7 @@
     top: 40px;
     width: 100%; z-index: 100"></div>
 
-  <div class="div-block" style="background-color: #333a56;position: fixed;
+  <div class="div-block nav-color-mobile" style="background-color: #333a56;position: fixed;
     top: 42px;
     width: 100%; z-index:100">
           <div data-collapse="medium" data-animation="default" data-duration="400" data-easing="ease-out" class="navbar-2 w-nav" >
