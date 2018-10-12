@@ -90,12 +90,13 @@
       <a href="/users/sign_up" class="button-2 w-button" style="margin-right: 20px;">Signup</a>
       <a href="/users/sign_in" class="button-3 w-button">Login</a>
       <% elsif %>
-
+      <a href="/users/edit" class="button-2 w-button">Edit Account</a>
       <%= link_to destroy_user_session_path, :method => :delete, class: 'button-3 w-button', style: 'color:black' do %>
               <span class="pull-left" style="color: white">Logout</span>
               <span class="pull-right"><i class="pg-power"></i></span>
             <% end %>
       <% end %>
+      
       
     </nav>
     <div class="hamburger-button white w-nav-button">

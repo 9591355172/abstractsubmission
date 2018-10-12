@@ -1,43 +1,230 @@
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
+<% content_for :styles do %>
+    <style type="text/css">
+        .heading-tittle h2 {
+          text-transform: uppercase;
+          position: relative;
+          text-align: center;
+          font-size: 28px;
+          font-weight: 400px;
+          line-height: 10px;
+          letter-spacing: 1px;
+          font-family: 'Roboto Condensed', sans-serif;
+     }
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-  <%= devise_error_messages! %>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+     .button {
+  border-radius: 4px;
+  background-color: #52658f !important;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 16px;
+  padding: 5px;
+  width: 100px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.btn {
+    border-radius: 4px;
+  background-color: #333a56 !important;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 16px;
+  padding: 5px;
+  width: 100px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 25px 5px 5px 55px;
+}
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.btn span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.btn span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.btn:hover span {
+  padding-right: 25px;
+}
+
+.btn:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+@media only screen and (max-width: 600px) {
+  .adjust_height_for_mobile {
+    height: 1200px !important;
+  }
+}
+
+    </style>
+<%end%> 
+  <div>
+    <div class="container-4 w-container">
+      <div class="card adjust_height_for_mobile" style=" height: 650px ;font-family: 'Roboto Condensed', sans-serif;">
+        <div>
+          <h3 class="heading" style="font-family: 'Roboto Condensed', sans-serif; padding-top: 10px; text-align: center;">Edit Account</h3>
+        </div>
+        <div>
+          
+            
+          
+          
+          <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+            <div class="div-block-1">
+              <div>
+                <div class="w-row">
+                  <div class="column-3 w-col w-col-6">
+                    <h6 class="heading-6" style="text-align: left !important; margin: 0px 0px 0px 10px;font-size: 14px; ">First Name</h6>
+                    <%= f.text_field :first_name ,class: "form-control required w-input", id:"name-field",placeholder:"Enter First Name", :required => true, style:"margin-left:10px;"%>
+                  </div>
+                  <div class="column-3 w-col w-col-6">
+                    <h6 class="heading-6" style="text-align: left !important; margin: 0px 0px 0px 10px; font-size: 14px;">Last Name</h6>
+                    <%= f.text_field :last_name ,class: "form-control required w-input", id:"name-field",placeholder:"Enter Last Name", :required => true, style:"margin-left:10px;"%>
+                  </div>
+                </div>
+              </div>
+              
+              <div style="margin-top: 10px;">
+                <div class="w-row">
+                  <div class="column-3 w-col w-col-6">
+                    <h6 class="heading-6" style="text-align: left !important; margin: 0px 0px 0px 10px; font-size: 14px;">Email Address</h6>
+
+                    <%= f.email_field :email ,class: "form-control required w-input", id:"name-field",placeholder:"Enter Email Address", :required => true, style:"margin-left:10px;"%>
+                  </div>
+                  <div class="column-3 w-col w-col-6">
+                    <h6 class="heading-6" style="text-align: left !important; margin: 0px 0px 0px 10px; font-size: 14px;">Mobile</h6>
+                    <%= f.text_field :mobile_number ,class: "form-control required w-input", id:"name-field",placeholder:"Enter mobile number", :required => true, style:"margin-left:10px;"%>
+                  </div>
+                </div>
+              </div>
+               <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+                  <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+               <% end %>
+              <div style="margin-top: 10px;">
+               <div class="w-row">
+                  
+                  <div class="column-3 w-col w-col-6">
+                    <h6 class="heading-6" style="text-align: left !important; margin: 0px 0px 0px 10px; font-size: 14px;">New Password
+                    <% if @minimum_password_length %>
+                  <small>(<%= @minimum_password_length %>
+                    characters minimum)</small>
+                <% end %></h6>
+                    <%= f.password_field :password, autocomplete: "off",class: "form-control w-input", id: "name-field",placeholder:"Enter password", :required => false, style:"margin-left:10px;" %>
+                      
+                  </div>
+                  <div class="column-3 w-col w-col-6">
+                    <h6 class="heading-6" style="text-align: left !important; margin: 0px 0px 0px 10px; font-size: 14px;">Confirm New Password</h6>
+                    <%= f.password_field :password_confirmation, autocomplete: "off",class: "form-control w-input", id: "name-field",placeholder:"Enter password", :required => false, style:"margin-left:10px;" %>
+                  </div>
+                  
+                </div>
+              </div>
+
+              <div style="margin-top: 10px;">
+                <div class="w-row">
+                  <div class="column-3 w-col w-col-6">
+                    <h6 class="heading-6" style="text-align: left !important; margin: 0px 0px 0px 10px; font-size: 14px;">Organization/College</h6>
+                    <%= f.text_field :organization ,class: "form-control required w-input", id:"name-field",placeholder:"Organization/College name", :required => true, style:"margin-left:10px;"%>
+                  </div>
+                  <div class="column-3 w-col w-col-6">
+                    <h6 class="heading-6" style="text-align: left !important; margin: 0px 0px 0px 10px; font-size: 14px;">Designation</h6>
+                    <%= f.text_field :designation ,class: "form-control required w-input", id:"name-field",placeholder:"Designation", :required => true, style:"margin-left:10px;"%>
+                  </div>
+                </div>
+              </div>
+
+              <div style="margin-top: 10px;">
+                <div class="w-row">
+                  <div class="column-3 w-col w-col-6">
+                    <h6 class="heading-6" style="text-align: left !important; margin: 0px 0px 0px 10px; font-size: 14px;">Website URL, if any</h6>
+                    <%= f.text_field :website_url ,class: "form-control required w-input", id:"name-field",placeholder:"Website URL", :required => false, style:"margin-left:10px;"%>
+                  </div>
+                  <div class="column-3 w-col w-col-6">
+                    
+                    <h6 class="heading-6" style="text-align: left !important; margin: 0px 0px 0px 10px; font-size: 14px;">Country</h6>
+                    <%= f.country_select :country, {selected: "IN"}, {class: "form-control required w-input margin-on-select", :style => "margin-left:10px;"} %>
+                  
+
+                    
+                  </div>
+                </div>
+                
+              </div>
+              <div>
+                <div class="w-row">
+                  <div class="column-4 w-col w-col-4">
+                    
+                  </div>
+                  <div class="column- w-col w-col-4">
+                        <h6 class="heading-6" style="text-align: left !important; margin: 0px 0px 0px 10px; font-size: 14px;">Current Password
+                    
+                  <small>(we need your current password to confirm your changes)</small>
+                </h6>
+    <%= f.password_field :current_password, autocomplete: "off",class: "form-control w-input", id: "name-field",placeholder:"Enter current password", :required => true, style:"margin-left:10px;" %>
+                  </div>
+                  <div class="column-4 w-col w-col-4">
+                    
+                  </div>
+                </div>
+
+
+                <div class="w-row">
+                  <div class="column-4 w-col w-col-4">
+                    
+                  </div>
+                  <div class="column- w-col w-col-4">
+                    <%= f.submit "Update",class:"btn btn-rounded btn-outline-primary"%>
+                  </div>
+                  <div class="column-4 w-col w-col-4">
+                    
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+          <% end %>
+      </div>
+    </div>
   </div>
+</div>
 
-  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-    <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
-  <% end %>
 
-  <div class="field">
-    <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-    <% if @minimum_password_length %>
-      <br />
-      <em><%= @minimum_password_length %> characters minimum</em>
-    <% end %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
-    <%= f.password_field :current_password, autocomplete: "off" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "Update" %>
-  </div>
-<% end %>
-
-<h3>Cancel my account</h3>
-
-<p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
-
-<%= link_to "Back", :back %>
