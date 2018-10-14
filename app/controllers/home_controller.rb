@@ -91,27 +91,27 @@ skip_before_action :verify_authenticity_token, only: [:payment]
 			flash[:notice] = @arr[2]
 			redirect_to root_path
 		elsif @arr[1] == 'success'
-			if @arr[6] = "1000.00"
+			if @arr[6] == "1000.00"
 				@payment = Pay.new(first_name: current_user.first_name,
 				 					last_name: current_user.last_name, email: current_user.email,
 				  					txnid: @arr[3], user_id: current_user.id, category: "For attending doctoral colloquium only")
-			elsif @arr[6] = "3000.00"
+			elsif @arr[6] == "3000.00"
 				@payment = Pay.new(first_name: current_user.first_name,
 				 					last_name: current_user.last_name, email: current_user.email,
 				  					txnid: @arr[3], user_id: current_user.id, category: "For attending doctoral colloquium and 2 day forum")
-			elsif @arr[6] = "8000.00"
+			elsif @arr[6] == "8000.00"
 				@payment = Pay.new(first_name: current_user.first_name,
 				 					last_name: current_user.last_name, email: current_user.email,
 				  					txnid: @arr[3], user_id: current_user.id, category: "Industry participant")
-			elsif @arr[6] = "6000.00"
+			elsif @arr[6] == "6000.00"
 				@payment = Pay.new(first_name: current_user.first_name,
 				 					last_name: current_user.last_name, email: current_user.email,
 				  					txnid: @arr[3], user_id: current_user.id, category: "Member of UN Global compact")
-			elsif @arr[6] = "2000.00"
+			elsif @arr[6] == "2000.00"
 				@payment = Pay.new(first_name: current_user.first_name,
 				 					last_name: current_user.last_name, email: current_user.email,
 				  					txnid: @arr[3], user_id: current_user.id, category: "Academics / Students")
-			elsif @arr[6] = "1500.00"
+			elsif @arr[6] == "1500.00"
 				@payment = Pay.new(first_name: current_user.first_name,
 				 					last_name: current_user.last_name, email: current_user.email,
 				  					txnid: @arr[3], user_id: current_user.id, category: "Social sector")
