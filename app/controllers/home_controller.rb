@@ -17,11 +17,11 @@ skip_before_action :verify_authenticity_token, only: [:payment]
 		if current_user
 		 @txnid = current_user.id
          @txnid = "9090" + @txnid.to_s 
-         @token1 = Digest::SHA2.new(512).hexdigest("L522|"+@txnid+"|8000||"+current_user.id.to_s+"|"+current_user.mobile_number.to_s+"|"+current_user.email+"||||||||||9567859878ALCMJH")
-		 @token2 = Digest::SHA2.new(512).hexdigest("L522|"+@txnid+"|6000||"+current_user.id.to_s+"|"+current_user.mobile_number.to_s+"|"+current_user.email+"||||||||||9567859878ALCMJH")
-		 @token3 = Digest::SHA2.new(512).hexdigest("L522|"+@txnid+"|6000||"+current_user.id.to_s+"|"+current_user.mobile_number.to_s+"|"+current_user.email+"||||||||||9567859878ALCMJH")
-		 @token4 = Digest::SHA2.new(512).hexdigest("L522|"+@txnid+"|2000||"+current_user.id.to_s+"|"+current_user.mobile_number.to_s+"|"+current_user.email+"||||||||||9567859878ALCMJH")
-		 @token5 = Digest::SHA2.new(512).hexdigest("L522|"+@txnid+"|1500||"+current_user.id.to_s+"|"+current_user.mobile_number.to_s+"|"+current_user.email+"||||||||||9567859878ALCMJH")	
+         @token1 = Digest::SHA2.new(512).hexdigest("L522|"+@txnid+"|8000||"+current_user.id.to_s+"|7506985279|"+current_user.email+"||||||||||9567859878ALCMJH")
+		 @token2 = Digest::SHA2.new(512).hexdigest("L522|"+@txnid+"|6000||"+current_user.id.to_s+"|7506985279|"+current_user.email+"||||||||||9567859878ALCMJH")
+		 @token3 = Digest::SHA2.new(512).hexdigest("L522|"+@txnid+"|6000||"+current_user.id.to_s+"|7506985279|"+current_user.email+"||||||||||9567859878ALCMJH")
+		 @token4 = Digest::SHA2.new(512).hexdigest("L522|"+@txnid+"|2000||"+current_user.id.to_s+"|7506985279|"+current_user.email+"||||||||||9567859878ALCMJH")
+		 @token5 = Digest::SHA2.new(512).hexdigest("L522|"+@txnid+"|1500||"+current_user.id.to_s+"|7506985279|"+current_user.email+"||||||||||9567859878ALCMJH")	
 		end
 	end
 
@@ -69,8 +69,8 @@ skip_before_action :verify_authenticity_token, only: [:payment]
 		if current_user
 		 @txnid = current_user.id
          @txnid = "9090" + @txnid.to_s 
-         @token1 = Digest::SHA2.new(512).hexdigest("L522|"+@txnid+"|1000||"+current_user.id.to_s+"|"+current_user.mobile_number.to_s+"|"+current_user.email+"||||||||||9567859878ALCMJH")
-		 @token2 = Digest::SHA2.new(512).hexdigest("L522|"+@txnid+"|3000||"+current_user.id.to_s+"|"+current_user.mobile_number.to_s+"|"+current_user.email+"||||||||||9567859878ALCMJH")
+         @token1 = Digest::SHA2.new(512).hexdigest("L522|"+@txnid+"|1000||"+current_user.id.to_s+"|7506985279|"+current_user.email+"||||||||||9567859878ALCMJH")
+		 @token2 = Digest::SHA2.new(512).hexdigest("L522|"+@txnid+"|3000||"+current_user.id.to_s+"|7506985279|"+current_user.email+"||||||||||9567859878ALCMJH")
 		  # render json: @token
 		end
 	end
