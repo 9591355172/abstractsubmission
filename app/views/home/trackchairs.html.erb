@@ -988,6 +988,73 @@ input[type='checkbox'] {
   border-bottom-right-radius: 7px;
   padding: .5rem 1rem;
 } 
+
+.lbl-toggle13 {
+  display: block;
+
+  font-weight: bold;
+  
+  font-size: 15px;
+  text-transform: uppercase;
+  text-align: center;
+
+  padding: 10px;
+
+  color: white;
+  background: #3a3a3a;
+
+  cursor: pointer;
+
+  /*border-radius: 7px;*/
+  transition: all 0.25s ease-out;
+}
+
+.lbl-toggle13:hover {
+  color: #a9a9a9;
+}
+
+.lbl-toggle13::before {
+  content: ' ';
+  display: inline-block;
+
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 5px solid currentColor;
+  vertical-align: middle;
+  margin-right: .7rem;
+  transform: translateY(-2px);
+
+  transition: transform .2s ease-out;
+}
+
+.toggle13:checked + .lbl-toggle13::before {
+  transform: rotate(90deg) translateX(-3px);
+}
+
+.collapsible-content13 {
+  max-height: 0px;
+  overflow: hidden;
+  transition: max-height .25s ease-in-out;
+}
+
+.toggle13:checked + .lbl-toggle13 + .collapsible-content13 {
+  max-height: 960px;
+}
+
+.toggle13:checked + .lbl-toggle13 {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.collapsible-content13 .content-inner13 {
+  background: #fefdfb;
+  border-bottom: 1px solid rgba(250, 224, 66, .45);
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
+  padding: .5rem 1rem;
+} 
+
+
     </style>
 <%end%> 
 <div>
@@ -1423,6 +1490,41 @@ His primary areas of interest in research are business entrepreneurship and soci
 </div>
         </div>
       </div>
+
+
+
+
+
+            <div class="column-6 w-col w-col-6" id="11" style="margin-top: 20px;">
+        <div class="card-track">
+          <div class="row-5 w-row">
+            <div class="w-col w-col-3" style="text-align: center"><img src="../sushanta.jpg" width="225" class="image-6" style="border-radius: 50%; height: 120px; width: 120px; object-fit: cover; object-position: 50% 0%"></div>
+            <div class="w-col w-col-9">
+              <h4 class="heading-8" style="margin-bottom: 0px !important; font-family: 'Roboto Condensed', sans-serif;">Sushanta Kumar Sarma</h4>
+              <p style="text-align: center; margin-bottom: 20px !important; font-size: 14px;color:#6c757d!important ">SOCIAL ENTREPRENEURSHIP</p>
+              
+              <h5 class="heading-10" style="font-size: 16px;font-family: 'Roboto Condensed', sans-serif;">
+Associate Dean-Research, Human Resource Management
+              </h5>
+              <h5 class="heading-10" style="font-size: 16px;font-family: 'Roboto Condensed', sans-serif;">TAPMI</h5>
+            </div>
+          </div>
+                    <div class="wrap-collabsible13" style="margin-top: 21px;">
+  <input id="collapsible13" class="toggle13" type="checkbox">
+  <label for="collapsible13" class="lbl-toggle13">About Sushanta Kumar Sarma</label>
+  <div class="collapsible-content13">
+    <div class="content-inner13">
+      <p style="font-size: 14px; text-align: justify;">
+               Sushanta Kumar Sarma is a Fellow from IRMA and currently working as Associate Professor at T A Pai Management Institute, Manipal. His research interests revolves around hybrid organizations and social entrepreneurship.
+              </p>
+    </div>
+  </div>
+</div>
+        </div>
+      </div>
+
+
+
 
 
     </div>
