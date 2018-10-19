@@ -1085,6 +1085,12 @@ figcaption {
   background-size: contain;
 }
 
+.slide-7 {
+  background-image: url('../deadline.jpg');
+  background-position: 50% 35%;
+  background-size: cover;
+}
+
 .icon-3 {
   padding-top: 5px;
 }
