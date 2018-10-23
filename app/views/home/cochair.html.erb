@@ -233,6 +233,82 @@ input[type='checkbox'] {
   padding: .5rem 1rem;
 } 
 
+
+
+
+   .wrap-collabsible3 {
+  /*margin-bottom: 1.2rem 0;*/
+}
+
+input[type='checkbox'] {
+  display: none;
+}
+
+.lbl-toggle3 {
+  display: block;
+
+  font-weight: bold;
+  
+  font-size: 15px;
+  text-transform: uppercase;
+  text-align: center;
+
+  padding: 10px;
+
+  color: white;
+  background: #3a3a3a;
+
+  cursor: pointer;
+
+  /*border-radius: 7px;*/
+  transition: all 0.25s ease-out;
+}
+
+.lbl-toggle3:hover {
+  color: #a9a9a9;
+}
+
+.lbl-toggle3::before {
+  content: ' ';
+  display: inline-block;
+
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 5px solid currentColor;
+  vertical-align: middle;
+  margin-right: .7rem;
+  transform: translateY(-2px);
+
+  transition: transform .2s ease-out;
+}
+
+.toggle3:checked + .lbl-toggle3::before {
+  transform: rotate(90deg) translateX(-3px);
+}
+
+.collapsible-content3 {
+  max-height: 0px;
+  overflow: hidden;
+  transition: max-height .25s ease-in-out;
+}
+
+.toggle3:checked + .lbl-toggle3 + .collapsible-content3 {
+  max-height: 960px;
+}
+
+.toggle3:checked + .lbl-toggle3 {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.collapsible-content3 .content-inner3 {
+  background: #fefdfb;
+  border-bottom: 1px solid rgba(250, 224, 66, .45);
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
+  padding: .5rem 1rem;
+} 
+
 @media only screen and (max-width: 600px) {
   .w-slider {
     height: 150px !important;
@@ -247,6 +323,80 @@ input[type='checkbox'] {
 
 }
 
+
+
+   .wrap-collabsible4 {
+  /*margin-bottom: 1.2rem 0;*/
+}
+
+input[type='checkbox'] {
+  display: none;
+}
+
+.lbl-toggle4 {
+  display: block;
+
+  font-weight: bold;
+  
+  font-size: 15px;
+  text-transform: uppercase;
+  text-align: center;
+
+  padding: 10px;
+
+  color: white;
+  background: #3a3a3a;
+
+  cursor: pointer;
+
+  /*border-radius: 7px;*/
+  transition: all 0.25s ease-out;
+}
+
+.lbl-toggle4:hover {
+  color: #a9a9a9;
+}
+
+.lbl-toggle4::before {
+  content: ' ';
+  display: inline-block;
+
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 5px solid currentColor;
+  vertical-align: middle;
+  margin-right: .7rem;
+  transform: translateY(-2px);
+
+  transition: transform .2s ease-out;
+}
+
+.toggle4:checked + .lbl-toggle4::before {
+  transform: rotate(90deg) translateX(-3px);
+}
+
+.collapsible-content4 {
+  max-height: 0px;
+  overflow: hidden;
+  transition: max-height .25s ease-in-out;
+}
+
+.toggle4:checked + .lbl-toggle4 + .collapsible-content4 {
+  max-height: 960px;
+}
+
+.toggle4:checked + .lbl-toggle4 {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.collapsible-content4 .content-inner4 {
+  background: #fefdfb;
+  border-bottom: 1px solid rgba(250, 224, 66, .45);
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
+  padding: .5rem 1rem;
+} 
 
     </style>
 <%end%> 
@@ -274,12 +424,15 @@ input[type='checkbox'] {
         <div class="w-slider-nav w-round"></div>
       </div>
       <div class="w-container"></div>
-     <h2 class="-5" style="margin: 30px 0px 30px 0px"><p style="text-decoration: underline; text-decoration-color: #3b1e9a;">Co chairs</p></h2>
+     <h2 class="-5" style="margin: 30px 0px 30px 0px"><p style="text-decoration: underline; text-decoration-color: #3b1e9a;">LEADERSHIP</p></h2>
+
+     
     </div>
       
     </div>
     
     <div class="row-2 w-row">
+      <h4 class="heading-8" style="text-align: left;font-family: 'Roboto Condensed', sans-serif; "> <p style="text-decoration: underline; text-decoration-color: #3b1e9a;"> CO CHAIRS :</p></h4>
       <div class="column-6 w-col w-col-6">
         <div class="card-track">
           <div class="row-5 w-row">
@@ -376,6 +529,112 @@ Her current research focuses on how individual-level helpful in developing inten
         </div>
       </div>
       <div class="column-6 w-col w-col-6"></div>
+    </div>
+
+
+    <div class="row-2 w-row">
+      <h4 class="heading-8" style="text-align: left;font-family: 'Roboto Condensed', sans-serif; "> <p style="text-decoration: underline; text-decoration-color: #3b1e9a;"> PANELISTS :</p></h4>
+      <div class="column-6 w-col w-col-6">
+        <div class="card-track">
+          <div class="row-5 w-row">
+            <div class="w-col w-col-3 align_for_mobile"><img src="../DP.jpg" width="225" class="image-6" style="border-radius: 50%; height: 120px; width: 120px; object-fit: cover; object-position: 50% 0%;"></div>
+            <div class="w-col w-col-9">
+              <h4 class="heading-8" style="font-family: 'Roboto Condensed', sans-serif;">Prof. D. P. Shah</h4>
+              <h5 class="heading-10" style="font-size: 16px;font-family: 'Roboto Condensed', sans-serif;color:#6c757d!important">Adjunct Professor
+              </h5>
+              
+              <h5 class="heading-10" style="font-size: 17px;font-family: 'Roboto Condensed', sans-serif;color:#6c757d!important">Xavier Institute of Management</h5>
+              <h5 class="heading-10" style="font-size: 17px;font-family: 'Roboto Condensed', sans-serif;color:#6c757d!important">Bhubaneshwar, India</h5>
+            </div>
+          </div>
+                    <div class="row-5 w-row" >
+            <div class="w-col w-col-12">
+              
+          <div class="wrap-collabsible3">
+  <input id="collapsible3" class="toggle3" type="checkbox">
+  <label for="collapsible3" class="lbl-toggle3">About Prof. D. P. Shah</label>
+  <div class="collapsible-content3">
+    <div class="content-inner3">
+      <p style="font-size: 14px; text-align: justify;">
+                Professor D. P. Dash has three decades of professional and academic experience in India, the United Kingdom, and Malaysia. As a professor of management, he teaches subjects related to leadership, strategy, and innovation. His approach tends to be interdisciplinary, informed by his studies in engineering, social science, behavioural science, and higher education policy. Professor Dash is the founding editor of the Journal of Research Practice, an indexed journal focusing on developing the practice of research in various domains. He is also the founding editor of Research World, a graduate journal meant to support students in developing as researchers. Supporting research students has been a key mission for Professor Dash. He has set up and strengthened research degree programs, established support networks for research students, directed research training events, and mentored research students and early-career researchers, while maintaining a regular schedule of writing and speaking on related topics. Professor Dash is known to the members of the “doctoral_education” electronic forum by his nickname, DP.
+
+
+              </p>
+    </div>
+  </div>
+</div>
+            </div>
+          </div>
+        </div>
+      </div>
+<!--       <div class="column-6 w-col w-col-6">
+        <div class="card-track">
+          <div class="row-5 w-row">
+            <div class="w-col w-col-3 align_for_mobile"><img src="../Dr.-Sapna-Narula.jpg" class="image-6" style="border-radius: 50%; height: 120px; width: 120px; object-fit: cover; object-position: 50% 0%;"></div>
+            <div class="column-7 w-col w-col-9">
+              <h4 class="heading-8" style="font-family: 'Roboto Condensed', sans-serif;">Dr. Sapna Narula</h4>
+              <h5 class="heading-10" style="font-size: 16px;font-family: 'Roboto Condensed', sans-serif;color:#6c757d!important">Associate Professor & Head</h5>
+              <h5 class="heading-10" style="font-size: 17px;font-family: 'Roboto Condensed', sans-serif;color:#6c757d!important">Deptt of Business and Sustainability</h5>
+              <h5 class="heading-10" style="font-size: 17px;font-family: 'Roboto Condensed', sans-serif;color:#6c757d!important">TERI School of Advanced Studies</h5>
+            </div>
+          </div>
+                              <div class="row-5 w-row" style="margin-top: 3px;">
+            <div class="w-col w-col-12">
+              
+          <div class="wrap-collabsible1">
+  <input id="collapsible1" class="toggle1" type="checkbox">
+  <label for="collapsible1" class="lbl-toggle1">About Dr. Sapna Narula</label>
+  <div class="collapsible-content1">
+    <div class="content-inner1">
+      <p style="font-size: 14px; text-align: justify;">
+              Dr. Sapna Narula is a Professor and the Head of the Department of Business Sustainability at the TERI School of Advanced Studies. With over 18 years’ experience in teaching and research in the fields of business strategy, sustainability, CSR and marketing, Dr. Narula has been a part of several of India’s sustainability drives, and is currently working with Coal India Lt.d on Eco restoration and livelihood generation activities in Jharia Coal Mines. <br>
+Dr. Narula is an extraordinary scholar, with a gold medal from Delhi University and awards from the top international organizations including the UN and the German Ministry. She also has to her name several publications in the top journals across the globe.
+              </p>
+    </div>
+  </div>
+</div>
+            </div>
+          </div>
+        </div>
+      </div> -->
+    </div>
+
+
+    <div class="row-2 w-row">
+      <h4 class="heading-8" style="text-align: left;font-family: 'Roboto Condensed', sans-serif; "> <p style="text-decoration: underline; text-decoration-color: #3b1e9a;"> KEYNOTE SPEAKER :</p></h4>
+      <div class="column-6 w-col w-col-6">
+        <div class="card-track">
+          <div class="row-5 w-row">
+            <div class="w-col w-col-3 align_for_mobile"><img src="../DrAmbikaZutshi.jpg" width="225" class="image-6" style="border-radius: 50%; height: 120px; width: 120px; object-fit: cover; object-position: 50% 0%;"></div>
+            <div class="w-col w-col-9">
+              <h4 class="heading-8" style="font-family: 'Roboto Condensed', sans-serif;">Dr. Ambika Zutshi</h4>
+              <h5 class="heading-10" style="font-size: 16px;font-family: 'Roboto Condensed', sans-serif;color:#6c757d!important">Associate Professor & HDR Director, Department of Management
+              </h5>
+              
+              <h5 class="heading-10" style="font-size: 17px;font-family: 'Roboto Condensed', sans-serif;color:#6c757d!important">Deakin University, Melbourne</h5>
+             
+            </div>
+          </div>
+                    <div class="row-5 w-row" >
+            <div class="w-col w-col-12">
+              
+          <div class="wrap-collabsible4">
+  <input id="collapsible4" class="toggle4" type="checkbox">
+  <label for="collapsible4" class="lbl-toggle4">About Dr. Ambika Zutshi</label>
+  <div class="collapsible-content4">
+    <div class="content-inner4">
+      <p style="font-size: 14px; text-align: justify;">
+                Content coming soon.
+
+
+              </p>
+    </div>
+  </div>
+</div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
