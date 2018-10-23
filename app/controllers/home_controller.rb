@@ -65,6 +65,9 @@ skip_before_action :verify_authenticity_token, only: [:payment]
 	def trackdetails
 	end
 
+	def conferencechairs
+	end
+
 	def application
 		if current_user
 		 @txnid = current_user.id

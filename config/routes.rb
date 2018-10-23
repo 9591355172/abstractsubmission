@@ -41,5 +41,7 @@ Rails.application.routes.draw do
   get '/tracks/sustainability' => 'track_detail#sustainability'
   get '/tracks/sustainbusiness' => 'track_detail#sustainbusiness'
   post 'payments' => 'home#payment'
+  get 'conferencechairs' => 'home#conferencechairs'
+  get 'steeringcommittee' => 'home#steeringcommittee'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
