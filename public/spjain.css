@@ -1091,6 +1091,12 @@ figcaption {
   background-size: cover;
 }
 
+.slide-8 {
+  background-image: url('../banner2.jpg');
+  background-position: 50% 35%;
+  background-size: cover;
+}
+
 .icon-3 {
   padding-top: 5px;
 }
