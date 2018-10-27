@@ -1334,6 +1334,70 @@ input[type='checkbox'] {
   border-bottom-right-radius: 7px;
   padding: .5rem 1rem;
 } 
+.lbl-toggle18 {
+  display: block;
+
+  font-weight: bold;
+  
+  font-size: 15px;
+  text-transform: uppercase;
+  text-align: center;
+
+  padding: 10px;
+
+  color: white;
+  background: #3a3a3a;
+
+  cursor: pointer;
+
+  /*border-radius: 7px;*/
+  transition: all 0.25s ease-out;
+}
+
+.lbl-toggle18:hover {
+  color: #a9a9a9;
+}
+
+.lbl-toggle18::before {
+  content: ' ';
+  display: inline-block;
+
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 5px solid currentColor;
+  vertical-align: middle;
+  margin-right: .7rem;
+  transform: translateY(-2px);
+
+  transition: transform .2s ease-out;
+}
+
+.toggle18:checked + .lbl-toggle18::before {
+  transform: rotate(90deg) translateX(-3px);
+}
+
+.collapsible-content18 {
+  max-height: 0px;
+  overflow: hidden;
+  transition: max-height .25s ease-in-out;
+}
+
+.toggle18:checked + .lbl-toggle18 + .collapsible-content18 {
+  max-height: 960px;
+}
+
+.toggle18:checked + .lbl-toggle18 {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.collapsible-content18 .content-inner18 {
+  background: #fefdfb;
+  border-bottom: 1px solid rgba(250, 224, 66, .45);
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
+  padding: .5rem 1rem;
+} 
     </style>
 <%end%> 
 <div>
@@ -1572,6 +1636,36 @@ DESIGN THINKING IN MANAGEMENT</p>
       </div>
 
 
+            <div class="column-6 w-col w-col-6" id="3" style="margin-top: 20px;">
+        <div class="card-track">
+          <div class="row-5 w-row">
+            <div class="w-col w-col-3" style="text-align: center"><img src="../chavi.png" width="225" class="image-6" style="border-radius: 50%; height: 120px; width: 120px; object-fit: none; object-position: 50% 25%"></div>
+            <div class="w-col w-col-9">
+              <h4 class="heading-8" style="margin-bottom: 0px !important; padding-top: 0px;font-family: 'Roboto Condensed', sans-serif;">Dr. Chavi Bhargava Sharma</h4>
+              <p style="text-align: center; margin-bottom: 20px !important; font-size: 14px; color:#6c757d; padding-left: 15px;">ASIAN WAY OF THINKING: INTEGRATING LOCAL DIVERSITIES IN MANAGEMENT EDUCATION</p>
+              
+              <h5 class="heading-10" style="font-size: 16px;font-family: 'Roboto Condensed', sans-serif; padding-right: 15px; padding-left: 15px;">Executive Director  & Dean- Faculty of Behavioral & Social Sciences 
+              </h5>
+              <h5 class="heading-10" style="font-size: 16px;font-family: 'Roboto Condensed', sans-serif; padding-left: 15px; padding-right: 15px;">Manav Rachna International Institute of Research and Studies</h5>
+            </div>
+          </div>
+          <div class="row-5 w-row">
+            <div class="w-col w-col-12">
+                                  <div class="wrap-collabsible18" style="margin-top: 0px;">
+  <input id="collapsible18" class="toggle18" type="checkbox">
+  <label for="collapsible18" class="lbl-toggle18">About Dr. Chavi Bhargava Sharma</label>
+  <div class="collapsible-content18">
+    <div class="content-inner18">
+      <p style="font-size: 14px; text-align: justify;">
+               Content coming soon.
+              </p>
+    </div>
+  </div>
+</div>
+            </div>
+          </div>
+        </div>
+      </div>
 
 
 
@@ -1617,7 +1711,7 @@ Dr. Divya was a founder member of the coordination committee of institute’s So
             <div class="w-col w-col-3" style="text-align: center"><img src="../track/ProfJankiAndharia.jpeg" width="225" class="image-6" style="border-radius: 50%; height: 120px; width: 120px; object-fit: cover; object-position: 50% 0%"></div>
             <div class="w-col w-col-9">
               <h4 class="heading-8" style="margin-bottom: 0px !important; font-family: 'Roboto Condensed', sans-serif;">Prof. Janki Andharia</h4>
-              <p style="text-align: center; margin-bottom: 20px !important; font-size: 14px;color:#6c757d!important ">EXTREME EVENTS, <br> DISASTERS AND BUILDING RESILIENCE</p>
+              <p style="text-align: center; margin-bottom: 0px !important; font-size: 14px;color:#6c757d!important ">EXTREME EVENTS, <br> DISASTERS AND BUILDING RESILIENCE</p>
               <h5 class="heading-10" style="font-size: 16px;font-family: 'Roboto Condensed', sans-serif;">Dean - Jamsetji Tata School of Disaster Studies <br>
 Chairperson - Centre for Disasters and Development, Jamsetji Tata School of Disaster Studies 
               </h5>
@@ -1663,7 +1757,7 @@ She has been involved in national and state level policy making work and has had
           </div>
           <div class="row-5 w-row">
             <div class="w-col w-col-12">
-                                  <div class="wrap-collabsible16" style="margin-top: 0px;">
+                                  <div class="wrap-collabsible16" style="margin-top: 56px;">
   <input id="collapsible16" class="toggle16" type="checkbox">
   <label for="collapsible16" class="lbl-toggle16">About Dr. Jeevan J Arakal</label>
   <div class="collapsible-content16">
@@ -1697,7 +1791,7 @@ She has been involved in national and state level policy making work and has had
           </div>
           <div class="row-5 w-row" >
             <div class="w-col w-col-12">
-                                  <div class="wrap-collabsible9" style="margin-top: 0px;">
+                                  <div class="wrap-collabsible9" style="margin-top: 33px;">
   <input id="collapsible9" class="toggle9" type="checkbox">
   <label for="collapsible9" class="lbl-toggle9">About Prof. Kartik Dave</label>
   <div class="collapsible-content9">
@@ -1754,7 +1848,7 @@ She has been involved in national and state level policy making work and has had
               <h5 class="heading-10" style="font-size: 16px;font-family: 'Roboto Condensed', sans-serif;">The Hong Kong Polytechnic University</h5>
             </div>
           </div>
-          <div class="row-5 w-row" style="margin-top: 33px;" >
+          <div class="row-5 w-row" style="margin-top: 30px;" >
             <div class="w-col w-col-12">
               
           <div class="wrap-collabsible">
@@ -1823,7 +1917,7 @@ AURO University</h5>
             </div>
           </div>
 
-          <div class="wrap-collabsible1" style="margin-top: 21px;">
+          <div class="wrap-collabsible1" style="margin-top: 0px;">
   <input id="collapsible1" class="toggle1" type="checkbox">
   <label for="collapsible1" class="lbl-toggle1">About Prof. Santosh Kumar</label>
   <div class="collapsible-content1">
@@ -1852,7 +1946,7 @@ As a specialist in the field of Public Policy, he has been engaged with Social A
               <h5 class="heading-10" style="font-size: 16px;font-family: 'Roboto Condensed', sans-serif;">Founding Associate Dean, Doctoral Programs, <br> Xavier University Bhubaneswar </h5>
             </div>
           </div>
-                    <div class="wrap-collabsible10" style="margin-top: 0px;">
+                    <div class="wrap-collabsible10" style="margin-top: 3px;">
   <input id="collapsible10" class="toggle10" type="checkbox">
   <label for="collapsible10" class="lbl-toggle10">About Dr. Sandip Anand</label>
   <div class="collapsible-content10">
@@ -1929,7 +2023,7 @@ Center for Social Entrepreneurship
               <h5 class="heading-10" style="font-size: 16px;font-family: 'Roboto Condensed', sans-serif;">Tata Institute of Social Sciences (TISS, Mumbai)</h5>
             </div>
           </div>
-                    <div class="wrap-collabsible2" style="margin-top: 21px;">
+                    <div class="wrap-collabsible2" style="margin-top: 0px;">
   <input id="collapsible2" class="toggle2" type="checkbox">
   <label for="collapsible2" class="lbl-toggle2">About Prof. Satyajit Majumdar</label>
   <div class="collapsible-content2">
