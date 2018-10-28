@@ -1067,13 +1067,13 @@ figcaption {
 }
 
 .slide-4 {
-  background-image: url('../123456.jpg');
+  background-image: url('../001.jpg');
   background-position: 50% 50%;
   background-size: cover;
 }
 
 .slide-5 {
-  background-image: url('../12345.jpg');
+  background-image: url('../003.jpg');
   background-position: 50% 50%;
   background-size: contain;
   
@@ -1086,7 +1086,7 @@ figcaption {
 }
 
 .slide-7 {
-  background-image: url('../deadline.jpg');
+  background-image: url('../002B.jpg');
   background-position: 50% 35%;
   background-size: cover;
 }
